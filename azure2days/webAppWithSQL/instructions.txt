@@ -1,0 +1,10 @@
+CREATE TABLE STUDENT
+(
+	rollnumber NVARCHAR(30) PRIMARY KEY,
+	name NVARCHAR(256),
+	class NVARCHAR(256),
+	division NVARCHAR(256),
+	guardianname NVARCHAR(256),
+	age INTEGER,
+	joiningdate DATETIME 
+);

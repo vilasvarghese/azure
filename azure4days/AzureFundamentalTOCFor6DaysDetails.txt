@@ -1,0 +1,1354 @@
+1. Cloud Concepts
+
+	Cloud Concepts
+################################################################################	Traditional Datacenter
+		Rack and Stack servers
+		Install O/S
+		Hand it over to business.
+		
+	Cloud made it very easily
+
+	Cloud Computing
+		Rent resources Vs purchasing
+		Pay for what you use.
+		Run your applications in someone else's datacenter
+		Cloud provider responsible for keeping the services they provide up-to-date
+		Cloud provider responsible for the SLA's of the services.
+		
+	Major Cloud Services
+		Compute
+			VM's / Desktoop
+			Windows/Linux servers
+			Containers
+			Serverless options.
+			
+https://www.serverless360.com/blog/why-serverless-computing			
+			
+		Storage
+			File shares
+			....
+			
+		Networking
+			Network security groups
+			LB
+			Azure ...
+			
+		Application Services
+			App services
+			..
+			
+		Analytics
+			Telemetery
+			....
+		
+
+################################################################################	
+	Elasticity
+
+Elastic computing 
+	Ability to quickly expand or decrease 
+		computer processing, 
+		memory, and 
+		storage resources 
+		to meet changing demands without worrying about capacity planning and engineering for peak usage. 
+	Typically controlled by system monitoring tools, 
+	Matches the amount of resources allocated to the amount of resources actually needed without disrupting operations. 
+	With cloud elasticity, 
+		Company avoids paying for unused capacity or idle resources and 
+		Doesn’t have to worry about investing in the purchase or maintenance of additional resources and equipment upfront.
+
+Concerns to consider while using Elastic computing
+	Security and 
+	Limited control 
+Benefits. 
+	More efficient than your typical IT infrastructure, 
+	Typically automated 
+		Require very less human administrators around the clock, 
+		Offers continuous availability of services by avoiding unnecessary slowdowns or service interruptions.
+
+	Ability to fit the resources needed to cope with loads dynamically 
+		usually in relation to scale out. 
+	When the load increases you scale by adding more resources and 
+	When demand wanes you shrink back and 
+		remove unneeded resources. 
+	Elasticity is mostly important in Cloud environments where you pay-per-use and 
+		- don't want to pay for resources you do not currently need 
+		- want to meet rising demand when needed on the other hand.
+
+---------------------------------------------------------------------------------------------------	
+Scalability 
+	Have you scaled?
+	Ability of the system to accommodate larger loads by
+		Scale up or
+		Scale out.
+---------------------------------------------------------------------------------------------------
+
+share	
+	
+		Elastic workloads
+		Allow to change workload requirements
+		
+		Look for images
+		
+		Compare between Elasticity, Scalability and HA.
+		
+Real world example		
+https://azure.microsoft.com/en-in/blog/real-world-example-of-cloud-elasticity-with-windows-azure/		
+################################################################################	
+Scalability
+
+https://docs.microsoft.com/en-us/azure/architecture/framework/scalability/overview
+https://docs.microsoft.com/en-us/learn/modules/design-for-performance-and-scalability-in-azure/2-scaling-up-and-scaling-out
+################################################################################
+	High Availability (HA) 
+	
+	
+################################################################################
+	SLAs
+		Agreement with the business and application team on the expeccted performance and availability of a specific service.
+	
+	General SLA's for each workload
+		Define SLA's for each workload
+	Dependency mapping
+		Make sure to include interal/external dependencies
+	Identify single points of failure
+		Example - Service A needs to be available 99.99% times.
+		But it depends on Service B with 99.9%.
+		You need to find alternatives.
+	
+	Key Terms
+		Mean Time to Recovery (MTTR)
+			Average time to recover from a service outage
+			On an average (How long will it take to recover from service outages)
+			
+		Mean Time Between Failures (MTBF)
+			Average time between outages
+		
+		Recovery Point Objective (RPO)
+			Interval of time in which data could be lost during a recovery. e.g. 5 minutes RPO means up to 5 minutes data may be lost.
+		
+		Recovery time objective (RTO)
+			Time requirement for recovery to be completed in before there is a business impact.
+		  
+
+	Other important standard considerations
+		Fault Tolerance
+			Design redundant systems so that components/services are replaceable.
+			Reduces impact when disaster occur.
+		Disaster Recovery
+			Designing for a catastrpohic failure of an entire system (in a geography)
+			Region to region failover
+			On-premises to cloud failover
+			Automation and Orchestation.
+			
+			
+			
+	HA examples
+		Underlying host has a catastrophic failures, replacing VM's may get created on a different Host.
+		Availability Sets and Zones further increases the availability.
+		
+	Cross Region Deployment
+		An application is deployed in a configuration to be highly available across regions.
+		When a service 	in one region has an outage, traffic can continue to run in the second region.
+	
+	Cloud Service Models
+################################################################################	Cloud Economics	- Can that be removed?
+################################################################################	Cloud Deployment Models
+
+	Public Cloud
+		e.g. of Cloud providers Azure, AWS, GCP 
+
+		Advantages
+			High scalability/agility
+			Pay as you go pricing 
+			Not responsible for maintenance or updates to h/w
+			Minimal "technical" knowledge required to get started.
+			
+			
+		Disadvantages
+			Specific security requirements may be difficult or impossible to support.
+			Certain govt./fed compliance
+			SLA you have agreed upon etc. 
+			You don't own the h/w.
+			Data is not in your premises 
+				may not be in your country.
+			Unique business requiements.
+		
+		
+
+################################################################################	
+Lab: Create Azure Trial Account
+################################################################################
+2. Azure Core Services
+
+https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure/3-tour-of-azure-services
+Azure Services
+	1. Compute Services
+		
+		Execute logic to doing operations.
+		e.g VM's ect.
+		Covered in detail latter
+	2. Cloud Storage
+		Includes disk's attached VM's
+		Covered in detail latter
+	3. Networking
+		Private n/w connection
+		optimize performance and security
+		Covered in detail latter
+	4. App Hosting
+		Run entire web platform on windows or linux.
+	5. AI
+		Analyze data
+	6. IoT
+		Interprise devices integration
+	7. Integration
+		
+	8. Security
+		
+		
+		
+Most commonly used categories:
+	Compute
+		Covered in detail latter
+	Networking
+		Covered in detail latter
+		
+	Storage
+		Covered in detail latter
+----------------------------------------------------------------------------------------	
+	Mobile
+		
+		Azure enables developers to create mobile backend services for iOS, Android, and Windows apps quickly and easily. Features that used to take time and increase project risks, such as adding corporate sign-in and then connecting to on-premises resources such as SAP, Oracle, SQL Server, and SharePoint, are now simple to include.
+
+		Other features of this service include:
+
+		Offline data synchronization.
+		Connectivity to on-premises data.
+		Broadcasting push notifications.
+		Autoscaling to match business needs.
+
+
+		
+	Databases
+		Covered in detail latter
+----------------------------------------------------------------------------------------		
+	Web
+	----
+Having a great web experience is critical in today's business world. Azure includes first-class support to build and host web apps and HTTP-based web services. The Azure services focused on web hosting include:
+
+
+Azure App Service	
+	Quickly create powerful cloud web-based apps
+Azure Notification Hubs	
+	Send push notifications to any platform from any back end.
+Azure API Management	
+	Publish APIs to developers, partners, and employees securely and at scale.
+Azure Cognitive Search	
+	Fully managed search as a service.
+Web Apps feature of Azure App Service	
+	Create and deploy mission-critical web apps at scale.
+Azure SignalR Service	
+	Add real-time web functionalities easily.
+	
+----------------------------------------------------------------------------------------
+	
+	
+	Internet of Things
+	
+	Internet of Things
+People are able to access more information than ever before. It began with personal digital assistants (PDAs), then morphed into smartphones. Now there are smart watches, smart thermostats, even smart refrigerators. Personal computers used to be the norm. Now the internet allows any item that's online-capable to access valuable information. This ability for devices to garner and then relay information for data analysis is referred to as the Internet of Things (IoT).
+
+There are a number of services that can assist and drive end-to-end solutions for IoT on Azure.
+
+
+
+IoT Central	
+	Fully-managed global IoT software as a service (SaaS) solution that makes it easy to connect, monitor, and manage your IoT assets at scale
+Azure IoT Hub	
+	Messaging hub that provides secure communications between and monitoring of millions of IoT devices
+IoT Edge	
+	Push your data analysis models directly onto your IoT devices, allowing them to react quickly to state changes without needing to consult cloud-based AI models.
+
+	
+----------------------------------------------------------------------------------------
+	
+	Big Data
+----------------------------------------------------------------------------------------
+
+Data comes in all formats and sizes. When we talk about Big Data, we're referring to large volumes of data. Data from weather systems, communications systems, genomic research, imaging platforms, and many other scenarios generate hundreds of gigabytes of data. This amount of data makes it hard to analyze and make decisions. It's often so large that traditional forms of processing and analysis are no longer appropriate.
+
+Open source cluster technologies have been developed to deal with these large data sets. Microsoft Azure supports a broad range of technologies and services to provide big data and analytic solutions.
+
+
+Azure Synapse Analytics	
+	Run analytics at a massive scale using a cloud-based Enterprise Data Warehouse (EDW) that leverages massive parallel processing (MPP) to run complex queries quickly across petabytes of data
+Azure HDInsight	
+	Process massive amounts of data with managed clusters of Hadoop clusters in the cloud
+Azure Databricks	
+	Collaborative Apache Spark–based analytics service that can be integrated with other Big Data services in Azure.
+
+----------------------------------------------------------------------------------------	
+	Artificial Intelligence
+----------------------------------------------------------------------------------------
+Artificial Intelligence, in the context of cloud computing, is based around a broad range of services, the core of which is Machine Learning. Machine Learning is a data science technique that allows computers to use existing data to forecast future behaviors, outcomes, and trends. Using machine learning, computers learn without being explicitly programmed.
+
+Forecasts or predictions from machine learning can make apps and devices smarter. For example, when you shop online, machine learning helps recommend other products you might like based on what you've purchased. Or when your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud. And when your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.
+
+Some of the most common Artificial Intelligence and Machine Learning service types in Azure are:
+
+Azure Machine Learning Service	
+	Cloud-based environment you can use to develop, train, test, deploy, manage, and track machine learning models. It can auto-generate a model and auto-tune it for you. It will let you start training on your local machine, and then scale out to the cloud
+Azure Machine Learning Studio	
+	Collaborative, drag-and-drop visual workspace where you can build, test, and deploy machine learning solutions using pre-built machine learning algorithms and data-handling modules
+	A closely related set of products are the cognitive services. These are pre-built APIs you can leverage in your applications to solve complex problems.
+
+Vision	
+	Image-processing algorithms to smartly identify, caption, index, and moderate your pictures and videos.
+Speech	
+	Convert spoken audio into text, use voice for verification, or add speaker recognition to your app.
+Knowledge mapping	
+	Map complex information and data in order to solve tasks such as intelligent recommendations and semantic search.
+Bing Search	Add Bing Search APIs to your apps and harness the ability to comb billions of webpages, images, videos, and news with a single API call.
+Natural Language processing	Allow your apps to process natural language with pre-built scripts, evaluate sentiment and learn how to recognize what users want.
+
+----------------------------------------------------------------------------------------	
+	DevOps
+----------------------------------------------------------------------------------------
+
+DevOps (Development and Operations) brings together people, processes, and technology, automating software delivery to provide continuous value to your users. Azure DevOps Services allows you to create build and release pipelines that provide continuous integration, delivery, and deployment for your applications. You can integrate repositories and application tests, perform application monitoring, and work with build artifacts. You can also work with and backlog items for tracking, automate infrastructure deployment and integrate a range of third-party tools and services such as Jenkins and Chef. All of these functions and many more are closely integrated with Azure to allow for consistent, repeatable deployments for your applications to provide streamlined build and release processes.
+
+Some of the main DevOps services available with Azure are Azure DevOps Services and Azure DevTest Labs.
+
+Azure DevOps	
+	Azure DevOps Services (formerly known as Visual Studio Team Services, or VSTS), 
+	provides development collaboration tools including high-performance pipelines, free private Git repositories, 4configurable Kanban boards, and extensive automated and cloud-based load testing
+	Azure DevTest Labs	Quickly create on-demand Windows and Linux environments you can use to test or demo your applications directly from your deployment pipelines
+
+################################################################################
+	Azure Core Services Overview
+################################################################################	
+	Lab: Quick Overview of Azure Portal
+-------------------------------------------------------------------------------
+
+Reference: https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-overview
+
+The Azure portal is a web-based, unified console that provides an alternative to command-line tools. With the Azure portal, you can manage your Azure subscription using a graphical user interface. You can build, manage, and monitor everything from simple web apps to complex cloud deployments. Create custom dashboards for an organized view of resources. Configure accessibility options for an optimal experience.
+
+The Azure portal is designed for resiliency and continuous availability. It has a presence in every Azure datacenter. This configuration makes the Azure portal resilient to individual datacenter failures and avoids network slow-downs by being close to users. The Azure portal updates continuously and requires no downtime for maintenance activities.
+
+
+Creating an Azure Account
+-------------------------
+
+1. Go to https://azure.microsoft.com/en-in/free/
+2. Click on "Start Free"
+3. Click No account? Create one!
+4. Enter email id and press "Next"
+5. You may have to click on "Create account anyway"
+6. Enter first name and last name, click "Next"
+7. Keep entering the details
+8. Go to https://azure.microsoft.com/
+9. Click on products in top menu bar
+
+Click on App Services 
+Click on Start Free (twice)
+Enter your details and identify your details.
+
+
+Overview
+-------
+
+
+
+--------------------------------------------------------------------------------	
+	
+################################################################################	
+	Azure Regions
+	
+	Azure regions can be found at
+	https://azure.microsoft.com/en-in/global-infrastructure/regions/
+	
+	Area contained at least one Data center.  
+	Location for your resources
+	Need to select a region for deploying resources.
+		e.g. South India, East US.
+		
+	
+	Set of datacenters deployed within a latency-defined perimeter and 
+	connected through a dedicated regional low-latency network.
+
+	More global regions than any other cloud provider, 
+	Azure gives customers the flexibility to deploy applications where they need to. 
+	Azure is generally available in 53 regions around the world, 
+		with plans announced for 5 additional regions.
+
+
+N.B: Not all products are available in all regions.
+Check the below link to understand what is available in each regions.
+https://azure.microsoft.com/en-in/global-infrastructure/services/
+
+Geographies
+-----------
+A geography is a discrete market, 
+	Typically containing two or more regions, 
+	that preserves data residency and 
+	compliance boundaries.
+
+Geographies allow customers with specific 
+	data-residency and 
+	compliance needs 
+	to keep their data and applications close. Geographies are fault-tolerant to withstand complete region failure through their connection to our dedicated high-capacity networking infrastructure.	
+	
+	
+################################################################################	
+	Resoure Groups
+	
+Resource groups provide a way to monitor, control access, provision and manage billing for collections of assets that are required to run an application, or used by a client or company department. Azure Resource Manager (ARM) is the technology that works behind the scenes so that you can administer assets using these logical containers.
+
+	Nice group of resource group.
+		Very easy way to organize
+	Can implement security for the resource group.
+		RBAC can be applied at Resource group.
+	Can destroy them together.	
+	Can apply policies 
+		for e.g. in this Resource group you can deploy workloads of X size
+	
+################################################################################	
+	Lab	: Resource Groups
+	
+1. Login to Azure
+https://azure.microsoft.com/
+
+2. Click on Portal on the right top.
+3. In the left menu (click on the left top if this is not visible)
+	Click on Resource goups.
+
+4. Click Add
+5. Give a name
+6. Select Region.
+	We can add resources from other regions.
+	The metadata abou this resource gorup would be stored in this region. 
+	However while creating resources we can inherit the region from Resource group.
+7. Click on the Tags
+	Name - value pair.
+	This should help you to group objects.
+	Importance of Tagging
+	
+	Review and Create.
+		
+		We can now pin it to Dashboard or
+		go into the Resource group.
+		
+	Explain each of the links out there
+	
+	Objective: 
+	Engineers should now be able to understand how resource group helps.
+	
+	
+################################################################################	
+	Azure Resource Manager (ARM)
+	
+	How resources are made available to us
+	How we can interact with various components/services
+	The major services that can be managed are 
+		Resource
+			Individual manageable item
+		Resource Groups
+			Container holding resources for management.
+		Resource Provider
+			Provider of services we can deploy in Azure
+			e.g. compute, storage ect.
+			
+		ARM Template
+			Files used to define resources we wish to deploy to a resource group.
+			
+	https://azure.microsoft.com/en-in/resources/templates/
+
+	
+	
+	ARM Template overview
+		There is a schema and language
+		Apply infrastructure as Code 
+		Download templates from Azure Portal
+		Write new templates
+		Use Quickstart templates from MS.
+	Templating includes	
+		- ARM Template file
+			Describe the configuration of your infrastructure via a JSON fiel
+		- ARM Template parameter file
+			Seperate parameters
+		- Deployment Scripts
+			e.g. powershell scripts
+			or directly deploy using Azure portal
+			
+		
+		
+	
+	
+		
+################################################################################
+3. Compute
+
+Compute
+Compute services are often one of the primary reasons why companies move to the Azure platform. Azure provides a range of options for hosting applications and services. Here are some examples of compute services in Azure:
+
+
+Azure Virtual Machines	
+	Windows or 
+	Linux virtual machines (VMs) 
+	
+	hosted in Azure
+Azure Virtual Machine Scale Sets	
+	Scaling for Windows or Linux VMs hosted in Azure
+
+Azure Kubernetes Service	
+	Enables management of a cluster of VMs that run containerized services
+
+Azure Service Fabric	
+	Distributed systems platform. Runs in Azure or on-premises
+
+Azure Batch	
+	Managed service for parallel and high-performance computing applications
+
+Azure Container Instances	
+	Run containerized apps on Azure without provisioning servers or VMs
+
+Azure Functions	
+	An event-driven, serverless compute service
+
+################################################################################
+	Azure Virtual Machines
+https://azure.microsoft.com/en-in/overview/what-is-a-virtual-machine/
+
+	A virtual machine is a computer file, typically called an image, which behaves like an actual computer. In other words, creating a computer within a computer. It runs in a window, much like any other programme, giving the end user the same experience on a virtual machine as they would have on the host operating system itself. The virtual machine is sandboxed from the rest of the system, meaning that the software inside a virtual machine cannot escape or tamper with the computer itself. This produces an ideal environment for testing other operating systems including beta releases, accessing virus-infected data, creating operating system backups and running software or applications on operating systems for which they were not originally intended.
+
+	Multiple virtual machines can run simultaneously on the same physical computer. For servers, the multiple operating systems run side-by-side with a piece of software called a hypervisor to manage them, while desktop computers typically employ one operating system to run the other operating systems within its programme windows. Each virtual machine provides its own virtual hardware, including CPUs, memory, hard drives, network interfaces and other devices. The virtual hardware is then mapped to the real hardware on the physical machine which saves costs by reducing the need for physical hardware systems along with the associated maintenance costs that go with it, plus reduces power and cooling demand.	
+	
+	
+	
+################################################################################	
+	Lab: Create a VM
+	
+	Walk through Creating a VM
+	
+	Availability Zone: May come based on the Region you select.
+	
+	If size creates a problem - Ensure that you select a different region.
+	
+################################################################################	
+	Lab: Connect to a Windows VM
+################################################################################	
+	Lab: Connect to a Linux VM
+	
+	In unmanaged disks, you have to create storage accounts to hold the disks (VHD files) for your Azure VMs. With Managed Disks, you are no longer limited by the storage account limits.
+
+
+	Objects created
+		3 Storage accounts.
+
+
+################################################################################	
+	App Services
+################################################################################		
+	When to use them?
+################################################################################		
+	How to use them?
+################################################################################	
+	Lab: App Service Plan
+################################################################################	
+	Azure web app Introduction
+################################################################################	
+	Why do you need Web App
+################################################################################	
+	When do you use Web App
+################################################################################	
+	Lab: Deploy Web App
+################################################################################	
+	Lecture Containers
+################################################################################	
+	Serverless Computing
+################################################################################################################################################################	
+	Comparing Compute Options
+################################################################################
+
+4. Azure Networking
+
+Linking compute resources and providing access to applications is the key function of Azure networking. Networking functionality in Azure includes a range of options to connect the outside world to services and features in the global Microsoft Azure datacenters.
+
+Azure networking facilities have the following features:
+
+TABLE 2
+Azure Virtual Network	
+	Connects VMs to incoming Virtual Private Network (VPN) connections
+Azure Load Balancer	
+	Balances inbound and outbound connections to applications or service endpoints
+Azure Application 
+	Gateway	Optimizes app server farm delivery while increasing application security
+Azure VPN Gateway	
+	Accesses Azure Virtual Networks through high-performance VPN gateways
+Azure DNS	
+	Provides ultra-fast DNS responses and ultra-high domain availability
+Azure Content Delivery Network	
+	Delivers high-bandwidth content to customers globally
+Azure DDoS Protection	
+	Protects Azure-hosted applications from distributed denial of service (DDOS) attacks
+Azure Traffic Manager	
+	Distributes network traffic across Azure regions worldwide
+Azure ExpressRoute	
+	Connects to Azure over high-bandwidth dedicated secure connections
+Azure Network Watcher	
+	Monitors and diagnoses network issues using scenario-based analysis
+Azure Firewall	
+	Implements high-security, high-availability firewall with unlimited scalability
+Azure Virtual WAN	
+	Creates a unified wide area network (WAN), connecting local and remote sites
+
+################################################################################
+	Networking Overview
+	
+################################################################################	
+	Lab: Virtual Networks (VNets) and Subnets
+################################################################################	
+	Hybrid Connectivity
+################################################################################	
+	Load Balancers
+################################################################################	
+	Lab: Load Balancing
+################################################################################	
+	Content Delivery Network (CDN)
+################################################################################	
+	Lab: Content Delivery Network (CDN)
+################################################################################
+
+5. Data and Storage Services
+################################################################################
+	Types of Data
+################################################################################	
+	Azure SQL
+################################################################################	
+	Cosmos DB
+################################################################################	
+	Azure Storage
+################################################################################	
+	Disk Storage
+################################################################################	
+	Storage Account Overview
+################################################################################	
+	Lab: Storage Account via Azure Portal
+################################################################################		
+		
+6. Accounts and Identity
+https://medium.com/@ealtili/understanding-cloud-identity-models-for-office-365-and-azure-active-directory-351e0e689b8b
+
+
+################################################################################
+	Accounts and Subscriptions Overview
+################################################################################	
+	Domain Services
+################################################################################	
+	Azure AD
+################################################################################	
+	RBAC
+https://docs.microsoft.com/en-us/azure/role-based-access-control/overview
+Here are some examples of what you can do with Azure RBAC:
+
+Allow one user to manage virtual machines in a subscription and another user to manage virtual networks
+Allow a DBA group to manage SQL databases in a subscription
+Allow a user to manage all resources in a resource group, such as virtual machines, websites, and subnets
+Allow an application to access all resources in a resource group
+################################################################################	
+	Lab: RBAC
+################################################################################	
+	Azure Policy
+################################################################################	
+	Lab: Azure Policy
+################################################################################	
+7. Availability and Distributing the load 
+################################################################################	
+	VM Availability
+	
+	General Introduction.
+	How would you design for availability.
+	
+################################################################################	
+	Virtual Machine Scale sets - when to use them
+	
+	https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview
+	
+	Let you create and manage a group of identical, load balanced VMs. 
+	The number of VM instances can automatically increase or decrease 
+		in response to demand or a defined schedule. 
+	Provide high availability to your applications, 
+	Allow you to centrally manage, configure, and update a large number of VMs. 
+	Can build large-scale services for areas such as compute, big data, and container workloads.
+	Provide the management capabilities for applications that run across many VMs, 
+		automatic scaling of resources, 
+		and load balancing of traffic. 
+	
+	Why use virtual machine scale sets?
+	-----------------------------------
+	provide redundancy and improved performance, 
+	applications are typically distributed across multiple instances. 
+	Customers may access your application through a load balancer 
+		that distributes requests to one of the application instances. 
+	While performing maintenance or update an application instance, 
+		your customers must be distributed to another available application instance. 
+		To keep up with additional customer demand, 
+		you may need to increase the number of application instances that run your application.
+
+	Key benefits:
+	-------------
+	Easy to create and manage multiple VMs
+		When you have many VMs that run your application, 
+		it's important to maintain a consistent configuration across your environment. 
+		For reliable performance of your application, 
+			the VM size, 
+			disk configuration, 
+			and application installs should match across all VMs.
+	With scale sets, 
+		all VM instances are created from the same base OS image and configuration. 
+	Lets you easily manage hundreds of VMs without additional configuration tasks or network management.
+	Support the use of the Azure load balancer for basic layer-4 traffic distribution, 
+	
+	Use Azure Application Gateway for more advanced layer-7 traffic distribution and TLS termination.
+	Provides high availability and application resiliency
+
+	Run multiple instances of your application. 
+	If one of these VM instances has a 	problem, 
+		customers continue to access your application through one of the other VM instances 
+		with minimal interruption.
+
+	For additional availability, you can use Availability Zones to automatically distribute VM instances in a scale set within a single datacenter or across multiple datacenters.
+	Allows your application to automatically scale as resource demand changes
+
+Customer demand for your application may change throughout the day or week. To match customer demand, scale sets can automatically increase the number of VM instances as application demand increases, then reduce the number of VM instances as demand decreases.
+Autoscale also minimizes the number of unnecessary VM instances that run your application when demand is low, while customers continue to receive an acceptable level of performance as demand grows and additional VM instances are automatically added. This ability helps reduce costs and efficiently create Azure resources as required.
+Works at large-scale
+
+Scale sets support up to 1,000 VM instances. If you create and upload your own custom VM images, the limit is 600 VM instances.
+For the best performance with production workloads, use Azure Managed Disks.
+
+
+Question: 
+	Do you really need Virtual machine scale set if you already have kubernetes?
+		Ans: Yes
+	What is the diff. between 
+
+		Availability ensures that resources are available whenever you access it. As a cloud service provider, Azure has different availability benchmarks for different services. These availability marks are normally publishing like 99.99XXXX %. So how many 9's, that much better availability.
+
+	
+		Availability set?
+			Consists of a set of discrete (don't need to be identical) VMs 
+			Have their own names and individual properties, 
+			Are spread across fault domains, 
+				When you have more than one VM in a set 
+				it reduces the chances of losing all your VMs in event of a 
+					hardware failure in the host or rack.
+	
+			
+			For example you could have 2 VMs running database servers in an AS. 
+				One configured as a database replication Primary and one configured as a Secondary.
+					Availability guaranteed.
+					availability guaranteed
+					Can have their own names, public IP addresses, and even be different sizes
+	
+		Virtual machine scale set?
+			Type of availability set 
+			(Implicit availability set with 5 fault domains and 5 update domains)
+			Set of identically configured VMs (CPU, RAM ect would be identical)
+			Very easy to scale out and scale in.
+			Easy to auto scale.
+			API's available which can reimage and upgrade VM's
+			
+			Support public IP addresses per VM. 
+			Scale sets can contain different sized VMs, 
+				but a scale set always has a current "model" 
+					Defines the VM size and other properties, 
+					Can be applied to the set, or a subset of VMs depending on upgradePolicy settings.
+			VM machine names always consist of the same name prefix, followed by a number.
+			
+		Further read...	https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups
+
+N.B: Scale sets and availability sets are specifically for VM's.
+
+			
+		Availability zones?
+			Allow to deploy resources into multiple regions.
+			Resources supported
+				Linux Virtual Machines
+				Windows Virtual Machines
+				Virtual Machine Scale Sets
+				Managed Disks
+				Load Balancer
+				Public IP address
+				Zone-redundant storage
+				SQL Database
+				Event Hubs
+				Service Bus (Premium Tier Only)
+				VPN Gateway
+				ExpressRoute
+				Application Gateway (preview)
+		Regions?
+			https://azure.microsoft.com/en-in/global-infrastructure/regions/
+			May have one or more AZ.
+			datacenters deployed within a latency-defined perimeter and connected through a dedicated regional low-latency network.
+			
+			Pick image from https://heranonazure.wordpress.com/2019/02/12/azure-infrastructure-geographies-regions-zones-datacenters/
+		
+		Regional pairs
+			Consists of two regions within the same geography. 
+			Azure serializes platform updates (planned maintenance) across regional pairs, 
+				ensuring that only one region in each pair updates at a time. 
+			If an outage affects multiple regions, 
+				at least one region in each pair will be prioritized for recovery.
+		
+			Some Azure services take further advantage of paired regions to ensure business continuity and to protect against data loss. Azure provides several storage solutions that take advantage of paired regions to ensure data availability. For example, Azure Geo-redundant Storage (GRS) replicates data to a secondary region automatically, ensuring that data is durable even in the event that the primary region isn't recoverable.
+
+		Can I select my regional pairs?	
+			No. Some Azure services rely upon regional pairs, such as Azure's redundant storage. These services don't allow you to create new regional pairings. Similarly, because Azure controls planned maintenance and recovery prioritization for regional pairs, you can't define your own regional pairs to take advantage of these services. However, you can create your own disaster recovery solution by building services in any number of regions and leveraging Azure services to pair them.
+		Am I limited to using services within my regional pairs?
+			No. While a given Azure service may rely upon a regional pair, you can host your other services in any region that satisfies your business needs.
+		Is it mandatory to use a regional pair?
+			No. Customers can leverage Azure services to architect a resilient service without relying on Azure's regional pairs. However, we recommend that you configure business continuity disaster recovery (BCDR) across regional pairs to benefit from isolation and improve availability.
+		
+		List of regional pair along with further read
+		https://docs.microsoft.com/en-us/azure/best-practices-availability-paired-regions
+		
+		Geographies?
+			https://azure.microsoft.com/en-us/global-infrastructure/geographies/
+			Azure regions are organized into geographies. An Azure geography ensures that data residency, sovereignty, compliance, and resiliency requirements are honored within geographical boundaries.
+	
+			customer data
+				“Microsoft may replicate to other Regions for data resiliency but Microsoft will not replicate or move customer data outside the Geo”
+		
+		
+		Availability Zones
+			Availability Zones is a high-availability offering that protects your applications and data from datacenter failures. Availability Zones are unique physical locations within an Azure region.
+			Regions may have one or more AZ.
+			AZ may have one or more datacenters.
+			
+			N.B: Not all Azure products/Service support Availability Zone.
+			Further read: 
+				https://docs.microsoft.com/en-us/azure/availability-zones/az-overview
+
+		Datacenters
+			https://www.youtube.com/watch?v=s5I4wcQ6n0g
+
+			Suggested watch: https://www.youtube.com/watch?v=9VWA-7_-Pb0
+			
+		Zone & Availability Zone
+			Zone is a geographical grouping of Azure Regions for billing purpose. Data transfer pricing is based on the Zones.
+			
+			A sub-region is the lowest level geo-location that you may select to deploy your applications and associated data. For data transfers (except CDN), the following regions correspond to Zone 1, Zone 2, Zone 3, and DE Zone 1.
+
+			Zone 1—
+				Canada Central, Canada East, North Europe, West Europe, France Central, France South, UK South, UK West, Central US, East US, East US 2, US Gov Arizona, US Gov Iowa, US Gov Texas, US Gov Virginia, North Central US, South Central US, West US, West US 2, West Central US
+			Zone 2—
+				East Asia, Southeast Asia, Australia Central, Australia Central 2, Australia East, Australia Southeast, Central India, Japan East, Japan West, Korea Central, Korea South, South India, West India
+			Zone 3—
+				Brazil South
+			DE Zone 1—
+				Germany Central, Germany Northeast
+
+			https://azure.microsoft.com/en-us/pricing/details/bandwidth/
+
+################################################################################	
+	Availability Sets - when to use them
+	
+	https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-availability-sets
+	
+	Availability Set
+
+Availability Sets ensure that the 
+	Azure virtual machines are deployed across multiple isolated hardware nodes in a cluster.
+By deploying your vms across multiple hardware nodes Azure ensures that 
+	if hardware or software failure happens within Azure, 
+	only a sub-set of your virtual machines are impacted and your overall solution is safe and in working condition.
+	Availability set provides redundancy for your virtual machines.
+	Availability set spreads your virtual machines across multiple fault domains and update domains.
+If you want to leverage Microsoft’s 99.95% SLA from Microsoft you must place your VMs inside availability set except your VMs are having premium storage.
+Following are the 3 main scenarios which can cause your vms in Azure to be impacted or make them in a faulted state.
+Unplanned Hardware Maintainance Events -  When Azure platform predicts that the hardware or any platform components associated to a physical machine is about to fail.
+An unexpected downtime -- rarely occurs
+Planned Maintenance events -- periodic updates made by Microsfot.
+After both planned and unplanned updates your virtual machines and your operating system will be rebooted.
+Each virtual machine in the Availability Set is assigned an Update domain and Fault domain by the Azure platform.
+
+Fault Domain 
+------------
+Fault domains define the group of virtual machines that share a common power source and network switch.
+Each and every fault domain contains some racks and each rack contains virtual machine.
+Each of these Fault domain shares a power supply and a network switch.
+If there is a failure in the fault domain then all the resources in the fault domain become unavailable.
+You should place your vms such a way that each fault domain get one web server, one database server and like that.
+	
+	
+Update Domains
+--------------
+Virtual machines get update domains automatically once they are put inside availability set.
+All virtual machines within that update domain will reboot together.
+Update domains are used for patching of the virtual machines.
+Only one update domain would be updated at the time 
+How many Fault Domains and How many Update Domains we can have? 
+In Azure Service Management (ASM) portal, we have two Fault domains and 5 update domains.
+In Azure Resource Manager(ARM) portal, we have three Fault domains and 5 update domains but we can upgrade our update domains from 5 to 20.
+VMs are assigned sequentially in the update domains and fault domains.
+Consider the below mentioned table to understand how virtual machines would be placed within Fault Domains and Update Domains inside an availability set. 
+Virtu
+	
+	
+################################################################################	
+	Availability Zones - when to use them
+
+https://docs.microsoft.com/en-us/azure/availability-zones/az-overview
+
+Availability Zones
+An Availability Zone is a high-availability offering that protects your applications and data from datacenter failures. Availability Zones are unique physical locations within an Azure region. Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking. To ensure resiliency, there's a minimum of three separate zones in all enabled regions. The physical separation of Availability Zones within a region protects applications and data from datacenter failures. Zone-redundant services replicate your applications and data across Availability Zones to protect from single-points-of-failure. With Availability Zones, Azure offers industry best 99.99% VM uptime SLA. The full Azure SLA explains the guaranteed availability of Azure as a whole.
+
+An Availability Zone in an Azure region is a combination of a fault domain and an update domain. For example, if you create three or more VMs across three zones in an Azure region, your VMs are effectively distributed across three fault domains and three update domains. The Azure platform recognizes this distribution across update domains to make sure that VMs in different zones are not updated at the same time.
+
+Build high-availability into your application architecture by co-locating your compute, storage, networking, and data resources within a zone and replicating in other zones. Azure services that support Availability Zones fall into two categories:
+
+Zonal services – where a resource is pinned to a specific zone (for example, virtual machines, managed disks, Standard IP addresses), or
+Zone-redundant services – when the Azure platform replicates automatically across zones (for example, zone-redundant storage, SQL Database).
+To achieve comprehensive business continuity on Azure, build your application architecture using the combination of Availability Zones with Azure region pairs. You can synchronously replicate your applications and data using Availability Zones within an Azure region for high-availability and asynchronously replicate across Azure regions for disaster recovery protection.
+
+----------------------------------------------------------------------------------------------------
+The Availability Zone identifiers (the numbers 1, 2 and 3 in the picture above) are logically mapped to the actual physical zones for each subscription independently. That means that Availability Zone 1 in a given subscription might refer to a different physical zone than Availability Zone 1 in a different subscription. As a consequence, it's recommended to not rely on Availability Zone IDs across different subscriptions for virtual machine placement.
+
+
+-----------------------------------------------------------------------------------------------------
+
+Difference between Availability Zones and Availability Sets
+
+
+	
+################################################################################	
+	Azure Batch
+################################################################################		
+	Introduction to Azure Batch
+################################################################################		
+	When and why to use them.
+################################################################################		
+	Distributing huge workload 
+################################################################################	
+	Lab: Azure Batch
+################################################################################	
+	Azure Service Fabric 
+################################################################################		
+	Introduction to Azure Service Fabric
+################################################################################		
+	When to use Azure Service Fabric
+################################################################################	
+	
+8. 	Jobs
+################################################################################		
+	Introduction to the Jobs
+################################################################################		
+	Running scripts/programs as jobs
+################################################################################		
+	Azure web jobs.
+################################################################################		
+9. 	Azure API Apps
+
+
+https://microsoft.github.io/AzureTipsAndTricks/blog/tip197.html
+
+	https://www.youtube.com/watch?v=3EcJu8Rn3Ho
+	https://www.youtube.com/watch?v=f7CJphbEmk4
+	https://www.youtube.com/watch?v=VV2q0xJWjx8
+
+https://medium.com/azure-architects/azure-api-management-and-application-gateway-integration-a31fde80f3db
+
+
+################################################################################		
+	Introduction to Azure API
+################################################################################		
+	When to use Azure API Apps
+################################################################################		
+	How to use it?
+################################################################################		
+	Convert one of our Spring API to Azure API
+################################################################################		
+	Leveraging the benefits of Azure API 
+################################################################################
+10. Service Bus
+
+ Service Bus can decouple applications and services. Service Bus offers a reliable and secure platform for asynchronous transfer of data and state.
+
+Data is transferred between different applications and services using messages. A message is in binary format and can contain JSON, XML, or just text. 
+
+https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+https://azure.microsoft.com/en-in/services/service-bus/?&ef_id=EAIaIQobChMIiqbCqcS_6QIVCKqWCh3xHgbVEAAYASAAEgJAP_D_BwE:G:s&OCID=AID2000081_SEM_EAIaIQobChMIiqbCqcS_6QIVCKqWCh3xHgbVEAAYASAAEgJAP_D_BwE:G:s&dclid=CODLp8PEv-kCFQnUcwEd6t4ArQ
+################################################################################		
+	Introduction to Azure Service Bus
+################################################################################		
+	When to use Azure Service Bus
+################################################################################		
+	Relate and Broken Messaging
+################################################################################			
+	Use case of using related and broken messaging
+################################################################################		
+	Lab: Messaging using Service Bus
+################################################################################			
+
+11. Azure Event Grid
+
+https://docs.microsoft.com/en-us/azure/event-grid/overview
+Azure Event Grid allows you to easily build applications with event-based architectures. First, select the Azure resource you would like to subscribe to, and then give the event handler or WebHook endpoint to send the event to. Event Grid has built-in support for events coming from Azure services, like storage blobs and resource groups. Event Grid also has support for your own events, using custom topics.
+
+
+Difference between Event Hub and Event Grid
+https://www.serverless360.com/blog/azure-event-grid-vs-event-hub
+
+################################################################################	
+	Introduction to Azure Event Grid
+################################################################################	
+	When to use Azure Event Grid
+################################################################################	
+	Benefits of Azure Event Grid
+################################################################################	
+	Lab: Consuming inbuilt events.
+################################################################################	
+		
+12. Azure functions
+Azure Functions are part of the Azure Web and Mobile suite of App Services and are designed to enable the creation of small pieces of meaningful, reusable methods, easily shared across services. You can build the Azure Function in various languages like Node.js, C#, F#, Python, PHP, and even Java.
+
+################################################################################	
+
+	Overview of Azure functions
+################################################################################	
+
+	why do you need Azure functions
+################################################################################	
+
+################################################################################	
+	where to use Azure functions
+################################################################################	
+
+	Lab: Azure functions
+
+
+13. Logic Apps -  
+
+Azure Logic Apps is a cloud service that helps you schedule, automate, and orchestrate tasks, business processes, and workflows when you need to integrate apps, data, systems, and services across enterprises or organizations.
+
+
+https://dzone.com/articles/when-to-use-logic-apps-and-azure-functions
+You can run a business workflow in Azure using the Logic App service. The Logic App is a logical container for one workflow you can define using triggers and actions. A trigger can instantiate a workflow, which can consist of one or many activities (actions). For instance, you can trigger a workflow by sending an HTTP request or schedule a workflow every hour to retrieve data from a public website.
+################################################################################	
+
+	Overview of Azure Login Apps
+################################################################################	
+
+################################################################################	
+	Why do you need it?
+################################################################################	
+
+################################################################################	
+	Where to use Azure Logic Apps
+################################################################################	
+
+################################################################################	
+	Understanding Connectors
+################################################################################	
+
+################################################################################	
+	Lab: Azure Logic Apps
+	
+14. What is a CDN?
+
+################################################################################	
+
+################################################################################	
+	What is Azure CDN?
+################################################################################	
+
+	Where and when to use CDN?
+################################################################################	
+
+################################################################################	
+	Hosting a static website on CDN.
+	
+15. 
+Databases
+Azure provides multiple database services to store a wide variety of data types and volumes. And with global connectivity, this data is available to users instantly.
+
+TABLE 4
+Azure Cosmos DB	
+	Globally distributed database that supports NoSQL options
+Azure SQL Database	
+	Fully managed relational database with auto-scale, integral intelligence, and robust security
+Azure Database for MySQL	
+	Fully managed and scalable MySQL relational database with high availability and security
+Azure Database for PostgreSQL	
+	Fully managed and scalable PostgreSQL relational database with high availability and security
+SQL Server on VMs	
+	Host enterprise SQL Server apps in the cloud
+Azure Synapse Analytics	
+	Fully managed data warehouse with integral security at every level of scale at no extra cost
+Azure Database Migration Service	
+	Migrates your databases to the cloud with no application code changes
+Azure Cache for Redis	
+	Caches frequently used and static data to reduce data and application latency
+Azure Database for MariaDB	
+	Fully managed and scalable MariaDB relational database with high availability and security
+
+
+
+•	MYSQL overview
+
+################################################################################	
+
+	Introduction of MySQL Database
+################################################################################	
+
+	Mysql Database on A
+	
+	
+	
+	
+	
+################################################################################	
+
+	RDS SQL instances / CosmoDB instance
+
+################################################################################	
+	
+16. Azure Container Registry
+
+	Containers
+	
+17. Azure DevOps
+################################################################################	
+		Overview of Repos, pipeline, boards, artifacts, test plans
+
+
+
+	https://azure.microsoft.com/en-in/services/devops/
+
+https://www.edureka.co/blog/azure-devops/
+	
+	boards
+https://www.edureka.co/blog/azure-boards/	
+
+
+Components of Azure DevOps
+Following are the Azure DevOps Components:
+
+	Pipelines
+
+pick: Image form url
+Pipeline supported by Azure platform where you can build, test and deploy applications continuously.	
+	
+
+	Boards
+If you have multiple teams working on a project, those teams need to communicate better. Azure Boards ensure better work tracking. Lets you deal with backlogs and also ensure creation great custom reports.
+
+	
+	Artifacts
+Azure enables you to create, host, and also share packages among your team. Artifacts in Azure ensure your pipelines have fully integrated package management. This can achieved with a mere click. You can also create Maven, npm, and NuGet packages. Here the team size does not matter.
+	
+	Repos
+Think of it as a home or a storage for repositories. It provides you with unlimited cloud-hosted private Git repositories. You can pull, push and commit your changes to these repositories.
+
+	Test Plans
+It provides you with a complete toolkit to perform end to end, manual and exploratory testing ensuring your software functions just fine.
+	
+	
+
+
+################################################################################	
+
+		Azure Boards
+################################################################################	
+
+		Azure Pipelines
+################################################################################	
+
+		Azure Repos
+################################################################################	
+
+		Azure Test Plans
+################################################################################	
+
+		Azure Artifacts
+################################################################################	
+		
+		Implement a complete Continous deliver with Azure DevOps
+################################################################################	
+	
+18. Azure AD Services and options
+################################################################################	
+	https://docs.microsoft.com/en-us/azure/active-directory-domain-services/overview
+	https://microsoft.github.io/AzureTipsAndTricks/blog/tip184.html
+
+		Introduction to Azure AD
+################################################################################	
+
+		Identity solutions
+################################################################################	
+
+		Features and Benefits
+################################################################################	
+
+		Onpremise to cloud connetivity
+################################################################################	
+
+		Azure Active Directory options
+################################################################################	
+
+			editions—Free, 
+################################################################################	
+
+			Office 365 apps, 
+################################################################################	
+
+			Premium P1, and 
+################################################################################	
+
+			Premium P2.
+################################################################################	
+
+		Azure AD for cloud only.
+	Lab: 
+	
+################################################################################	
+
+19. Network (all concepts overview), - Networking
+################################################################################	
+https://docs.microsoft.com/en-us/azure/networking/
+https://www.infoq.com/news/2019/04/Azure-Front-Door/
+Azure Front Door takes advantage of the anycast protocol, which goes beyond providing traditional CDN capabilities by also providing advanced security capabilities, including preventing Distributed Denial of Service (DDoS) attacks.		
+
+(Better refer this for more details)
+
+https://azure.microsoft.com/en-in/services/frontdoor/
+		
+	Bastion host
+		What is a Azure Bastion host
+
+https://azure.microsoft.com/en-in/blog/announcing-the-preview-of-microsoft-azure-bastion/
+For many customers around the world, securely connecting from the outside to workloads and virtual machines on private networks can be challenging. Exposing virtual machines to the public Internet to enable connectivity through Remote Desktop Protocol (RDP) and Secure Shell (SSH), increases the perimeter, rendering your critical networks and attached virtual machines more open and harder to manage.
+
+RDP and SSH are both a fundamental approach through which customers connect to their Azure workloads. To connect to their virtual machines, most customers either expose their virtual machines to the public Internet or deploy a bastion host, such as jump-server or jump-boxes.
+
+
+
+
+
+
+
+
+	Load Balancer, 
+################################################################################	
+
+		Network LB
+################################################################################	
+
+		DNS based LB
+################################################################################	
+
+		Web application LB
+################################################################################	
+
+		Global LB
+################################################################################	
+
+	Gateway Subnet, 
+################################################################################	
+
+	Firewall, 
+################################################################################	
+
+		Network firewall
+################################################################################	
+
+		Azure firewall manager
+################################################################################	
+
+		Web application firewall (WAF)
+################################################################################	
+
+	Front door, 
+################################################################################	
+
+		WAF on Azure front door
+################################################################################	
+
+	Bastion host
+################################################################################	
+
+		What is a Azure Bastion host
+################################################################################	
+
+		
+20. Storage
+################################################################################	
+https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure/3-tour-of-azure-services
+Azure provides four main types of storage services. 
+These services are:
+
+TABLE 3
+Azure Blob storage	
+	Storage service for very large objects, such as video files or bitmaps
+Azure File storage	
+	File shares that you can access and manage like a file server
+Azure Queue storage	
+	A data store for queuing and reliably delivering messages between applications
+Azure Table storage	
+	A NoSQL store that hosts unstructured data independent of any schema
+
+
+These services all share several common characteristics:
+
+Durable and highly available with redundancy and replication.
+Secure through automatic encryption and role-based access control.
+Scalable with virtually unlimited storage.
+Managed, handling maintenance and any critical problems for you.
+Accessible from anywhere in the world over HTTP or HTTPS.
+
+
+https://www.edureka.co/blog/azure-storage-tutorial/
+
+Azure Storage is a Microsoft-managed cloud storage service, that provides highly available, durable, scalable and redundant storage, at a fraction of the cost, if you were to manage it manually
+
+Why do we need storage
+	Pick the image from the above.
+
+		Tables
+The Azure Table storage service stores large amounts of structured data. The service is a NoSQL datastore which accepts authenticated calls from inside and outside the Azure cloud. Azure tables are ideal for storing structured, non-relational data.
+
+		
+		
+		Blob Storage
+Azure Blob storage is a service that stores unstructured data in the cloud as objects/blobs. Blob storage can store any type of text or binary data, such as a document, media file, or application installer. Blob storage is also referred to as object storage.
+
+
+		File Storage
+A File Storage share is an SMB (Server Message Block) file share in Azure. All directories and files must be created in a parent share. An account can contain an unlimited number of shares, and a share can store an unlimited number of files, up to the 5 TB total capacity of the file share.
+		
+		Queues
+Azure Queue storage is a service for storing large numbers of messages that can be accessed from anywhere in the world via authenticated calls using HTTP or HTTPS. A single queue message can be up to 64 KB in size, and a queue can contain millions of messages, up to the total capacity limit of a storage account.		
+		
+		More details on all
+		https://www.edureka.co/blog/azure-storage-tutorial/
+		
+		Lab: 
+
+
+		Tables
+################################################################################	
+
+		Blob Storage
+################################################################################	
+
+		File Storage
+################################################################################	
+
+		Queue
+################################################################################	
+
+		Lab: 
+	################################################################################	
+	
