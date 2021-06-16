@@ -8,3 +8,43 @@ CREATE TABLE STUDENT
 	age INTEGER,
 	joiningdate DATETIME 
 );
+
+Data Source=tcp:vilasdatabaseserver.database.windows.net,1433;Initial Catalog=vilasazuresqldatabase;User ID=vilas;Password=Welcome123987
+
+
+
+https://docs.microsoft.com/en-us/azure/app-service/deploy-continuous-deployment#option-1-use-app-service-kudu-build-server
+
+
+
+MobileAppsManagement_EXTENSION_VERSION 
+MS_TableConnectionString	
+
+https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/app-service/app-service-web-tutorial-dotnet-sqldatabase.md
+
+In case of errors while loading.
+Do Nu Get update latest.
+
+
+N.B: All visual studio projects should be created only in the root or somewhere close on the c drive.
+	Else it may give weired errors while installing packages.
+
+
+https://www.spyglassmtg.com/blog/moving-apps-to-azure-part-1-migrating-an-asp.net-application-to-azure-paas
+
+	Open solution from 
+	D:\PraiseTheLord\HSBGInfotech\Others\AzurePaaS\MVCAzureDemo
+	
+https://www.spyglassmtg.com/blog/moving-apps-to-azure-part-2-create-azure-resources-for-your-asp.net-application
+
+https://www.spyglassmtg.com/blog/moving-apps-to-azure-part-3-deploying-an-asp.net-application-on-azure-paas
+
+
+https://www.spyglassmtg.com/blog/moving-apps-to-azure-part-4-setting-up-configuration-settings-in-azure
+
+https://www.spyglassmtg.com/blog/moving-apps-to-azure-part-5-connecting-to-the-azure-sql-database
+
+
+------------------------------------------------
+https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-connect-msi
+
