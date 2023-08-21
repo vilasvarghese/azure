@@ -1,0 +1,27 @@
+Reference: https://learn.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-secured-vm-from-template
+
+
+Install az (I already have this)
+
+Open gitbash
+az login 
+
+
+Copy paste the follwing code.
+
+----------------------------------------------------------------
+echo "Enter the name of a new Resource Group you want:" &&
+read resourceGroupName &&
+echo "Enter the location (i.e. eastus2):" &&
+read location &&
+echo "Enter the project name (new name - e.g. vilasautovm - used for generating resource names):" &&
+read projectName &&
+echo "Enter the administrator username (e.g. vilas):" &&
+read username &&
+echo "Enter the SSH public key (This should be an existing public key get it from ~/.ssh/):" &&
+read key &&
+az group create --name $resourceGroupName --location "$location" &&
+az deployment group create --resource-group $resourceGroupName --template-uri https://raw.githubusercontent.com/azure/azure-quickstart-templates/master/quickstarts/microsoft.compute/vm-sshkey/azuredeploy.json --parameters projectName=$projectName adminUsername=$username adminPublicKey="$key" &&
+az vm show --resource-group $resourceGroupName --name "$projectName-vm" --show-details --query publicIps --output tsv
+----------------------------------------------------------------
+

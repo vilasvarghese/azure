@@ -1,0 +1,50 @@
+Assigning roles to a user at the subscription level and resource group level in Microsoft Azure involves using Azure's Role-Based Access Control (RBAC) system. RBAC allows you to define fine-grained permissions for users, groups, or applications to access Azure resources. Here are the step-by-step instructions for both scenarios:
+
+1. Assigning Roles at the Subscription Level:
+
+    Sign in to Azure Portal:
+        Go to https://portal.azure.com and sign in with your Azure account.
+
+    Navigate to Subscriptions:
+        Click on "All services" on the left-hand menu.
+        In the "Search resources, services, and docs" box, type "Subscriptions" and click on it.
+
+    Select Subscription:
+        Choose the subscription for which you want to assign roles.
+
+    Access Control (IAM):
+        In the subscription's menu, click on "Access control (IAM)".
+
+    Add Role Assignment:
+        Click on "+ Add" and then select "Add role assignment".
+
+    Assign Role:
+        In the "Add role assignment" pane:
+            Select a role (e.g., Owner, Contributor, Reader).
+            Search for and select the user or group to which you want to assign the role.
+
+    Save:
+        Click on "Save" to assign the selected role to the user/group at the subscription level.
+
+2. Assigning Roles at the Resource Group Level:
+
+    Sign in to Azure Portal:
+        Go to https://portal.azure.com and sign in with your Azure account.
+
+    Navigate to Resource Group:
+        Click on "All services" on the left-hand menu.
+        In the "Search resources, services, and docs" box, type the name of the resource group and click on it.
+
+    Access Control (IAM):
+        In the resource group's menu, click on "Access control (IAM)".
+
+    Add Role Assignment:
+        Click on "+ Add" and then select "Add role assignment".
+
+    Assign Role:
+        In the "Add role assignment" pane:
+            Select a role (e.g., Owner, Contributor, Reader).
+            Search for and select the user or group to which you want to assign the role.
+
+    Save:
+        Click on "Save" to assign the selected role to the user/group at the resource group level.
