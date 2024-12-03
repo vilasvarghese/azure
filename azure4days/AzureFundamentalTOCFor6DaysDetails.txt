@@ -152,7 +152,8 @@ https://docs.microsoft.com/en-us/learn/modules/design-for-performance-and-scalab
 		When a service 	in one region has an outage, traffic can continue to run in the second region.
 	
 	Cloud Service Models
-################################################################################	Cloud Economics	- Can that be removed?
+################################################################################	
+Cloud Economics	- Can that be removed?
 ################################################################################	Cloud Deployment Models
 
 	Public Cloud

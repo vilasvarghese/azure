@@ -1,3 +1,8 @@
+Complete documentation of az commands 
+	https://learn.microsoft.com/en-us/cli/azure/
+
+
+
 General:
 
     Login to Azure: az login
