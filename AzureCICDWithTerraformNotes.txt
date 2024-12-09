@@ -1802,11 +1802,29 @@ Compute Services (VMs, App Services, Azure Functions)
 		Lab: 
 			https://learn.microsoft.com/en-us/training/modules/publish-web-app-with-maven-plugin-for-azure-app-service/3-exercise-create-java-web-app
 		
+		change index.jsp to 
+		<%
+			String hostname = request.getServerName();
+			out.println("Hostname: " + hostname);
+		%>
+		
+		https://learn.microsoft.com/en-us/azure/app-service/quickstart-java?pivots=java-javase&tabs=springboot	
+		
+		
+		another option tried: https://learn.microsoft.com/en-us/azure/app-service/quickstart-java?tabs=springboot&pivots=java-javase
+			cicd 
+			
+			
 	Azure Functions
 		Reference: 
 			https://learn.microsoft.com/en-us/azure/azure-functions/functions-reference-python?tabs=get-started%2Casgi%2Capplication-level&pivots=python-mode-decorators
 			
 			https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-python
+			https://learn.microsoft.com/en-us/azure/azure-functions/functions-reference-java?tabs=bash%2Cconsumption
+			
+			https://learn.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code?tabs=node-v4%2Cpython-v2%2Cisolated-process%2Cquick-create&pivots=programming-language-java
+			or 
+			https://learn.microsoft.com/en-us/azure/azure-functions/functions-develop-local
 			
 		az account clear
 		az config set core.enable_broker_on_windows=false
@@ -2078,7 +2096,103 @@ Here are some of the key networking services:
 										a weight assigned to each endpoint.
 							Geographic routing: 
 								Directs traffic to the endpoint closest to the client's location.
-								
+					
+
+---------------------
+Azure Traffic Manager vs. Azure Load Balancer
+---------------------------------------------
+Azure Traffic Manager and Azure Load Balancer 
+	both essential tools for 
+		optimizing application performance and 
+		availability in Azure, 
+	but 
+		serve 
+			different purposes and 
+			operate at different layers of the network stack.  
+
+Azure Traffic Manager
+
+	DNS-based Traffic Distribution: 
+		Traffic Manager 
+			works at the DNS level to 
+				distribute traffic across 
+					multiple endpoints based on 
+						various traffic routing methods, 
+		such as:  
+
+			Performance-based routing: 
+				Directs traffic to the closest endpoint.  
+			Priority-based routing: 
+				Prioritizes certain endpoints over others.  
+			Weighted routing: 
+				Distributes traffic based on defined weights.  
+			Geographic routing: 
+				Directs traffic to specific regions based on the user's geographic location.  
+			Failover routing: 
+				Directs traffic to a secondary endpoint if the primary endpoint fails.  
+			Global Load Balancing: 
+				Traffic Manager is a global load balancer, capable of distributing traffic across multiple regions.  
+
+Use Cases:
+
+	Global load balancing for web applications
+	Geo-DNS for content delivery networks (CDNs)  
+	High availability and disaster recovery
+
+
+Azure Load Balancer
+---------
+Layer 4 Load Balancing: 
+	Load Balancer 
+		operates at the transport layer (Layer 4) of the OSI model, 
+		distributing traffic across 
+			multiple virtual machines or 
+			virtual machine scale sets 
+				within a single Azure region.  
+
+Load Balancing Methods:
+
+	Round Robin: 
+		Distributes traffic 
+			evenly across all 
+				backend servers.  
+	Least Connections: 
+		Directs traffic to the server with the fewest active connections.  
+	Source IP Hash: 
+		Distributes traffic based on the source IP address.  
+Use Cases:
+
+	Load balancing for web servers, application servers, and database servers.  
+	High availability and scalability for applications.
+
+Key Differences
+---------------
+Feature		Azure Traffic Manager			Azure Load Balancer
+Layer		DNS								Layer 4 (Transport)
+Scope		Global							Regional
+Routing 	Performance, 					Round Robin, 
+Methods		priority,               		Least Connections, 
+			weighted,               		Source IP Hash
+			geographic, 		
+			failover			
+Primary 	Directs traffic to the 			Distributes traffic within a region
+Function		best endpoint	
+
+
+In Summary:
+
+Azure Traffic Manager 
+	ideal for global load balancing and geographic routing. 
+	It's best suited for applications with multiple endpoints in different regions.  
+Azure Load Balancer 
+	designed for load balancing within a single Azure region. 
+	It's best suited for applications that require high availability and scalability within a specific region.
+Often, these two services are used together to create a robust and highly available global application architecture. Traffic Manager can distribute traffic globally, while Load Balancer can distribute traffic within each region to multiple instances of your application.  
+
+
+Sources and related content
+
+					
 --------------------------------------------------------------------------
 o	overview of  Storage Services (Azure Blob, Azure Files, Managed Disks)
 --------------------------------------------------------------------------
@@ -2168,6 +2282,28 @@ o	overview of  Storage Services (Azure Blob, Azure Files, Managed Disks)
 						Azure, and 
 						Dynamics 365.
 	By leveraging Azure AD/Entra ID, organizations can strengthen their security posture, improve user productivity, and simplify identity and access management.
+	
+	
+lab: 
+
+	Identity 
+		identify 
+		user
+		group 
+		credit card number etc 
+	authentication 
+	authorization 
+	https://entra.microsoft.com/#home
+		Identity 
+		Protection 
+		Permission 
+		Identity Governance 
+			etc
+			
+			Give "Global Admin" 
+			
+			
+	
 	
 --------------------------------------------------------------------------
 o	overview of  Identity Services (Azure AD/Entra ID)
@@ -2913,9 +3049,40 @@ By understanding the different VM types and their characteristics, you can choos
 
 
 
+az vmss create \
+    --name myScaleSet \
+    --resource-group myResourceGroup \
+    --image UbuntuLTS \
+    --instance-count 2 \
+    --vm-size Standard_D2as_v4 \
+    --location eastus \
+    --public-ip-per-vm
+
+- Create a resource group with name ss1
 
 
+az configure --defaults location=eastasia	
+az vmss create --name MyVmss --resource-group ss1 --public-ip-address-dns-name my-globally-dns-name --load-balancer MyLoadBalancer --vnet-name MyVnet --subnet MySubnet --image Ubuntu2204 --generate-ssh-keys
 
+
+az vmss create --name MyVmss --resource-group ss2 --public-ip-address-dns-name my-globally-dns-name --load-balancer MyLoadBalancer --vnet-name MyVnet --subnet MySubnet --image Ubuntu2204  --admin-username azureuser --admin-password Azure123456!
+
+az vmss create \
+  --name myvmss \
+  --resource-group myResourceGroupAG \
+  --image Ubuntu2204 \
+  --admin-username azureuser \
+  --admin-password Azure123456! \
+  --instance-count 2 \
+  --vnet-name myVNet \
+  --subnet myBackendSubnet \
+  --vm-sku Standard_DS2 \
+  --upgrade-policy-mode Automatic \
+  --app-gateway myAppGateway \
+  --backend-pool-name appGatewayBackendPool
+
+
+https://github.com/vilasvarghese/azure-cli-samples
 --------------------------------------------------------------------------
 •	Very detailed Overview of  Pricing and Sizing of VMs
 --------------------------------------------------------------------------
@@ -3373,7 +3540,7 @@ Scalability: Design your application to scale horizontally or vertically as need
 By following these best practices, you can effectively deploy and manage your Java applications on Azure VMs.
 
 --------------------------------------------------------------------------
-•	Very detailed Overview of  Integrating VMs with Azure DevOps or GitHub Actions for CI/CD
+•	Integrating VMs with Azure DevOps or GitHub Actions for CI/CD
 
 --------------------------------------------------------------------------
 
@@ -3429,9 +3596,14 @@ By effectively integrating Azure VMs with Azure DevOps or GitHub Actions, you ca
 
 
 
+lab: 
+		selfhostedlinux
+			https://www.youtube.com/watch?v=Hy6fne9oQJM&t=1055s
+			https://www.coachdevops.com/2023/01/how-to-setup-self-hosted-linux-agent-in.html
+			https://www.coachdevops.com/2023/01/azure-build-pipeline-for-building-java.html
 
-
-
+		deploy to web app 
+			https://learn.microsoft.com/en-us/azure/devops/pipelines/ecosystems/java-webapp?view=azure-devops&tabs=java-tomcat
 
 
 
@@ -3752,40 +3924,40 @@ Azure Integration Services provide a suite of tools to connect applications, dat
 Key Integration Services
 1. Azure Logic Apps
 
-Low-code/no-code development: Create and manage cloud-based workflows without writing extensive code.
-Connectors: Connect to various services and APIs, including SaaS, on-premises, and custom systems.
-Triggers: Trigger workflows based on events, schedules, or data changes.
-Actions: Perform actions like sending emails, making API calls, or updating databases.
+	Low-code/no-code development: Create and manage cloud-based workflows without writing extensive code.
+	Connectors: Connect to various services and APIs, including SaaS, on-premises, and custom systems.
+	Triggers: Trigger workflows based on events, schedules, or data changes.
+	Actions: Perform actions like sending emails, making API calls, or updating databases.
 2. Azure Service Bus
 
-Reliable Messaging: Ensure message delivery, even in the event of failures or network disruptions.
-Message Queues: Store and process messages in a first-in, first-out order.
-Topic Subscriptions: Broadcast messages to multiple subscribers.
-Message Sessions: Enable reliable, ordered, and transactional messaging.
+	Reliable Messaging: Ensure message delivery, even in the event of failures or network disruptions.
+	Message Queues: Store and process messages in a first-in, first-out order.
+	Topic Subscriptions: Broadcast messages to multiple subscribers.
+	Message Sessions: Enable reliable, ordered, and transactional messaging.
 3. Azure Event Grid
 
-Event-Driven Architecture: Build event-driven applications that respond to events in real-time.
-Event Sources: Connect to various event sources, including Azure resources, IoT devices, and custom applications.
-Event Handlers: Trigger actions based on events, such as sending notifications, invoking functions, or updating databases.
+	Event-Driven Architecture: Build event-driven applications that respond to events in real-time.
+	Event Sources: Connect to various event sources, including Azure resources, IoT devices, and custom applications.
+	Event Handlers: Trigger actions based on events, such as sending notifications, invoking functions, or updating databases.
 4. Azure API Management
 
-API Gateway: Expose APIs to both internal and external clients.
-API Gateway Features:
-API creation, publishing, and versioning
-Security (OAuth, OpenID Connect, API keys)
-Rate limiting and throttling
-Analytics and monitoring
+	API Gateway: Expose APIs to both internal and external clients.
+	API Gateway Features:
+	API creation, publishing, and versioning
+	Security (OAuth, OpenID Connect, API keys)
+	Rate limiting and throttling
+	Analytics and monitoring
 5. Azure Integration Services Extension for Visual Studio Code
 
-Simplified Development: Develop and debug integration flows directly in Visual Studio Code.
-Drag-and-Drop Design: Visually design integration flows.
-Code Generation: Automatically generate code for complex integration scenarios.
-Use Cases for Azure Integration Services
-Data Integration: Integrate data from various sources, such as databases, files, and APIs.
-Process Automation: Automate business processes, such as order processing, invoice generation, and employee onboarding.
-Real-time Event Processing: Respond to real-time events, such as IoT device data or application logs.
-API Management: Expose APIs to external developers and control access.
-Hybrid Integration: Connect on-premises systems with cloud-based applications.
+	Simplified Development: Develop and debug integration flows directly in Visual Studio Code.
+	Drag-and-Drop Design: Visually design integration flows.
+	Code Generation: Automatically generate code for complex integration scenarios.
+	Use Cases for Azure Integration Services
+	Data Integration: Integrate data from various sources, such as databases, files, and APIs.
+	Process Automation: Automate business processes, such as order processing, invoice generation, and employee onboarding.
+	Real-time Event Processing: Respond to real-time events, such as IoT device data or application logs.
+	API Management: Expose APIs to external developers and control access.
+	Hybrid Integration: Connect on-premises systems with cloud-based applications.
 By leveraging these powerful integration services, you can build robust, scalable, and efficient integration solutions to meet your business needs.
 
 --------------------------------------------------------------------------
@@ -3793,46 +3965,57 @@ By leveraging these powerful integration services, you can build robust, scalabl
 --------------------------------------------------------------------------
 
 Azure Logic Apps for System Integration
-Azure Logic Apps is a cloud-based integration platform that allows you to create and run cloud-based workflows without writing code. It provides a visual designer to create and manage integration flows, making it easy to connect various applications, services, and data sources.
+	Azure Logic Apps 
+		cloud-based integration platform 
+		create and run cloud-based workflows without writing code. 
+		has visual designer to 
+			create and 
+			manage 
+				integration flows, 
+			making it easy to 
+				connect various 
+					applications, 
+					services, and 
+					data sources.
 
 Key Features of Azure Logic Apps:
 
-Pre-built Connectors: A wide range of connectors to popular services like Salesforce, Microsoft 365, SAP, and many more.
-Custom Connectors: Create custom connectors to integrate with any API or system.
-Workflow Orchestration: Define complex workflows with branching, loops, and error handling.
-Scheduling and Triggering: Schedule workflows to run at specific times or trigger them based on events.
-Monitoring and Logging: Track the execution of your workflows and troubleshoot issues.
+	Pre-built Connectors: A wide range of connectors to popular services like Salesforce, Microsoft 365, SAP, and many more.
+	Custom Connectors: Create custom connectors to integrate with any API or system.
+	Workflow Orchestration: Define complex workflows with branching, loops, and error handling.
+	Scheduling and Triggering: Schedule workflows to run at specific times or trigger them based on events.
+	Monitoring and Logging: Track the execution of your workflows and troubleshoot issues.
 Use Cases for Azure Logic Apps:
 
-Data Integration:
-Extract, transform, and load (ETL) data between different systems.
-Synchronize data between databases.
-Import/export data from cloud storage.
+	Data Integration:
+		Extract, transform, and load (ETL) data between different systems.
+		Synchronize data between databases.
+		Import/export data from cloud storage.
 Process Automation:
-Automate business processes like order processing, invoice generation, and employee onboarding.
-Trigger workflows based on events like email arrival, file creation, or database changes.
+	Automate business processes like order processing, invoice generation, and employee onboarding.
+	Trigger workflows based on events like email arrival, file creation, or database changes.
 API Integration:
-Consume and expose APIs to integrate with external systems.
-Create REST API proxies to simplify API consumption.
+	Consume and expose APIs to integrate with external systems.
+	Create REST API proxies to simplify API consumption.
 B2B Integration:
-Integrate with partners and suppliers using EDI, FTP, or other protocols.
+	Integrate with partners and suppliers using EDI, FTP, or other protocols.
 IoT Integration:
-Process and analyze data from IoT devices.
-Trigger actions based on IoT device events.
+	Process and analyze data from IoT devices.
+	Trigger actions based on IoT device events.
 How to Use Azure Logic Apps:
 
-Create a Logic App: Log in to the Azure portal and create a new Logic App.
-Design the Workflow: Use the visual designer to add triggers, actions, and conditions to your workflow.
-Connect to Data Sources: Use pre-built connectors or create custom connectors to connect to your data sources.
-Configure Settings: Set up authentication, authorization, and other settings for your connectors.
-Test and Deploy: Test your workflow and deploy it to production.
+	Create a Logic App: Log in to the Azure portal and create a new Logic App.
+	Design the Workflow: Use the visual designer to add triggers, actions, and conditions to your workflow.
+	Connect to Data Sources: Use pre-built connectors or create custom connectors to connect to your data sources.
+	Configure Settings: Set up authentication, authorization, and other settings for your connectors.
+	Test and Deploy: Test your workflow and deploy it to production.
 Benefits of Using Azure Logic Apps:
 
-Low-code/no-code development: Easy to use and learn.
-Scalability: Easily scale your workflows to handle increased load.
-Reliability: Ensure reliable message delivery and error handling.
-Security: Benefit from Azure's robust security features.
-Cost-Effective: Pay-as-you-go pricing model.
+	Low-code/no-code development: Easy to use and learn.
+	Scalability: Easily scale your workflows to handle increased load.
+	Reliability: Ensure reliable message delivery and error handling.
+	Security: Benefit from Azure's robust security features.
+	Cost-Effective: Pay-as-you-go pricing model.
 By leveraging Azure Logic Apps, you can streamline your integration processes, reduce development time, and improve overall efficiency.
 
 
@@ -3847,38 +4030,80 @@ Day 4
 Azure Storage Accounts: A Comprehensive Overview
 What is an Azure Storage Account?
 
-An Azure Storage account is a cloud-based storage service that provides scalable and durable storage for a variety of data, including text, images, videos, and application data. It offers a cost-effective and reliable way to store and retrieve data in the cloud.
+	An Azure Storage account 
+		cloud-based storage service that 
+			provides 
+				scalable and 
+				durable 
+					storage 
+						for a variety of data, including 
+							text, 
+							images, 
+							videos, and 
+							application data. 
+	It offers a 
+		cost-effective and 
+		reliable way to 
+			store and 
+			retrieve 
+				data in the cloud.
 
 Types of Azure Storage Accounts
 
 Azure offers four primary types of storage accounts:
 
-General-purpose v2: Most versatile, supporting block blobs, page blobs, append blobs, and files.
-Blob Storage: Optimized for storing large amounts of unstructured data, such as images, videos, and documents.
-File Storage: Provides file shares accessible via SMB protocol, similar to traditional file servers.
-Blob Storage (H Series): High-performance storage for big data analytics workloads.
+	General-purpose v2: 
+		Most versatile, 
+			supporting block blobs, 
+			page blobs, 
+			append blobs, and 
+			files.
+	Blob Storage: 
+		Optimized for 
+			storing large amounts of 
+				unstructured data, 
+				such as 
+					images, 
+					videos, and 
+					documents.
+	File Storage: 
+		Provides file shares accessible via SMB protocol, 
+			similar to traditional file servers.
+	Blob Storage (H Series): 
+		High-performance storage for big data analytics workloads.
 Key Features of Azure Storage
 
-Durability: Ensures data durability with multiple replicas.
-Scalability: Easily scale storage capacity to meet growing demands.
-Performance: Offers high-performance read and write operations.
-Security: Provides robust security features, including encryption, access control, and threat protection.
-Cost-Effective: Pay-as-you-go pricing model.
+	Durability: 
+		Ensures data durability with multiple replicas.
+	Scalability: 
+		Easily scale storage capacity to meet growing demands.
+	Performance: 
+		Offers high-performance read and write operations.
+	Security: 
+		Provides robust security features, including encryption, access control, and threat protection.
+	Cost-Effective: 
+		Pay-as-you-go pricing model.
 Common Use Cases
 
-Storing application data: Backups, logs, and other application data.
-Hosting websites and web applications: Serve static content and web applications.
-Big data analytics: Store and process large datasets.
-Image and video storage: Store and retrieve images, videos, and other media files.
-Archiving data: Store historical data for long-term retention.
+	Storing application data: Backups, logs, and other application data.
+	Hosting websites and web applications: Serve static content and web applications.
+	Big data analytics: Store and process large datasets.
+	Image and video storage: Store and retrieve images, videos, and other media files.
+	Archiving data: Store historical data for long-term retention.
 Best Practices for Using Azure Storage
 
-Choose the Right Storage Account Type: Select the appropriate type based on your workload requirements.
-Optimize Storage Performance: Use appropriate storage tiers and configurations.
-Implement Strong Security: Use Azure Storage security features, such as encryption and access control.
-Monitor Storage Usage: Monitor storage usage and costs to optimize resource allocation.
-Consider Data Lifecycle Management: Implement policies for data retention, archiving, and deletion.
-Leverage Azure Storage Features: Utilize features like blob indexing, static website hosting, and Azure CDN to enhance performance and functionality.
+	Choose the Right Storage Account Type: Select the appropriate type based on your workload requirements.
+		Optimize Storage Performance: 
+			Use appropriate storage tiers and configurations.
+		Implement Strong Security: 
+			Use Azure Storage security features, such as encryption and access control.
+		Monitor Storage Usage: 
+			Monitor storage usage and costs to optimize resource allocation.
+		Consider Data Lifecycle Management: 
+			Implement policies for data retention, archiving, and deletion.
+		Leverage Azure Storage Features: 
+			Utilize features like blob indexing, static website hosting, and Azure CDN to enhance performance and functionality.
+
 By effectively leveraging Azure Storage, you can securely store and manage your data in the cloud, enabling you to build scalable and reliable applications.
 
 
@@ -3900,13 +4125,26 @@ Types of Azure Storage
 
 1. Blob Storage
 	What is it?
-	Blob storage is designed to store large amounts of unstructured data, such as images, videos, documents, and backups.
+	Blob storage is designed to store large amounts of 
+		unstructured data, such as 
+			images, 
+			videos, 
+			documents, and 
+			backups.
 
 	Types of Blobs:
 
-		Block Blob: Optimized for storing large blocks of data, like large images or backups.
-		Page Blob: Optimized for random read/write access, often used for VHD files.
-		Append Blob: Optimized for append operations, useful for logs and backups.
+		Block Blob: 
+			Optimized for storing large blocks of data, like 
+				large images or 
+				backups.
+		Page Blob: 
+			Optimized for random read/write access, often used for 
+				VHD files.
+		Append Blob: 
+			Optimized for append operations, useful for 
+				logs and 
+				backups.
 	Use Cases:
 
 		Storing website content
@@ -3915,13 +4153,18 @@ Types of Azure Storage
 		Archiving data
 2. Queue Storage
 	What is it?
-	Queue storage is a service for storing large numbers of messages. It's often used to implement reliable message queues.
+	Queue storage 
+		service for storing large numbers of messages. 
+	It's often used to implement reliable message queues.
 
 	Key Features:
 
-	Message Storage: Stores messages in a queue.
-	Message Retrieval: Messages are retrieved from the queue in a first-in, first-out (FIFO) order.
-	Message Visibility Timeout: Controls how long a message is visible to other clients.
+	Message Storage: 
+		Stores messages in a queue.
+	Message Retrieval: 
+		Messages are retrieved from the queue in a first-in, first-out (FIFO) order.
+	Message Visibility Timeout: 
+		Controls how long a message is visible to other clients.
 	Use Cases:
 
 	Asynchronous task processing
@@ -3929,14 +4172,23 @@ Types of Azure Storage
 	Message queuing
 3. Table Storage
 	What is it?
-	Table storage is a NoSQL database service that stores structured data in a flexible schema. It's ideal for storing large volumes of structured data that can be easily queried.
+	Table storage is a NoSQL database service 
+	stores structured data in a flexible schema. 
+	It's ideal for storing 
+		large volumes of 
+			structured data that can 
+				be easily queried.
 
 	Key Features:
 
-		Schema-less: You can add, modify, or delete properties for entities without affecting existing data.
-		Scalability: Easily scale to handle large amounts of data.
-		High Performance: Low-latency access to data.
-		Strong Consistency: Ensures data consistency across multiple requests.
+		Schema-less: 
+			You can add, modify, or delete properties for entities without affecting existing data.
+		Scalability: 
+			Easily scale to handle large amounts of data.
+		High Performance: 
+			Low-latency access to data.
+		Strong Consistency: 
+			Ensures data consistency across multiple requests.
 	Use Cases:
 
 		Storing user profiles and settings
@@ -3948,10 +4200,14 @@ Types of Azure Storage
 
 	Key Features:
 
-		File Shares: Create and manage file shares.
-		SMB Protocol: Access files using the SMB protocol.
-		Scalability: Scale file shares to accommodate large workloads.
-		Durability: Ensure data durability with automatic backups.
+		File Shares: 
+			Create and manage file shares.
+		SMB Protocol: 
+			Access files using the SMB protocol.
+		Scalability: 
+			Scale file shares to accommodate large workloads.
+		Durability: 
+			Ensure data durability with automatic backups.
 	Use Cases:
 
 		Storing application settings and configuration files.
@@ -3983,19 +4239,29 @@ Premium 				Page Blob 				Frequent random reads/writes
 
 Storage Redundancy 
 ------------------
-Account Type 					Redundancy option 
-Standard general purpose v2		?
-Premium Block Blob 				?
-Premium Page Blob 				?
-
+Account Type		Redundancy Option				Description
+Standard general 
+	purpose v2		Locally Redundant Storage (LRS)	Replicates data within a single storage facility.
+Premium Block Blob	Zone-Redundant Storage (ZRS)	Replicates data across multiple facilities within a region.
+Premium Page Blob	Zone-Redundant Storage (ZRS)	Replicates data across multi
 
 
 Blob Storage Tiers 
 -------------------
-Hot 
-cool 
-Cold 
-Archive 
+Azure Blob Storage offers various tiers to optimize cost and performance based on your data access patterns. Here's a brief overview:
+
+--------------------------------------------------------------------------------------------------------------
+Tier	Description
+--------------------------------------------------------------------------------------------------------------
+Hot		For frequently accessed data. 
+		Optimized for performance.
+Cool	For infrequently accessed data that you may need to access in the future. 
+		Lower cost than Hot.
+Cold	For data that is rarely accessed but needs to be retained for compliance or other reasons. 
+		Lowest cost tier.
+--------------------------------------------------------------------------------------------------------------
+
+Archive	For data that is archived and rarely accessed. Very low cost, but retrieval can take several hours.
 
 
 Data Protection 
@@ -4011,18 +4277,19 @@ Versioning Vs Snapshots
 Configuring and Accessing Azure Storage
 Creating a Storage Account
 Log in to the Azure portal.
-Create a Resource Group: A resource group is a container for your Azure resources.
+	Create a Resource Group: A resource group is a container for your Azure resources.
 Create a Storage Account:
-Select a name: Choose a unique name for your storage account.
-Select a performance tier: Choose a tier based on your performance and cost requirements (e.g., Standard, Premium, Hot, Cool, Archive).
-Select a replication type: Choose a replication type to ensure data durability and availability (e.g., LRS, GRS, ZRS, RA-GRS).
-Configure network access: Decide whether to allow access from all networks or restrict access to specific IP addresses or virtual networks.
+	Select a name: Choose a unique name for your storage account.
+	Select a performance tier: Choose a tier based on your performance and cost requirements (e.g., Standard, Premium, Hot, Cool, Archive).
+	Select a replication type: Choose a replication type to ensure data durability and availability (e.g., LRS, GRS, ZRS, RA-GRS).
+	Configure network access: Decide whether to allow access from all networks or restrict access to specific IP addresses or virtual networks.
+
 Accessing Blob Storage
 Using the Azure Portal:
 
-Navigate to your storage account in the Azure portal.
-Select the "Blobs" service.
-Upload or download blobs using the intuitive interface.
+	Navigate to your storage account in the Azure portal.
+	Select the "Blobs" service.
+	Upload or download blobs using the intuitive interface.
 Using Azure CLI:
 
 Bash
@@ -4118,19 +4385,346 @@ Implement Data Lifecycle Management: Regularly review and delete unnecessary dat
 By following these best practices and leveraging Azure's robust security features, you can ensure the confidentiality, integrity, and availability of your data stored in Azure Storage.
 
 --------------------------------------------------------------------------
+
 ________________________________________
 9. Bicep
-•	Very detailed Overview of  What is Bicep in Azure?
---------------------------------------------------------------------------
 --------------------------------------------------------------------------
 •	Very detailed Overview of  Introduction to Infrastructure as Code (IaC)
 --------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------
+
+•	Very detailed Overview of  What is Bicep in Azure?
+--------------------------------------------------------------------------
+lab: 
+az group create \
+  --name storage-resource-group \
+  --location eastasia
+
+
+
+
+
+Azure Bicep
+
+What is Bicep?
+	declarative language 
+	designed to simplify the 
+		creation and 
+		management 
+			of Azure resources. 
+	can define 
+		infrastructure in 
+			a concise and 
+			readable manner, 
+			using a syntax similar to JSON. 
+	By using Bicep, 
+		you can automate the 
+			deployment and 
+			configuration 
+				of your Azure resources, 
+				ensuring consistency and 
+				reducing the risk of human error.
+
+	Domain Specific Language (DSL) for 
+		deploying 
+			Azure resources declaratively. 
+	Simplify the authoring experience with 
+		cleaner syntax, 
+		improved type safety, and 
+		better support for 
+			modularity and 
+			code re-use. 
+	Transparent abstraction over 
+		ARM and ARM templates, 
+		anything that can be done in an ARM Template 
+			can be done in Bicep (outside of temporary known limitations). 
+	All 
+		resource types, 
+		apiVersions, and 
+		properties 
+			that are valid in an ARM template are 
+				equally valid in Bicep on day one (Note: even if Bicep warns that type information is not available for a resource, it can still be deployed).
+
+	Bicep code is transpiled to standard ARM Template JSON files, which effectively treats the ARM Template as an Intermediate Language (IL).
+
+Goals
+	Build the best possible language for 
+		describing, 
+		validating, and 
+		deploying infrastructure to Azure.
+	The language should provide a transparent abstraction for the underlying platform. There must be no "onboarding step" to enable Bicep support for a new resource type and/or api version.
+	Code should be easy to understand at a glance and straightforward to learn, regardless of your experience with other programming languages.
+	Users should be given a lot of freedom to modularize and re-use their code. Code re-use should not require any 'copy/paste'-ing.
+	Tooling should provide a high level of resource discoverability and validation, and should be developed alongside the compiler rather than added at the end.
+	Users should have a high level of confidence that their code is 'syntactically valid' before deploying.
+Non-goals
+	Build a general purpose language to meet any need. This will not replace general purpose languages and you may still need to do pre or post-Bicep execution tasks in a script or high-level programming language.
+	Provide a first-class provider model for non-Azure related tasks. While we will likely introduce an extensibility model at some point, any extension points are intended to be focused on Azure infra or application deployment related tasks.
+Get started with Bicep
+
+Installation 
+	https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install
+
+
+
+How does Bicep work?
+	Author your Bicep code using 
+		the Bicep language service as 
+		part of the Bicep VS Code extension
+
+	Both 
+		Az CLI (2.20.0+) and 
+		PowerShell Az module (v5.6.0+) 
+			have Bicep support built-in. 
+	Use the standard deployment commands with your *.bicep files 
+	
+	tooling will transpile the code and 
+		send it to ARM on your behalf. 
+	For example, to deploy 
+		main.bicep to a resource group my-rg, 
+		we can use the CLI command we are already used to:
+		
+		az deployment group create -f ./main.bicep -g my-rg
+	
+	
+Known limitations
+	Bicep is newline sensitive. 
+	We are exploring ways we can remove/relax this restriction (#146)
+	No support for the concept of apiProfile which is used to map a single apiProfile to a set apiVersion for each resource type. We are looking to bring support for this type of capability, but suspect it will work slightly differently. Discussion is in #622
+
+FAQ
+What unique benefits do you get with Bicep?
+
+	Day 0 resource provider support. 
+	Any Azure resource — 
+		whether in private or public preview or GA — 
+			can be provisioned using Bicep.
+	Much simpler syntax 
+		compared to equivalent ARM Template JSON
+	No state or state files to manage. 
+		All state is stored in Azure, 
+			so makes it easy to collaborate and 
+			make changes to resources confidently.
+	Tooling is the cornerstone to any great experience with a programming language. 
+	Our VS Code extension for Bicep 
+		makes it extremely easy to 
+			author and 
+			get started with 
+				advanced type validation based on all Azure resource type API definitions.
+	Easily break apart your code with native modules
+	Supported by Microsoft support and 100% free to use.
+Why create a new language instead of using an existing one?
+
+	Bicep is more of a revision to the existing ARM template language rather than an entirely new language. While most of the syntax has been changed, the core functionality of ARM templates and the runtime remains the same. You have the same template functions, same resource declarations, etc. Part of the complexity with ARM Templates is due to the "DSL" being embedded inside of JSON. With Bicep, we are revising the syntax of this DSL and moving it into its own .bicep file format. Before going down this path, we closely evaluated using an existing high-level programming language, but ultimately determined that Bicep would be easier to learn for our target audience. We are open to other implementations of Bicep in other languages.
+
+	We spent a lot of time researching various different options and even prototyped a TypeScript based approach. We did over 120 customer calls, Microsoft Most Valuable Professional (MVP) conversations and collected quantitative data. We learned that in majority of organizations, it was the cloud enablement teams that were responsible for provisioning the Azure infra. These folks were not familiar with programming languages and did not like that approach as it had a steep learning curve. These users were our target users. In addition, authoring ARM template code in a higher level programming language would require you to reconcile two uneven runtimes, which ends up being confusing to manage. At the end of the day, we simply want customers to be successful on Azure. In the future if we hear more feedback asking us to support a programming language approach, we are open to that as well. If you'd like to use a high-level programming language to deploy Azure Infra we recommend Farmer, the Terraform CDK or Pulumi.
+
+Why not focus your energy on Terraform or other third-party IaC offerings?
+
+	Using Terraform can be a great choice depending on the requirements of the organization, and if you are happy using Terraform there is no reason to switch. 
+	At Microsoft, we have teams actively investing to make sure the Terraform on Azure experience is the best it can be.
+
+	That being said, there is a huge customer base using ARM templates today because it provides a unique set of capabilities and benefits. We wanted to make the experience for those customers first-class as well, in addition to making it easier to start for Azure focused customers who have not yet transitioned to infra-as-code.
+
+	Fundamentally, we believe that configuration languages and tools are always going to be polyglot and different users will prefer different tools for different situations. We want to make sure all of these tools are great on Azure, Bicep is only a part of that effort.
+
+Is this ready for production use?
+
+	Yes. As of v0.3, Bicep is now supported by Microsoft Support Plans and Bicep has 100% parity with what can be accomplished with ARM Templates. As of this writing, there are no breaking changes currently planned, but it is still possible they will need to be made in the future.
+
+Is this only for Azure?
+
+	Bicep is a DSL focused on deploying end-to-end solutions in Azure. 
+	In practice, that usually means working with some non-Azure APIs (i.e. creating Kubernetes deployments or users in a database), so we expect to provide some extensibility points. That being said, currently only Azure resources exposed through the ARM API can be created with Bicep.
+
+What happens to my existing ARM Template investments?
+
+	One of our goals is to make the transition from ARM Templates to Bicep as easy as possible. The Bicep CLI supports a decompile command to generate Bicep code from an ARM template. Please see Decompiling an ARM Template for usage information.
+
+Note that while we want to make it easy to transition to Bicep, we will continue to support and enhance the underlying ARM Template JSON language. As mentioned in What is Bicep?, ARM Template JSON remains the wire format that will be sent to Azure to carry out a deployment.
+
+Reference: 
+	https://github.com/Azure/bicep
+	
+	
+	
+
+Key Features of Azure Bicep:
+
+	Declarative Syntax: 
+		Bicep uses a declarative syntax, 
+			focusing on 
+				what you want to deploy rather than 
+				how to deploy it
+			This makes it easier to 
+				understand, 
+				write, and 
+				maintain.
+	Strong Typing: 
+		Bicep supports strong typing
+			to catch errors early in the development process and 
+			improve code quality.
+	Modularization: 
+		You can break down complex deployments into 
+			smaller, 
+			reusable modules, 
+			promoting code reusability and 
+			maintainability.
+	Built-in Functions: 
+		Bicep provides a rich set of built-in functions for common tasks
+			e.g. 
+				manipulation, 
+				resource referencing, and 
+				conditional logic.
+	Integration with Azure CLI and PowerShell: 
+		You can use Bicep with Azure CLI and PowerShell to deploy and manage your infrastructure.
+	Integration with Azure Portal: 
+		The Azure portal provides a visual interface for creating and editing Bicep files.
+How Bicep Works:
+
+	Define Infrastructure: 
+		You write Bicep code to define the desired state of your infrastructure, including virtual machines, virtual networks, storage accounts, and other resources.
+	Deploy Infrastructure: 
+		You use the Azure CLI, PowerShell, or Azure portal to deploy your Bicep file.
+	Provisioning: 
+		Azure provisions the resources based on the definitions in your Bicep file.
+	Management: 
+		You can use Bicep to manage your infrastructure, such as updating, deleting, or modifying resources.
+Benefits of Using Bicep:
+
+	Increased Productivity: 
+		Bicep's concise syntax and powerful features accelerate infrastructure deployment.
+	Improved Consistency: 
+		By using a declarative approach, Bicep ensures consistent deployments and minimizes human error.
+	Enhanced Collaboration: 
+		Bicep's readability and modularity make it easier for teams to collaborate on infrastructure projects.
+	Faster Time to Market: 
+		Automate infrastructure provisioning to speed up deployment cycles.
+	Reduced Costs: 
+		Minimize manual errors and optimize resource utilization.
+Example of a Basic Bicep File:
+
+Code snippet
+resource resourceGroup 'Microsoft.Resources/resourceGroups@2020-10-01' = {
+  name: 'myResourceGroup'
+  location: 'East US'
+}
+
+resource virtualNetwork 'Microsoft.Network/virtualNetworks@2021-05-01' = {
+  name: 'myVirtualNetwork'
+  location: resourceGroup.location
+  addressSpace: {
+    addressPrefixes: [
+      '10.0.0.0/16'
+    ]
+  }
+}
 --------------------------------------------------------------------------
 •	Very detailed Overview of  Writing Your First Bicep Template
 --------------------------------------------------------------------------
+
+Understanding the Basics
+
+Before we dive into the code, let's understand a few key concepts:
+
+Resource: A fundamental building block in Azure. It can be a virtual machine, a storage account, a network interface, etc.
+Resource Type: Defines the type of resource, such as Microsoft.Compute/virtualMachines for virtual machines or Microsoft.Storage/storageAccounts for storage accounts.
+Resource Group: A container for Azure resources. It's a logical grouping of resources that share the same lifecycle.
+A Simple Bicep Template: Creating a Resource Group
+
+Here's a basic Bicep template to create a resource group:
+
+Code snippet
+resource resourceGroup 'Microsoft.Resources/resourceGroups@2020-10-01' = {
+  name: 'myResourceGroup'
+  location: 'East US'
+}
+Use code with caution.
+
+Breaking Down the Template:
+
+Resource Declaration:
+resource resourceGroup: Declares a resource named resourceGroup.
+'Microsoft.Resources/resourceGroups@2020-10-01': Specifies the API version of the resource type.
+name: 'myResourceGroup': Sets the name of the resource group.
+location: 'East US': Sets the location of the resource group.
+Deploying the Template:
+
+You can deploy this Bicep template using the Azure CLI, Azure PowerShell, or the Azure portal. Here's an example using the Azure CLI:
+
+Bash
+az deployment group create \
+  --resource-group myResourceGroup \
+  --template-file myTemplate.bicep
+Use code with caution.
+
+Creating a More Complex Template: Deploying a Virtual Machine
+
+Let's create a more complex template to deploy a virtual machine:
+
+Code snippet
+param vmSize string = 'Standard_DS2_v2'
+
+resource resourceGroup 'Microsoft.Resources/resourceGroups@2020-10-01' = {
+  name: 'myResourceGroup'
+  location: 'East US'
+}
+
+resource virtualNetwork 'Microsoft.Network/virtualNetworks@2021-05-01' = {
+  name: 'myVirtualNetwork'
+  location: resourceGroup.location
+  // ... other virtual network properties
+}
+
+resource publicIPAddress 'Microsoft.Network/publicIPAddresses@2020-08-01' = {
+  name: 'myPublicIP'
+  location: resourceGroup.location
+  // ... other public IP address properties
+}
+
+resource networkInterface 'Microsoft.Network/networkInterfaces@2020-11-01' = {
+  name: 'myNetworkInterface'
+  location: resourceGroup.location
+  // ... other network interface properties
+}
+
+resource virtualMachine 'Microsoft.Compute/virtualMachines@2021-07-01' = {
+  name: 'myVM'
+  location: resourceGroup.location
+  // ... other virtual machine properties, including references to the network interface and public IP
+}
+Use code with caution.
+
+Key Points to Remember:
+
+	Resource References: 
+		You can reference resources within your template using their names.
+	Parameters: 
+		Use parameters to make your templates more flexible and reusable.
+	Modules: 
+		Break down complex templates into smaller, reusable modules.
+	Best Practices: 
+		Follow best practices for writing Bicep templates, such as using clear naming conventions, organizing resources logically, and using appropriate resource types.
+	Testing and Validation: 
+		Thoroughly test your Bicep templates to ensure they work as expected. Use tools like Bicep linting and validation to identify potential issues.
+By understanding these concepts and following best practices, you can effectively use Bicep to automate your Azure infrastructure deployments and improve your overall efficiency.
+
 --------------------------------------------------------------------------
 •	Very detailed Overview of  Deploying Azure Resources Using Bicep
 --------------------------------------------------------------------------
+
+https://adamtheautomator.com/azure-bicep/
+
+az login 
+az bicep version
+	if error 
+az bicep install
+
+		az deployment group create -f ./main.bicep -g my-rg
+
 --------------------------------------------------------------------------
 •	Very detailed Overview of  Managing Infrastructure Changes with Bicep
 --------------------------------------------------------------------------
@@ -4235,9 +4829,41 @@ ________________________________________
 15. GitHub Actions
 •	Detailed Section
 --------------------------------------------------------------------------
+https://www.coachdevops.com/2024/04/github-actions-cicd-pipeline-to-deploy.html
+https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-java-to-azure-app-service
+
+create resource group 
+	name: github-rg
+
+
+az appservice plan create \
+   --resource-group github-rg \
+   --name MY_APP_SERVICE_PLAN \
+   --is-linux
+
+create a web app manually 
+	
+	
 --------------------------------------------------------------------------
-o	Very detailed Overview of   Overview of GitHub Actions
+o	Overview of GitHub Actions
 --------------------------------------------------------------------------
+lab: 
+		https://www.coachdevops.com/2024/04/github-actions-cicd-pipeline-to-deploy.html
+		https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-java-to-azure-app-service
+			https://github.com/vilasvarghese/myOct2021WeekDayRepo
+
+			
+			Changes to make
+				1. Change pom.xml location  (mvn clean install -f MyWebApp/pom.xml)
+				2. Add distribution in line 23 under java version 11 
+				3. change line 33  path: '${{ github.workspace }}/target/*.war' to           path: '${{ github.workspace }}'
+				4. line 46 and 31/32 
+					name: java-app to MyWebApp (like helloworld in my app - artifactId in pom.xml )
+	
+				5. after cicd is over give /MyWebApp in the end.
+
+
+
 --------------------------------------------------------------------------
 o	 Creating and Configuring Workflows in GitHub Actions
 --------------------------------------------------------------------------
@@ -4281,6 +4907,8 @@ ________________________________________
 16. Web Apps
 •	Very detailed Overview of  Introduction to Azure App Services
 --------------------------------------------------------------------------
+https://learn.microsoft.com/en-us/azure/app-service/quickstart-java?pivots=java-javase&tabs=springboot
+
 --------------------------------------------------------------------------
 •	Very detailed Overview of  Deploying Web Applications on Azure Web Apps
 --------------------------------------------------------------------------

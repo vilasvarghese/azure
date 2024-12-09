@@ -1,0 +1,7 @@
+Goto CloudShell
+
+	bicep --help 
+#az bicep install 
+#az bicep upgrade 
+#az bicep version 
+	
