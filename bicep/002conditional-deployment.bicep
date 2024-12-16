@@ -23,3 +23,8 @@ resource sa 'Microsoft.Storage/storageAccounts@2019-06-01' = if (newOrExisting =
     accessTier: 'Hot'
   }
 }
+
+#az group create --name $rgp --location eastasia
+#az deployment group create --resource-group $rgp --template-file ./002conditional-deployment.bicep --mode Complete 
+
+#az group delete --name $rgp  --yes	

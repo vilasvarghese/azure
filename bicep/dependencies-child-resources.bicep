@@ -1,26 +1,29 @@
-/*
-resource <parent-resource-symbolic-name> '<resource-type>@<api-version>' = {
-  <parent-resource-properties>
+param location string = 'eastus'
 
-  resource <child-resource-symbolic-name> '<child-resource-type>' = {
-    <child-resource-properties>
-  }
-}
-*/
-
-resource storage 'Microsoft.Storage/storageAccounts@2021-02-01' = {
-  name: 'examplestorage'
-  location: resourceGroup().location
-  kind: 'StorageV2'
+resource appServicePlan 'Microsoft.Web/serverFarms@2023-01-01' = {
+  name: 'myAppServicePlan'
+  location: location
+  kind: 'AppServicePlan'
   sku: {
-    name: 'Standard_LRS'
-  }
-
-  resource service 'fileServices' = {
-    name: 'default'
-
-    resource share 'shares' = {
-      name: 'exampleshare'
-    }
+    name; 'F1'
+    tier: 'Standard'
+    size: 'S1'
   }
 }
+
+resource webApp 'Microsoft.Web/sites@2023-01-01' = {
+  name: 'vilasWebApp123'	#this name should be unique
+  location: location
+  kind: 'app'
+  properties: {
+    serverFarmId: appServicePlan.id
+  }
+  dependsOn: [
+    appServicePlan
+  ]
+}
+
+#az group create --name $rgp --location eastasia
+#az deployment group create --resource-group $rgp --template-file ./dependencies-child-resources.bicep --mode Complete 
+
+#az group delete --name $rgp  --yes	

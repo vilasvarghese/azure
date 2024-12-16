@@ -1,7 +1,15 @@
 Goto CloudShell
 
+rgp=vilasrgp
+
+az group create --name $rgp --location eastasia
+
 	bicep --help 
 #az bicep install 
 #az bicep upgrade 
 #az bicep version 
-	
+
+az deployment group create --resource-group $rgp --template-file ./script.bicep --mode Complete 
+
+
+az group delete --name $rgp  --yes	

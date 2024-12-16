@@ -4,7 +4,7 @@ In this example, we loop over the storageAccounts array. For each loop iteration
 */
 
 resource storageAccountResources 'Microsoft.Storage/storageAccounts@2019-06-01' = [for i in range(0,3): {
-  name: 'storageName${i}'
+  name: 'vilasstoragename${i}'
   location: resourceGroup().location
   properties: {
     supportsHttpsTrafficOnly: true

@@ -1,5 +1,5 @@
-resource storageAccount 'Microsoft.Storage/storageAccounts@2203-05-01' = {
-  name: 'mystorageaccount'
+resource storageAccount 'Microsoft.Storage/storageAccounts@2024-01-01' = {
+  name: 'vilasstorageaccount09121'
   location: 'eastasia'
   sku: {
     name: 'Standard_LRS'

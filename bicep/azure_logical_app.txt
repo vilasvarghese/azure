@@ -1,0 +1,3 @@
+https://learn.microsoft.com/en-us/azure/logic-apps/quickstart-create-deploy-bicep?tabs=CLI
+
+az group delete --name exampleRG  --yes	
