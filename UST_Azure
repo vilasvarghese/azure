@@ -1,0 +1,3297 @@
+• AAD Features and Benefits
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Azure Active Directory (Azure AD): 
+	A Comprehensive Overview 
+Azure Active Directory (Azure AD) 
+	Microsoft's cloud-based identity and access management (IAM) service. 
+	Helps users access 
+		external resources, 
+			such as Microsoft 365
+		Azure portal
+		thousands of other SaaS applications
+		internal resources like 
+			applications on your corporate network and intranet.  
+	Azure AD is more than just a directory; 
+		comprehensive platform 
+			for managing 
+				identities and 
+				access across your entire IT landscape. 
+
+Core Functionalities:
+
+	Single Sign-On (SSO): 
+		Users can access all their applications and resources 
+			with one set of credentials. 
+		Better user experience, 
+		reduces password fatigue, and 
+		improves productivity. 
+	Multi-Factor Authentication (MFA): 
+		Adds 
+			extra layer of security 
+				by requiring users to 
+					verify their identity using multiple factors 
+					(e.g., password, code from an authenticator app, biometric verification). 
+		MFA significantly reduces the risk of unauthorized access. 
+	Conditional Access: 
+		Enables granular control 
+			over access to resources based on various conditions, 
+			such as 
+				user location, 
+				device state, 
+				application sensitivity, and 
+				risk level. 
+		This allows organizations 
+			to enforce 
+				security policies and 
+				protect sensitive data. 
+	Identity Protection: 
+		Uses machine learning 
+			to detect and 
+			respond 
+				to identity-related risks, 
+			such as 
+				suspicious sign-ins, 
+				compromised accounts, and 
+				user anomalies. 
+		This helps organizations 
+			proactively mitigate security threats. 
+	User Management: 
+		Provides tools to 
+			manage 
+				user accounts, 
+				groups, and 
+				permissions. 
+		Administrators can easily 
+			create, 
+			modify, and 
+			delete 
+				user accounts, 
+				assign roles, and 
+				manage access to resources. 
+	Group Management: 
+		Simplifies administration by 
+			manage access based on group membership. 
+			Assign permissions to 
+				groups, and 
+					users inherit those permissions 
+						by virtue of their group membership. 
+	Application Management: 
+		Connects users to their applications, 
+			both cloud-based and on-premises. 
+		Azure AD supports various 
+			authentication protocols and 
+				integrates with thousands of SaaS applications. 
+	Device Management: 
+		Allows you to register and manage devices (PCs, laptops, mobile devices) that access your corporate resources. This enables you to enforce device compliance policies and ensure that only authorized devices can access sensitive data. 
+	Self-Service: 
+		Empowers users to manage their own passwords, profile information, and group memberships, reducing the burden on IT administrators. 
+	Reporting and Monitoring: 
+		Provides insights into user activity, sign-in attempts, and security events. This helps organizations monitor their identity infrastructure and identify potential security risks. 
+Key Benefits:
+
+Enhanced Security: Azure AD's security features, such as MFA, Conditional Access, and Identity Protection, help organizations protect against unauthorized access and data breaches. 
+Improved Productivity: SSO and self-service capabilities streamline user access and reduce the time spent managing passwords and other identity-related tasks. 
+Simplified IT Management: Azure AD's centralized management tools make it easier for IT administrators to manage users, groups, applications, and devices. 
+Cost Savings: By reducing the complexity of identity management and improving efficiency, Azure AD can help organizations save money on IT administration and support costs.
+Scalability and Reliability: As a cloud-based service, Azure AD is highly scalable and reliable. It can handle the identity management needs of organizations of all sizes. 
+Integration with Other Microsoft Services: Azure AD is tightly integrated with other Microsoft services, such as Microsoft 365, Azure, and Windows Server. This provides a seamless and consistent experience for users and administrators. 
+Compliance: Azure AD helps organizations meet various compliance requirements related to data security and privacy. 
+Azure Active Directory (Azure AD): A Comprehensive Overview (Page 2 of 5)
+Azure AD Editions and Features:
+
+Azure AD is available in several editions, each offering a different set of features and capabilities.  Understanding the differences between these editions is crucial for choosing the right one for your organization. 
+
+Azure AD Free: Provides basic identity and access management capabilities, including SSO, MFA (limited), and self-service password reset. Suitable for small businesses and organizations with basic identity needs.
+Azure AD Premium P1: Adds advanced features such as Conditional Access, Identity Protection (limited), and advanced group management. Suitable for organizations that require more robust security and management capabilities. 
+Azure AD Premium P2: Includes all the features of Premium P1, plus advanced Identity Protection capabilities (e.g., risk-based Conditional Access), Privileged Identity Management (PIM), and Identity Governance. Suitable for organizations with demanding security and compliance requirements. 
+Azure AD for Office 365: Included with Office 365 subscriptions. Provides basic identity and access management capabilities for Office 365 users. 
+Feature Comparison (Simplified):
+
+Feature						Free	Premium P1	Premium P2
+Single Sign-On (SSO)		Yes		Yes			Yes
+Multi-Factor Authentication	Limited	Yes			Yes
+Conditional Access			No		Yes			Yes
+Identity Protection			Limited	Limited		Advanced
+Privileged Identity Mgmt	No		No			Yes
+Identity Governance			No		No			Yes
+Self-Service Password Reset	Yes		Yes			Yes
+Group Management			Basic	Advanced	Advanced
+
+Export to Sheets
+Choosing the Right Edition:
+
+The best Azure AD edition for your organization depends on your specific needs and requirements.  Consider the following factors:
+
+Security Requirements: If your organization requires strong security and compliance, Premium P1 or Premium P2 is recommended.
+Management Needs: If you need advanced user and group management capabilities, Premium P1 or Premium P2 is the better choice.
+Budget: Azure AD Free is the most cost-effective option, but it offers limited functionality.
+Existing Microsoft Subscriptions: If you already have Office 365, you might have access to Azure AD for Office 365, which provides basic identity and access management for Office 365 users. 
+Azure Active Directory (Azure AD): A Comprehensive Overview (Page 3 of 5)
+Integrating Azure AD with Applications:
+
+Azure AD supports integration with a wide range of applications, both cloud-based and on-premises.  This allows you to provide users with SSO access to all their applications and manage access centrally. 
+
+SaaS Applications: Azure AD has a gallery of pre-integrated SaaS applications, making it easy to connect users to popular cloud services like Salesforce, Workday, and Dropbox. You can also add custom SaaS applications. 
+On-Premises Applications: You can connect on-premises applications to Azure AD using various methods, such as Azure AD Application Proxy, Active Directory Federation Services (AD FS), and password synchronization. This allows users to access internal applications using their Azure AD credentials. 
+Custom Applications: Developers can integrate their custom applications with Azure AD using standard authentication protocols like OAuth 2.0, OpenID Connect, and SAML. This enables secure authentication and authorization for custom applications. 
+Integration Methods:
+
+SAML-based SSO: Uses the Security Assertion Markup Language (SAML) to exchange authentication information between Azure AD and the application. 
+OpenID Connect: A modern authentication protocol that builds on OAuth 2.0. Often used for mobile and web applications. 
+OAuth 2.0: A framework for authorization. Allows applications to access resources on behalf of a user without sharing their credentials. 
+Password Synchronization: Synchronizes user passwords between on-premises Active Directory and Azure AD. Allows users to use the same password for both on-premises and cloud applications. 
+Azure AD Application Proxy: Publishes on-premises web applications to Azure AD, making them accessible to users from anywhere. 
+Benefits of Application Integration:
+
+Simplified User Access: Users can access all their applications with one set of credentials. 
+Centralized Access Management: Administrators can manage access to all applications from a single console. 
+Improved Security: Azure AD's security features, such as MFA and Conditional Access, can be applied to all integrated applications. 
+Enhanced Compliance: Azure AD helps organizations meet compliance requirements related to application access and security
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• AZure AD vs ADDS, Azure Active Directory Lab Activity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Understanding the distinctions between Azure Active Directory (Azure AD) and Active Directory Domain Services (AD DS) is crucial for managing identities in hybrid cloud environments. They are not interchangeable, but rather complementary technologies that serve different purposes.
+
+Active Directory Domain Services (AD DS):
+
+AD DS is the traditional directory service that has been the cornerstone of on-premises Windows-based networks for many years. It's a hierarchical database that stores information about users, computers, groups, and other objects in a network. It provides authentication, authorization, and other directory services for resources within a domain.
+
+Key Features of AD DS:
+
+Centralized Authentication and Authorization: Manages user access to resources within the domain.
+Group Policy: Allows administrators to configure and manage user and computer settings.
+Kerberos Authentication: A strong authentication protocol used within the domain.
+LDAP (Lightweight Directory Access Protocol): A protocol used to access and modify directory information.
+Domain Join: Computers can join the domain and be managed centrally.
+Group Management: Organizes users and computers into groups for easier management.
+Limitations of AD DS:
+
+On-Premises Focus: Primarily designed for managing resources within a local network.
+Limited Cloud Integration: Requires additional configuration to integrate with cloud services.
+Maintenance Overhead: Requires significant IT effort to maintain and manage (servers, patching, backups, etc.).
+Azure Active Directory (Azure AD):
+
+Azure AD is Microsoft's cloud-based identity and access management (IAM) service. It provides similar functionalities to AD DS but is designed for the cloud era. It manages access to cloud applications, Azure resources, and even on-premises applications through various integration mechanisms.  It's the directory for Microsoft 365, Azure, and other cloud services.
+
+Key Features of Azure AD:
+
+Cloud-Based Directory: Stores user and group information in the cloud.
+Single Sign-On (SSO): Provides users with access to multiple applications with one set of credentials.
+Multi-Factor Authentication (MFA): Enhances security by requiring multiple forms of verification.
+Conditional Access: Enables granular control over access based on various conditions (location, device, etc.).
+Identity Protection: Detects and responds to identity-related risks.
+Application Management: Connects users to both cloud and on-premises applications.
+Device Management: Registers and manages devices that access corporate resources (Intune integration).
+Self-Service: Empowers users to manage their own passwords and profiles.
+Benefits of Azure AD:
+
+Cloud Scalability and Reliability: Highly scalable and resilient cloud service. Microsoft handles the infrastructure.
+Seamless Cloud Integration: Integrates easily with Azure, Microsoft 365, and other cloud applications.
+Reduced Maintenance: Microsoft manages the underlying infrastructure, reducing your administrative overhead.
+Enhanced Security: Provides advanced security features like MFA, Conditional Access, and Identity Protection.
+Azure Active Directory (Azure AD) vs. Active Directory Domain Services (AD DS): A Comprehensive Overview (Page 2 of 5)
+Key Differences Between AD DS and Azure AD:
+
+Feature	AD DS	Azure AD
+Location	On-premises	Cloud-based
+Scope	Domain	Tenant (organization) - Global
+User Management	Within the domain	Across the organization and beyond (e.g., guest access)
+Authentication	Kerberos	Various (OAuth 2.0, OpenID Connect, SAML)
+Group Policy	Yes	No (uses Intune for similar functionality)
+Device Management	Domain join	Device registration (Azure AD Join, Hybrid Azure AD Join)
+Application Access	Primarily on-premises applications	Cloud and on-premises applications
+Management Tools	ADUC, Group Policy Management	Azure portal, PowerShell, Graph API, Microsoft 365 admin center
+Infrastructure	Customer-managed servers	Microsoft-managed infrastructure
+Schema	Fixed (extensible with effort)	Flexible, extensible
+Replication	Within the domain	Global, highly available
+
+Export to Sheets
+When to Use AD DS vs. Azure AD:
+
+AD DS: Use AD DS when you need to manage resources within a traditional on-premises Windows-based network. It's ideal for organizations with a strong reliance on on-premises applications and infrastructure. It's the foundation for managing Windows servers and workstations on your network.
+Azure AD: Use Azure AD when you need to manage access to cloud applications, Azure resources, or when you have a hybrid environment with both on-premises and cloud resources. It's essential for organizations that are moving to the cloud or have a significant cloud presence. It's the directory for Microsoft 365 and Azure.
+Hybrid Identity:
+
+Many organizations have a hybrid IT environment with both on-premises and cloud resources. In these scenarios, a hybrid identity solution is required to connect AD DS and Azure AD.
+
+Azure AD Connect: A tool that synchronizes user identities between AD DS and Azure AD. This allows users to use the same credentials for both on-premises and cloud resources. It also enables features like password hash synchronization, pass-through authentication, and federation.
+Azure Active Directory (Azure AD) vs. Active Directory Domain Services (AD DS): A Comprehensive Overview (Page 3 of 5)
+Hybrid Identity Models:
+
+There are several hybrid identity models, each with its own advantages and disadvantages.  Azure AD Connect facilitates these.
+
+Password Hash Synchronization: Synchronizes password hashes from AD DS to Azure AD. Users can use the same password for both on-premises and cloud resources. Simplest to implement but has some security considerations (hash is stored in Azure AD).
+Pass-through Authentication: Authenticates users against on-premises AD DS when they try to access Azure AD resources. More secure than password hash synchronization as passwords are not stored in Azure AD, but requires a live connection to on-premises AD DS.
+Federation (AD FS): Uses Active Directory Federation Services (AD FS) (or other federation providers) to provide single sign-on to cloud applications. Most complex to implement but offers the most flexibility and control, especially for complex scenarios.
+Choosing a Hybrid Identity Model:
+
+The best hybrid identity model depends on your organization's specific needs and requirements. Consider the following factors:
+
+Security Requirements: Pass-through authentication and federation offer better security than password hash synchronization.
+Complexity: Password hash synchronization is the easiest to implement, while federation is the most complex.
+Connectivity: Pass-through authentication and federation require a live connection to on-premises AD DS.
+Scale and Performance: Consider the impact on your on-premises AD DS if using pass-through authentication or federation.
+Azure Active Directory (Azure AD) vs. Active Directory Domain Services (AD DS): A Comprehensive Overview (Page 4 of 5)
+Managing Azure AD:
+
+Azure AD can be managed through various tools and interfaces.
+
+Azure Portal: The primary web-based interface for managing Azure AD. Provides access to all Azure AD features and settings.
+PowerShell: A command-line scripting tool that can be used to automate Azure AD tasks. The Azure AD module for PowerShell is essential for scripting.
+Microsoft Graph API: A RESTful API that allows developers to programmatically access Azure AD data and functionality. This is the foundation for many integrations.
+Microsoft 365 admin center: For managing users and groups related to Microsoft 365.
+Azure AD Connect Health:
+
+Azure AD Connect Health provides monitoring and alerting capabilities for Azure AD Connect. It helps you ensure that your hybrid identity solution is working correctly and alerts you to synchronization issues or other problems.
+
+Azure AD Reporting and Monitoring:
+
+Azure AD provides various reports and logs that can be used to monitor user activity, sign-in attempts, and security events. This information can be used to identify potential security risks, troubleshoot issues, and for auditing.  Log Analytics integration is often used for more advanced analysis.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Managing Azure AD with Powershell Lab Activity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Managing Azure AD with PowerShell: A Comprehensive Overview 
+PowerShell is a powerful scripting language and command-line shell that is essential for managing Azure Active Directory (Azure AD) efficiently and at scale.  It allows administrators to automate tasks, manage users and groups, configure settings, and perform many other administrative functions. This overview will cover the basics of using PowerShell for Azure AD management, including installation, connecting to Azure AD, and common tasks.
+
+Why PowerShell for Azure AD?
+
+Automation: Automate repetitive tasks like user creation, group management, and license assignment, saving significant time and effort.
+Bulk Operations: Perform operations on multiple users or groups simultaneously, which is much faster than using the Azure portal for large-scale changes.
+Scripting and Customization: Create custom scripts to tailor Azure AD management to your specific needs and integrate with other systems.
+Consistency and Accuracy: Reduce the risk of human error by using scripts to ensure consistent and accurate execution of administrative tasks.
+Reporting and Analysis: Generate reports on user activity, group memberships, and other Azure AD data for auditing and analysis.
+Installing the Azure AD PowerShell Module:
+
+The Azure AD PowerShell module is required to manage Azure AD using PowerShell.  It's typically installed from the PowerShell Gallery.
+
+
+
+Install-Module -Name AzureAD
+If you encounter errors related to NuGet or the PowerShell Gallery, you may need to set the appropriate repository.
+For older systems, you might need to install the Microsoft Online Services Sign-In Assistant first.
+Connecting to Azure AD:
+
+Before you can manage Azure AD, you need to connect to it using the Connect-AzureAD cmdlet.
+
+
+
+
+
+Connect-AzureAD
+This cmdlet will prompt you to enter your Azure AD credentials (username and password).  It might also require multi-factor authentication if enabled for your account.
+
+Common Azure AD PowerShell Cmdlets:
+
+Here are some of the most frequently used cmdlets for managing Azure AD:
+
+Users:
+	Get-AzureADUser: Retrieves users.
+	New-AzureADUser: Creates a new user.
+	Set-AzureADUser: Modifies an existing user.
+	Remove-AzureADUser: Deletes a user.
+	Get-AzureADUserMembership: Gets the groups a user belongs to.
+Groups:
+	Get-AzureADGroup: Retrieves groups.
+	New-AzureADGroup: Creates a new group.
+	Set-AzureADGroup: Modifies an existing group.
+	Remove-AzureADGroup: Deletes a group.
+	Add-AzureADGroupMember: Adds a member to a group.
+	Remove-AzureADGroupMember: Removes a member from a group.
+Licenses:
+	Get-AzureADSubscribedSku: Retrieves available licenses.
+	Set-AzureADUserLicense: Assigns or modifies user licenses.
+Applications:
+	Get-AzureADApplication: Retrieves applications registered in Azure AD.
+Service Principals:
+	Get-AzureADServicePrincipal: Retrieves service principals.
+	Managing Azure AD with PowerShell: A Comprehensive Overview (Page 2 of 5)
+Working with Users:
+
+Creating a User:
+
+
+
+$user = New-AzureADUser -DisplayName "John Doe" -UserPrincipalName "john.doe@example.com" -Password "P@$$wOrd" -AccountEnabled $true -MailNickName "johndoe"
+Retrieving User Information:
+
+
+
+Get-AzureADUser -UserPrincipalName "john.doe@example.com" | Format-List *
+Modifying User Properties:
+
+
+Set-AzureADUser -ObjectId $user.ObjectId -DisplayName "John A. Doe"
+Deleting a User:
+PowerShell
+
+Remove-AzureADUser -ObjectId $user.ObjectId
+Working with Groups:
+
+Creating a Group:
+PowerShell
+
+$group = New-AzureADGroup -DisplayName "Marketing Team" -MailEnabled $false -SecurityEnabled $true -MailNickName "marketing"
+Adding Members to a Group:
+PowerShell
+
+Add-AzureADGroupMember -ObjectId $group.ObjectId -RefObjectId $user.ObjectId
+Retrieving Group Members:
+PowerShell
+
+Get-AzureADGroupMember -ObjectId $group.ObjectId
+Deleting a Group:
+PowerShell
+
+Remove-AzureADGroup -ObjectId $group.ObjectId
+Managing Azure AD with PowerShell: A Comprehensive Overview (Page 3 of 5)
+Managing Licenses:
+
+Viewing Available SKUs:
+PowerShell
+
+Get-AzureADSubscribedSku
+Assigning Licenses to a User:
+PowerShell
+
+$skuId = "your_sku_id"  # Replace with the actual SKU ID
+$license = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense
+$license.SkuId = $skuId
+$license.ServiceStatus = New-Object -TypeName Microsoft.Open.AzureAD.Model.ServiceStatus
+$license.ServiceStatus.ServicePlan = "your_service_plan_name" # Replace with the service plan name
+$licensesToAssign = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense[] @($license)
+
+Set-AzureADUserLicense -ObjectId $user.ObjectId -AddLicenses $licensesToAssign
+Working with Applications and Service Principals:
+
+Retrieving Applications:
+PowerShell
+
+Get-AzureADApplication
+Retrieving Service Principals:
+PowerShell
+
+Get-AzureADServicePrincipal
+Conditional Access Policies (Requires Azure AD Premium):
+
+PowerShell can also be used to manage Conditional Access policies, which are essential for enforcing security policies.  This requires the AzureAD module and often the MSAL.PS module.
+
+PowerShell
+
+# Connect to Azure AD with MSAL.PS
+Connect-Msal
+
+# Get Conditional Access Policies
+Get-AzureADMSConditionalAccessPolicy
+
+# Create a new Conditional Access Policy (complex, see documentation)
+# ...
+
+# Modify a Conditional Access Policy
+# ...
+Managing Azure AD with PowerShell: A Comprehensive Overview (Page 4 of 5)
+Reporting and Auditing:
+
+Azure AD provides audit logs that can be accessed using PowerShell.
+
+PowerShell
+
+Get-AzureADAuditDirectoryLogs
+You can filter and process these logs to generate reports on user activity, sign-in attempts, and other events.  Often, it's more efficient to export these logs to a SIEM or Log Analytics for more advanced analysis.
+
+Best Practices for Azure AD PowerShell Management:
+
+Use Modules: Always use the latest version of the Azure AD PowerShell module.
+Connect Securely: Use Connect-AzureAD with appropriate authentication methods.
+Error Handling: Implement error handling in your scripts to handle unexpected situations.
+Variables: Use variables to store values and make your scripts more readable and maintainable.
+Functions: Organize your scripts into functions to improve modularity and reusability.
+Documentation: Document your scripts clearly to explain their purpose and how they work.
+Testing: Test your scripts thoroughly before deploying them to production.
+Least Privilege: Use accounts with the least necessary privileges for the tasks being performed.
+Secure Credentials: Avoid storing credentials directly in your scripts. Use secure methods like Azure Key Vault or Managed Identities.
+Managing Azure AD with PowerShell: A Comprehensive Overview (Page 5 of 5)
+Azure AD PowerShell Lab Activity (Example - User and Group Management):
+
+This lab activity demonstrates basic Azure AD user and group management using PowerShell.
+
+Scenario: Create two users, add them to a group, and verify the membership.
+
+Steps:
+
+Connect to Azure AD: Connect-AzureAD
+Create User1:
+PowerShell
+
+$user1 = New-AzureADUser -DisplayName "Test User 1" -UserPrincipalName "testuser1@yourdomain.com" -Password "P@$$wOrd1" -AccountEnabled $true -MailNickName "testuser1"
+Create User2:
+PowerShell
+
+$user2 = New-AzureADUser -DisplayName "Test User 2" -UserPrincipalName "testuser2@yourdomain.com" -Password "P@$$wOrd2" -AccountEnabled $true -MailNickName "testuser2"
+Create Group:
+PowerShell
+
+$group = New-AzureADGroup -DisplayName "Test Group" -MailEnabled $false -SecurityEnabled $true -MailNickName "testgroup"
+Add User1 to Group:
+PowerShell
+
+Add-AzureADGroupMember -ObjectId $group.ObjectId -RefObjectId $user1.ObjectId
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• All about Azure AD Groups, Managing Azure AD Groups with Powershell Lab Activity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Azure AD groups are fundamental building blocks for managing identities and access in Azure Active Directory. They provide a way to organize users and other objects (like devices and applications) into logical units, simplifying administration and enabling efficient access control.  This overview will cover the different types of Azure AD groups, their properties, use cases, and best practices.
+
+What are Azure AD Groups?
+
+Azure AD groups are collections of user accounts, service principals, computer accounts, or other groups.  They enable you to assign permissions and access rights to a group rather than individual users, making it easier to manage access at scale.  When a user is added to a group, they automatically inherit the permissions assigned to that group.  Conversely, removing a user from a group revokes those permissions.
+
+Types of Azure AD Groups:
+
+Azure AD offers several types of groups, each designed for specific purposes:
+
+Security Groups: Used to grant access to resources, such as files, folders, applications, and SharePoint sites. They are the most common type of group and are used for role-based access control (RBAC) in Azure.
+Microsoft 365 Groups (Unified Groups): Designed for collaboration within Microsoft 365 services like SharePoint, Teams, Planner, and Outlook. They provide a shared workspace for group members, including a shared mailbox, calendar, document library, and more. They also have associated security group functionality.
+Distribution Groups: Used for sending email to a group of users. They do not grant access to resources. Primarily used for email distribution lists. Modern approaches often favor Microsoft 365 Groups even for distribution.
+Mail-Enabled Security Groups: Combine the functionality of security groups and distribution groups. They can be used to grant access to resources and send email to group members. Less common now due to the broader capabilities of Microsoft 365 Groups.
+Dynamic Groups: Membership is determined automatically based on rules that you define. For example, you can create a dynamic group that includes all users in a specific department. This automates group membership management.
+All About Azure AD Groups: A Comprehensive Overview (Page 2 of 5)
+Group Properties:
+
+Azure AD groups have several important properties:
+
+Display Name: The name of the group that is displayed to users.
+Mail Nickname: The email address alias for the group (if applicable).
+Description: A description of the group's purpose.
+Group Type: The type of group (Security, Microsoft 365, Distribution, etc.).
+Membership Type: For dynamic groups, this defines the rule for automatic membership.
+Members: The users, groups, and other objects that are members of the group.
+Owners: Users who have administrative control over the group.
+Use Cases for Azure AD Groups:
+
+Access Control: Granting access to resources based on group membership.
+Application Management: Assigning users to applications via group membership.
+License Management: Assigning licenses to users based on group membership.
+Device Management: Applying policies to devices based on group membership.
+Email Distribution: Sending email to a group of users (Distribution Groups or Microsoft 365 Groups).
+Collaboration: Providing a shared workspace for group members (Microsoft 365 Groups).
+Delegation of Administration: Assigning administrative roles to groups.
+Dynamic Groups (Deep Dive):
+
+Dynamic groups are a powerful feature that automates group membership management.  You define rules based on user properties (e.g., department, location, job title), and Azure AD automatically adds or removes users from the group based on those rules.
+
+Membership Rules: Use expressions to define the criteria for group membership. These expressions can use various operators and properties.
+Supported Properties: You can use a wide range of user properties in dynamic group rules, including standard attributes (e.g., department, job title, company) and custom attributes.
+Rule Builder (Azure portal): The Azure portal provides a rule builder to help you create dynamic group rules without having to write complex expressions manually.
+All About Azure AD Groups: A Comprehensive Overview (Page 3 of 5)
+Managing Azure AD Groups:
+
+You can manage Azure AD groups through several methods:
+
+Azure portal: The web-based interface for managing Azure AD.
+PowerShell: A powerful scripting language for automating group management tasks.
+Microsoft Graph API: A RESTful API that allows developers to programmatically access and manage Azure AD groups.
+Group Management Best Practices:
+
+Plan your group structure: Carefully plan your group structure to ensure that it aligns with your organization's needs and makes administration easier.
+Use descriptive names: Use clear and descriptive names for your groups to make it easy to understand their purpose.
+Assign owners: Assign owners to each group to ensure that it is properly managed.
+Regularly review group memberships: Regularly review group memberships to ensure that users have the appropriate access rights.
+Use dynamic groups where appropriate: Use dynamic groups to automate group membership management and reduce administrative overhead.
+Implement a group naming convention: Establish a consistent naming convention for your groups to make it easier to identify and manage them.
+Use nested groups: Use nested groups to create a hierarchical structure and simplify management.
+Document your groups: Document the purpose and membership of each group to make it easier for others to understand and manage them.
+All About Azure AD Groups: A Comprehensive Overview (Page 4 of 5)
+Microsoft 365 Groups (Unified Groups) - Deeper Dive:
+
+Microsoft 365 Groups are a core part of the Microsoft 365 ecosystem and provide a unified collaboration experience.
+
+Unified Collaboration: Provide a shared workspace for group members, including a shared mailbox, calendar, document library, and more.
+Integration with Microsoft 365 Services: Integrate seamlessly with other Microsoft 365 services like SharePoint, Teams, Planner, and Outlook.
+Self-Service Creation: Users can often create their own Microsoft 365 Groups (depending on admin settings).
+Governance: Administrators can control who can create groups and manage group settings.
+Lifecycle Management: Administrators can set policies for group lifecycle management, such as automatic deletion of inactive groups.
+Key Features of Microsoft 365 Groups:
+
+Shared Mailbox: A shared email address for group communication.
+Shared Calendar: A shared calendar for scheduling meetings and events.
+Document Library (SharePoint): A shared document library for storing and collaborating on files.
+Microsoft Teams Integration: A team for real-time communication and collaboration.
+Planner Integration: A shared planner for managing tasks and projects.
+All About Azure AD Groups: A Comprehensive Overview (Page 5 of 5)
+Managing Azure AD Groups with PowerShell Lab Activity:
+
+This lab activity demonstrates basic Azure AD group management using PowerShell.
+
+Scenario: Create a security group, add two users to it, and verify the membership.
+
+Steps:
+
+Connect to Azure AD: Connect-AzureAD
+
+Create the Security Group:
+
+PowerShell
+
+$group = New-AzureADGroup -DisplayName "Marketing Team" -MailEnabled $false -SecurityEnabled $true -MailNickName "marketing" -Description "Group for the marketing team"
+Retrieve User Objects (assuming you have the UPNs): You'll need the ObjectIds of the users you want to add. If you know their UserPrincipalNames (UPNs), you can retrieve them like this:
+PowerShell
+
+$user1 = Get-AzureADUser -UserPrincipalName "user1@yourdomain.com"
+$user2 = Get-AzureADUser -UserPrincipalName "user2@yourdomain.com"
+Add Users to the Group:
+PowerShell
+
+Add-AzureADGroupMember -ObjectId $group.ObjectId -RefObjectId $user1.ObjectId
+Add-AzureADGroupMember -ObjectId $group.ObjectId -RefObjectId $user2.ObjectId
+Verify Group Membership:
+PowerShell
+
+Get-AzureADGroupMember -ObjectId $group.ObjectId
+This will list the members of the group, confirming that the users have been added successfully.
+
+Further Lab Activities:
+
+Create a dynamic group based on user properties.
+Create a Microsoft 365 Group and explore its features.
+Manage group membership using CSV files for bulk operations.
+Explore Conditional Access policies related to groups.
+Use PowerShell to report on group memberships.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• What is MFA, Multi Factor Authentication LAB Activity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Multi-Factor Authentication (MFA) is a security enhancement that requires users to provide multiple forms of verification to access an account or resource.  It adds layers of security beyond just a username and password, significantly reducing the risk of unauthorized access even if a password is compromised.  This overview will cover the principles of MFA, its benefits, different authentication methods, and best practices.
+
+The Problem with Passwords:
+
+Traditional username/password authentication relies on a single factor: something you know.  Passwords can be easily guessed, stolen through phishing or data breaches, or simply forgotten.  This single point of failure makes accounts vulnerable to attack.
+
+The Solution: Multi-Factor Authentication (MFA):
+
+MFA addresses this vulnerability by requiring multiple factors for authentication. These factors fall into three categories:
+
+Something you know: This is your password.
+Something you have: This could be a code from an authenticator app, a security key, or a biometric scan on your phone.
+Something you are: This is a biometric verification, such as a fingerprint, facial recognition, or iris scan.
+By requiring multiple factors from different categories, MFA makes it much harder for attackers to gain access, even if they have your password.  They would also need access to your physical device or biometric information.
+
+How MFA Works:
+
+User attempts to log in: The user enters their username and password.
+First factor verified: The system verifies the password.
+Second factor prompt: The system prompts the user for a second factor of authentication.
+Second factor verified: The user provides the second factor (e.g., code from an app).
+Access granted: If the second factor is correct, the user is granted access.
+Benefits of MFA:
+
+Increased Security: MFA significantly reduces the risk of unauthorized access, even if a password is compromised.
+Protection Against Phishing: MFA makes phishing attacks less effective, as attackers cannot access the second factor even if they steal the password.
+Compliance Requirements: Many regulations and industry standards require MFA for sensitive data protection.
+Enhanced Trust: MFA demonstrates a commitment to security and builds trust with users and customers.
+What is MFA? A Comprehensive Overview (Page 2 of 5)
+Authentication Methods:
+
+There are several different methods used for MFA, each with varying levels of security and convenience:
+
+Authenticator Apps (Time-based One-Time Passwords - TOTP): These apps generate time-based codes on your smartphone or other device. Examples include Google Authenticator, Microsoft Authenticator, Authy. This is a very common and strong method.
+SMS Text Messages: A code is sent to your phone via SMS. While convenient, it's less secure than authenticator apps due to potential SIM swapping vulnerabilities.
+Email Codes: A code is sent to your email address. Similar security concerns to SMS.
+Phone Calls: An automated voice call provides you with a code.
+Hardware Tokens (Security Keys): Small physical devices that generate one-time passwords or use other methods (like FIDO2/WebAuthn) for strong authentication. These are highly secure.
+Biometrics: Fingerprint scans, facial recognition, or iris scans. Often used in combination with other factors.
+Windows Hello for Business: Integrates biometric authentication with Windows devices.
+Choosing the Right MFA Method:
+
+The best MFA method for you depends on your security needs, convenience preferences, and the resources you are protecting.
+
+Strong Security: Hardware tokens and authenticator apps offer the strongest security.
+Convenience: SMS and email codes are convenient but less secure.
+Cost: Some methods, like hardware tokens, have a cost associated with them.
+MFA Implementation:
+
+MFA can be implemented at various levels:
+
+Application Level: Some applications have built-in MFA capabilities.
+Identity Provider Level: Azure AD, for example, provides MFA for all applications connected to it.
+Operating System Level: Windows Hello for Business provides MFA at the OS level.
+What is MFA? A Comprehensive Overview (Page 3 of 5)
+Azure AD MFA:
+
+Azure AD provides robust MFA capabilities that can be enabled for all users or specific groups.
+
+Conditional Access: Allows you to require MFA based on various conditions, such as user location, device state, and application sensitivity. This enables you to implement a Zero Trust approach.
+MFA Methods: Supports a variety of MFA methods, including authenticator apps, SMS codes, phone calls, and hardware tokens.
+Self-Service Registration: Users can register for MFA themselves.
+Reporting and Monitoring: Provides reports on MFA usage and sign-in attempts.
+Conditional Access and MFA:
+
+Conditional Access policies allow you to define granular access control rules.  You can use these policies to require MFA for specific applications, users, or conditions.
+
+Example: Require MFA for all users accessing sensitive financial data.
+Example: Require MFA for users accessing applications from outside the corporate network.
+Example: Block access from non-compliant devices unless MFA is used.
+What is MFA? A Comprehensive Overview (Page 4 of 5)
+Best Practices for MFA:
+
+Enable MFA for all users: Don't just enable it for administrators. All users should be protected.
+Educate users: Train users on the importance of MFA and how to use it.
+Choose strong authentication methods: Prefer authenticator apps or hardware tokens over SMS or email codes.
+Implement Conditional Access: Use Conditional Access policies to enforce MFA based on context.
+Have a backup plan: Have a process in place for users who lose access to their second factor (e.g., lost phone).
+Regularly review MFA usage: Monitor MFA usage and look for any suspicious activity.
+Use phishing-resistant MFA where possible: Consider FIDO2-compliant security keys for the highest level of protection against phishing attacks.
+MFA and Zero Trust:
+
+MFA is a critical component of a Zero Trust security strategy.  Zero Trust assumes that no user or device is inherently trusted, and requires verification for every access request.  MFA helps to enforce this principle by requiring multiple factors for authentication, regardless of the user's location or device.
+
+What is MFA? A Comprehensive Overview (Page 5 of 5)
+Multi-Factor Authentication Lab Activity (Example - Azure AD MFA):
+
+This lab activity demonstrates enabling and using Azure AD MFA.
+
+Scenario: Enable MFA for a test user and test the login process.
+
+Steps:
+
+Create a Test User (if you don't have one): In the Azure portal, create a new test user in your Azure AD tenant.
+Enable MFA for the User:
+Navigate to Azure Active Directory -> Security -> Conditional Access.
+Create a new policy.
+Under "Users," select the test user.
+Under "Cloud apps or actions," select "All cloud apps." (For testing, you can later scope this down.)
+Under "Access controls," select "Grant access" and then "Require multi-factor authentication."
+Enable the policy.
+Test Login:
+Open a new browser window or incognito mode.
+Try to log in to a Microsoft service (e.g., portal.azure.com, outlook.com) using the test user's credentials.
+You should be prompted for a second factor of authentication (e.g., code from an authenticator app, SMS code, etc.). Azure will guide you through the setup if the user hasn't registered a method yet.
+Complete Registration (if needed): If the user hasn't set up MFA before, they'll be guided through the process of choosing an authentication method and registering their device or phone number.
+Verify Login: Enter the code or complete the biometric verification to complete the login process.
+Further Lab Activities:
+
+Explore different MFA methods available in Azure AD.
+Implement Conditional Access policies to require MFA for specific applications or conditions.
+Set up a backup authentication method for the test user.
+Explore reporting and monitoring of MFA events in Azure AD.
+Investigate phishing-resistant authentication methods (e.g., FIDO2 keys).
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Governance and Compliance , Management Groups
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Governance and compliance are critical aspects of managing any IT environment, and Azure Active Directory (Azure AD) is no exception.  Effective governance ensures that your Azure AD environment is secure, compliant with regulations, and managed efficiently.  This overview will cover the key principles of governance and compliance in Azure AD, along with the role of Management Groups.
+
+What is Governance in Azure AD?
+
+Governance in Azure AD refers to the set of policies, processes, and tools that are used to manage and control access to Azure AD resources.  It aims to ensure that:
+
+Only authorized users have access to resources: This involves implementing strong authentication and authorization mechanisms.
+Users have the appropriate level of access: This involves using role-based access control (RBAC) and other access management tools.
+Access is granted and revoked efficiently: This involves automating user provisioning and deprovisioning.
+Azure AD is compliant with relevant regulations: This involves implementing security controls and audit logging.
+Key Components of Azure AD Governance:
+
+Identity Lifecycle Management: Managing the entire lifecycle of user identities, from creation to deletion.
+Access Management: Controlling who has access to what resources.
+Privileged Access Management: Managing access to privileged accounts.
+Security Management: Protecting Azure AD from security threats.
+Compliance Management: Ensuring that Azure AD complies with relevant regulations.
+What is Compliance in Azure AD?
+
+Compliance in Azure AD refers to adhering to relevant regulations and industry standards related to data security and privacy.  This includes regulations like GDPR, HIPAA, and SOX.
+
+Key Aspects of Azure AD Compliance:
+
+Data Protection: Protecting sensitive data from unauthorized access.
+Privacy: Respecting user privacy and complying with data privacy regulations.
+Audit Logging: Maintaining audit logs of user activity and system events.
+Reporting: Generating reports to demonstrate compliance.
+Governance and Compliance in Azure AD: A Comprehensive Overview (Page 2 of 5)
+Management Groups: Organizing Your Azure Resources:
+
+Management groups provide a hierarchical structure for organizing your Azure subscriptions.  They allow you to apply policies and manage access at different levels of the hierarchy.
+
+Hierarchy: You can create a hierarchy of management groups, with a root management group at the top. Subscriptions are placed under management groups, and management groups can be nested within other management groups.
+Policy Inheritance: Policies applied at a higher level of the hierarchy are inherited by lower levels. This allows you to enforce consistent policies across your Azure environment.
+Access Control: You can assign roles and permissions at the management group level, which are then inherited by the subscriptions under that management group.
+Benefits of Management Groups:
+
+Centralized Management: Manage policies and access control for multiple subscriptions from a single location.
+Policy Consistency: Ensure that consistent policies are applied across your Azure environment.
+Role-Based Access Control: Delegate administrative responsibilities based on the organizational structure.
+Cost Management: Track costs at the management group level.
+How Management Groups Relate to Governance and Compliance:
+
+Management groups are a key enabler of governance and compliance in Azure.  They provide a framework for organizing your resources and applying policies consistently.  This helps you to:
+
+Enforce compliance requirements: Apply policies that ensure compliance with relevant regulations.
+Manage access at scale: Easily manage access control for multiple subscriptions.
+Implement a hierarchical governance model: Align your governance structure with your organizational structure.
+Governance and Compliance in Azure AD: A Comprehensive Overview (Page 3 of 5)
+Key Governance and Compliance Features in Azure AD:
+
+Conditional Access: Enables granular access control based on various conditions, such as user location, device state, and application sensitivity. This is crucial for implementing a Zero Trust approach.
+Identity Protection: Detects and responds to identity-related risks, such as suspicious sign-ins, compromised accounts, and user anomalies.
+Privileged Identity Management (PIM): Manages access to privileged accounts, ensuring that privileged access is granted only when needed and for a limited time.
+Access Reviews: Allows you to regularly review user access rights to ensure that they are still appropriate.
+Lifecycle Workflows: Automates user provisioning and deprovisioning, ensuring that access is granted and revoked efficiently.
+Azure AD Identity Governance: Provides a comprehensive set of tools for managing identity lifecycle, access reviews, and privileged access.
+Azure Policy:
+
+Azure Policy is a service that allows you to define and enforce policies across your Azure environment, including Azure AD.  You can use Azure Policy to:
+
+Enforce compliance requirements: Create policies that ensure compliance with relevant regulations.
+Control resource configuration: Define policies that specify how resources should be configured.
+Automate remediation: Automatically fix non-compliant resources.
+How Azure Policy Relates to Governance and Compliance:
+
+Azure Policy is a powerful tool for implementing governance and compliance in Azure.  It allows you to define and enforce policies that ensure your Azure environment is secure and compliant.
+
+Governance and Compliance in Azure AD: A Comprehensive Overview (Page 4 of 5)
+Best Practices for Azure AD Governance and Compliance:
+
+Develop a governance framework: Define your governance policies, processes, and responsibilities.
+Implement a strong authentication strategy: Use multi-factor authentication (MFA) for all users, especially administrators.
+Use role-based access control (RBAC): Grant users only the access rights they need.
+Regularly review user access rights: Ensure that users have the appropriate level of access.
+Monitor for security threats: Use Azure AD Identity Protection to detect and respond to security risks.
+Implement privileged access management: Control access to privileged accounts.
+Use Azure Policy to enforce compliance requirements: Define and enforce policies across your Azure environment.
+Maintain audit logs: Keep detailed logs of user activity and system events.
+Regularly audit your Azure AD environment: Ensure that your governance and compliance controls are effective.
+Stay up-to-date with compliance requirements: Keep informed about changes in regulations and industry standards.
+Tools for Azure AD Governance and Compliance:
+
+Azure portal: The web-based interface for managing Azure AD.
+PowerShell: A scripting language for automating Azure AD tasks.
+Microsoft Graph API: A RESTful API for programmatically accessing Azure AD data and functionality.
+Azure AD Identity Governance: A service for managing identity lifecycle, access reviews, and privileged access.
+Azure Policy: A service for defining and enforcing policies across your Azure environment.
+Microsoft Cloud App Security: A cloud access security broker (CASB) that helps you protect your cloud applications.
+Governance and Compliance in Azure AD: A Comprehensive Overview (Page 5 of 5)
+Azure AD Governance and Compliance Lab Activity (Example - Management Groups and Policy):
+
+This lab activity demonstrates how to use management groups and Azure Policy to enforce compliance requirements.
+
+Scenario: Create a management group hierarchy, apply a policy to restrict resource creation in a specific region, and verify the policy enforcement.
+
+Steps:
+
+Create Management Groups: In the Azure portal, navigate to Management Groups. Create a hierarchy of management groups that reflects your organizational structure.
+Create a Policy: In the Azure portal, navigate to Azure Policy. Create a new policy definition that restricts resource creation in a specific region (e.g., "West US").
+Assign the Policy: Assign the policy to a management group that contains the subscriptions where you want to enforce the restriction.
+Verify Policy Enforcement: Try to create a resource in the restricted region within one of the subscriptions under the management group. The policy should prevent you from creating the resource.
+Test Policy Inheritance: Create a new subscription under the same management group and verify that the policy is also applied to the new subscription.
+Further Lab Activities:
+
+Explore other governance and compliance features in Azure AD, such as Conditional Access, Identity Protection, and PIM.
+Create and assign different types of Azure Policies to enforce various compliance requirements.
+Use Azure AD Identity Governance to manage user lifecycle and access reviews.
+Integrate Azure AD with Microsoft Cloud App Security to enhance cloud application security.
+By following these best practices and utilizing the available tools, you can effectively govern your Azure AD environment and ensure compliance with relevant regulations.  Management groups provide a crucial foundation for organizing your resources and applying policies consistently, making it easier to manage governance and compliance at scale.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Create a Management Group, Azure Subscrptions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Azure Management Groups provide a hierarchical structure for organizing your Azure subscriptions. This hierarchy allows you to manage policies, access control, and billing at scale, making it easier to govern your Azure environment. This overview will cover creating and managing Management Groups, along with how Azure subscriptions fit within this structure.
+
+What are Azure Management Groups?
+
+Management groups are containers that help you manage access, policy, and compliance for multiple Azure subscriptions. They provide a level of scope above subscriptions, allowing you to apply governance across a collection of subscriptions.  Think of them as folders for your subscriptions, but with powerful inheritance capabilities.
+
+Key Concepts:
+
+Hierarchy: Management groups can be nested within each other, creating a hierarchy up to six levels deep (excluding the tenant root group). This allows you to mirror your organizational structure.
+Inheritance: Policies and role assignments applied at a higher level in the management group hierarchy are inherited by all the subscriptions and management groups beneath it. This ensures consistency.
+Root Management Group: A tenant-level root management group exists by default. All other management groups and subscriptions ultimately fall under this root group.
+Subscriptions: Azure subscriptions are the fundamental unit for billing and resource management in Azure. They are placed under management groups.
+Why Use Management Groups?
+
+Centralized Management: Manage policies and access control for multiple subscriptions from a single location.
+Policy Consistency: Ensure consistent policies are applied across your Azure environment, simplifying compliance.
+Role-Based Access Control (RBAC): Delegate administrative responsibilities based on your organizational structure.
+Cost Management: Track costs at the management group level to understand spending patterns across departments or projects.
+Organizational Alignment: Mirror your organizational structure in Azure for easier management and reporting.
+Creating and Managing Azure Management Groups and Subscriptions: A Comprehensive Overview (Page 2 of 5)
+Creating Management Groups:
+
+You can create management groups using the Azure portal, Azure CLI, PowerShell, or the REST API.
+
+Using the Azure Portal:
+
+Sign in to the Azure portal.
+Search for and select "Management groups."
+Select "Create."
+Provide a name and (optionally) a parent management group.
+Select "Save."
+Using Azure CLI:
+
+Code snippet
+
+az account management-group create --name "GroupName" --parent-id "ParentGroupId"
+Using PowerShell:
+
+PowerShell
+
+New-AzManagementGroup -Name "GroupName" -ParentId "ParentGroupId"
+Managing Management Groups:
+
+You can perform various operations on management groups, including:
+
+Updating: Change the name or parent management group.
+Deleting: Remove a management group (only if it contains no subscriptions or child management groups).
+Adding subscriptions: Associate subscriptions with a management group.
+Adding child management groups: Create a hierarchy.
+Assigning policies: Apply Azure Policies at the management group level.
+Assigning roles: Manage access using RBAC at the management group level.
+Creating and Managing Azure Management Groups and Subscriptions: A Comprehensive Overview (Page 3 of 5)
+Working with Azure Subscriptions:
+
+Azure subscriptions are the core unit for billing and resource management in Azure.  They represent an agreement with Microsoft to use Azure resources.
+
+Key Subscription Properties:
+
+Subscription ID: A unique identifier for the subscription.
+Subscription Name: A friendly name for the subscription.
+Status: The current state of the subscription (e.g., Enabled, Disabled).
+Owner: The account that owns the subscription.
+Billing Information: The payment method associated with the subscription.
+Creating Azure Subscriptions:
+
+In most cases, subscriptions are created through your Azure account portal.  There are various subscription offers available (e.g., free trial, pay-as-you-go, enterprise agreement).
+
+Associating Subscriptions with Management Groups:
+
+Subscriptions must be associated with a management group.  You can move existing subscriptions between management groups.
+
+Using the Azure Portal:
+
+Go to the subscription in the Azure portal.
+Select "Overview."
+Select "Change directory."
+Choose the target management group.
+Using Azure CLI:
+
+Code snippet
+
+az account management-group subscription add --name "SubscriptionId" --parent-id "ManagementGroupId"
+Using PowerShell:
+
+PowerShell
+
+Set-AzManagementGroupSubscription -SubscriptionId "SubscriptionId" -ParentId "ManagementGroupId"
+Creating and Managing Azure Management Groups and Subscriptions: A Comprehensive Overview (Page 4 of 5)
+Management Group and Subscription Best Practices:
+
+Plan your hierarchy: Design your management group hierarchy to reflect your organizational structure and governance requirements.
+Use meaningful names: Use descriptive names for management groups and subscriptions to make them easy to identify.
+Apply policies strategically: Apply policies at the appropriate level in the hierarchy to ensure consistency and avoid conflicts.
+Use RBAC effectively: Assign roles at the management group level to delegate administrative responsibilities.
+Monitor costs: Track costs at the management group level to understand spending patterns and optimize resource utilization.
+Automate management: Use Azure CLI or PowerShell to automate management group and subscription tasks.
+Consider nesting: Use nested management groups to create a more granular structure for larger organizations.
+Regularly review: Periodically review your management group structure and policies to ensure they are still relevant and effective.
+Management Group and Subscription Lifecycle:
+
+Subscription Creation: Subscriptions are created through your Azure account portal.
+Subscription Association: Subscriptions are associated with management groups.
+Subscription Management: Subscriptions can be moved between management groups.
+Subscription Deletion: Subscriptions can be canceled or deleted.
+Management Group Creation: Management groups are created using the Azure portal, CLI, PowerShell, or API.
+Management Group Update: Management groups can be renamed or moved within the hierarchy.
+Management Group Deletion: Management groups can be deleted (if empty).
+Creating and Managing Azure Management Groups and Subscriptions: A Comprehensive Overview (Page 5 of 5)
+Management Groups and Subscriptions Lab Activity (Example):
+
+This lab activity demonstrates creating management groups and associating subscriptions.
+
+Scenario: Create a management group hierarchy and associate existing subscriptions.
+
+Steps:
+
+Create a Root Management Group (if needed): If you don't already have a custom root management group (different from your tenant root), create one.
+Create Child Management Groups: Create child management groups under the root group to represent departments or environments (e.g., "Production," "Development," "Marketing").
+Associate Subscriptions: Move existing Azure subscriptions into the appropriate management groups.
+Verify Hierarchy: Use the Azure portal or Azure CLI/PowerShell to verify the management group hierarchy and the association of subscriptions.
+Further Lab Activities:
+
+Explore applying Azure Policies at different levels of the management group hierarchy.
+Assign roles at the management group level to delegate administrative access.
+Use Azure CLI or PowerShell to automate management group and subscription management tasks.
+Experiment with different management group structures to see how they affect policy inheritance and access control.
+Investigate cost management features at the management group level.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• How Do you get a subscription, Azure Subscription Usage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Azure subscriptions are the fundamental unit for billing and resource management within Microsoft Azure. They represent an agreement with Microsoft to use Azure services. This overview will cover how to obtain an Azure subscription, the various subscription types, and how to understand and manage your Azure subscription usage.  
+
+How to Get an Azure Subscription:
+
+Several ways exist to acquire an Azure subscription, each catering to different needs:  
+
+Free Trial: A great starting point for exploring Azure. Provides limited free credits for a limited time. Ideal for testing and learning. Converts to a paid subscription after the trial period ends unless explicitly cancelled.  
+Pay-As-You-Go (PAYG): You pay for the resources you consume. Offers flexibility and is suitable for variable workloads. Good for development, testing, and production workloads where usage is predictable.  
+Enterprise Agreement (EA): A customized agreement for large organizations with significant Azure consumption. Offers discounted pricing and flexible payment options. Suitable for enterprises with established IT infrastructure.  
+Microsoft Customer Agreement (MCA): A newer agreement model that simplifies how you purchase Azure services. Offers flexibility and control over your spending. Suitable for organizations of all sizes.  
+Student/Education Offers: Special offers for students and educators, providing free credits or discounted pricing for learning and development.
+Other Programs: Microsoft offers various other programs and offers for specific scenarios (e.g., startups, nonprofits).  
+Choosing the Right Subscription:
+
+The best subscription type depends on your specific needs:
+
+Learning and Exploration: Free Trial.
+Variable Workloads, Pay-as-you-go: Pay-As-You-Go.  
+Large Organizations, Discounted Pricing: Enterprise Agreement or Microsoft Customer Agreement.
+Students and Educators: Student/Education Offers.
+Acquiring and Understanding Azure Subscriptions and Usage: A Comprehensive Overview (Page 2 of 5)
+Azure Subscription Usage:
+
+Understanding your Azure subscription usage is crucial for cost optimization and resource management.  Azure provides several tools and methods to track and analyze your usage.  
+
+Key Concepts:
+
+Resources: The various components you deploy in Azure (e.g., virtual machines, storage accounts, databases).
+Resource Groups: Logical containers for grouping related resources.  
+Regions: Geographic locations where Azure data centers are located.  
+Meters: The units used to measure resource consumption (e.g., compute hours, storage GB, data transfer).  
+Cost Management + Billing: The primary Azure service for tracking costs, analyzing usage, and managing billing.  
+Tools for Analyzing Usage:
+
+Cost Explorer: A powerful tool within Cost Management + Billing that allows you to analyze your Azure costs by service, resource group, region, and other dimensions. Offers visualizations and reporting capabilities.  
+Cost Analysis: Provides a detailed breakdown of your costs over time, including forecasts and budget alerts.  
+Budgets: Allows you to set budgets for your Azure spending and receive alerts when you approach or exceed your budget limits.  
+Azure Cost Management + Billing API: Programmatic access to cost and usage data for custom reporting and integration with other systems.  
+Azure Monitor: Provides metrics and logs for your Azure resources, which can be used to understand resource utilization and performance.  
+Acquiring and Understanding Azure Subscriptions and Usage: A Comprehensive Overview (Page 3 of 5)
+Understanding Cost Factors:
+
+Several factors influence your Azure costs:
+
+Resource Type: Different resources have different pricing structures.
+Usage: The amount of resource you consume (e.g., compute hours, storage GB, data transfer).  
+Region: Prices can vary between Azure regions.  
+Pricing Tier: Different pricing tiers are available for some resources (e.g., different VM sizes).
+Operating System: For virtual machines, the operating system can affect the cost.  
+Data Transfer: Data transfer within Azure and between Azure and the internet can incur costs.  
+Cost Optimization Strategies:
+
+Right-sizing Resources: Choose the appropriate size and type of resources for your workloads. Avoid over-provisioning.
+Reserved Instances: Purchase reserved instances for virtual machines and other resources to get significant discounts for long-term usage.  
+Spot VMs: Use spot VMs for non-critical workloads to take advantage of spare compute capacity at discounted prices.  
+Azure Hybrid Benefit: Bring your on-premises Windows Server licenses to Azure for reduced VM costs.  
+Manage Storage Costs: Choose the appropriate storage tier (e.g., hot, cool, archive) for your data to optimize storage costs.
+Monitor and Analyze Usage: Regularly monitor your Azure usage and costs to identify areas for optimization.  
+Automate Resource Management: Use automation to start and stop resources based on demand.  
+Use Azure Cost Management + Billing features: Set budgets, analyze costs, and get recommendations for cost optimization.  
+Acquiring and Understanding Azure Subscriptions and Usage: A Comprehensive Overview (Page 4 of 5)
+Managing Azure Subscriptions:
+
+Viewing Subscription Details: Use the Azure portal, CLI, or PowerShell to view subscription details, including the subscription ID, name, owner, and status.  
+Managing Access Control (IAM): Use Azure IAM to control who has access to your Azure resources. Assign roles at the subscription level to grant appropriate permissions.  
+Managing Billing: Use the Azure portal to manage billing information, payment methods, and invoices.  
+Transferring Subscriptions: You can transfer ownership of Azure subscriptions to another account.  
+Cancelling Subscriptions: You can cancel Azure subscriptions when they are no longer needed. Be aware of any potential charges for early termination.  
+Azure Subscription Lifecycle:
+
+Creation: Subscriptions are created through the Azure portal or other programs.  
+Active Use: Resources are deployed and used within the subscription.  
+Suspension (Optional): Subscriptions can be suspended in certain circumstances.  
+Cancellation/Deletion: Subscriptions can be cancelled or deleted.  
+Acquiring and Understanding Azure Subscriptions and Usage: A Comprehensive Overview (Page 5 of 5)
+Azure Subscription Usage Lab Activity (Example):
+
+This lab activity demonstrates how to analyze Azure subscription usage using Cost Explorer.
+
+Scenario: Analyze the cost of virtual machines in a specific resource group over the past month.  
+
+Steps:
+
+Navigate to Cost Explorer: In the Azure portal, search for and select "Cost Management + Billing," then select "Cost analysis."  
+Select Scope: Choose the appropriate scope (subscription or management group).
+Set Time Range: Select the past month as the time range.
+Filter by Resource Group: Filter the cost data by the specific resource group you want to analyze.
+Analyze Costs: Explore the cost breakdown by service, resource, and other dimensions. Identify the cost of virtual machines within the selected resource group.
+Visualize Data: Use charts and graphs to visualize the cost data over time.  
+Further Lab Activities:
+
+Explore other features of Cost Explorer, such as cost alerts and budget management.
+Use the Azure Cost Management + Billing API to retrieve cost data programmatically.  
+Implement cost optimization strategies, such as right-sizing VMs or using reserved instances.  
+Analyze Azure Monitor metrics to understand resource utilization and performance.  
+Set up budget alerts to notify you when spending approaches or exceeds your budget limits.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Subscription User Types, Resource Limits
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Managing users and understanding resource limits are crucial aspects of administering Azure subscriptions.  This overview will cover the different types of users you might encounter in Azure subscriptions and the various resource limits that apply.
+
+Azure Subscription User Types:
+
+Azure subscriptions can involve several types of users, each with different roles and responsibilities:
+
+Account Owner: The individual who created the Azure subscription. They have full control over the subscription, including billing, resource management, and user access. This is typically the primary contact for the subscription.
+Global Administrator (in Azure AD): While not directly tied to the subscription itself, Global Administrators in the associated Azure Active Directory (Azure AD) have broad permissions across the entire Azure AD tenant, which includes the ability to manage access to subscriptions. They can assign roles to users and groups at various scopes, including subscriptions.
+Users with Assigned Roles (RBAC): Users can be granted specific permissions to manage resources within a subscription through Role-Based Access Control (RBAC). Different roles provide varying levels of access.
+Guest Users: Users from other Azure AD tenants can be invited as guest users to your Azure AD and granted access to resources within your subscription. This enables collaboration with external partners or vendors.
+Service Principals: These are identities used by applications or services to access Azure resources. They are not human users but represent an application's identity.
+Role-Based Access Control (RBAC):
+
+RBAC is the primary mechanism for managing access to Azure resources.  It allows you to assign specific roles to users, groups, or service principals at different scopes (subscription, resource group, or individual resource).
+
+Built-in Roles: Azure provides several built-in roles with predefined permissions (e.g., Owner, Contributor, Reader).
+Custom Roles: You can create custom roles to define specific sets of permissions.
+Scopes: Roles can be assigned at different scopes, determining which resources the role applies to.
+Azure Subscription User Types and Resource Limits: A Comprehensive Overview (Page 2 of 5)
+Common Built-in Roles:
+
+Owner: Has full access to all resources within the scope. Can manage access and billing.
+Contributor: Can create and manage resources but cannot manage access or billing.
+Reader: Can view resources but cannot make changes.
+Virtual Machine Contributor: Can manage virtual machines but not other resources.
+Storage Account Contributor: Can manage storage accounts but not other resources.
+Network Contributor: Can manage network resources but not other resources.
+Assigning Roles:
+
+Roles can be assigned using the Azure portal, Azure CLI, PowerShell, or the REST API.
+
+Example (Azure CLI):
+
+Code snippet
+
+az role assignment create --assignee "user@example.com" --role "Contributor" --scope "/subscriptions/subscriptionId/resourceGroups/resourceGroupName"
+Example (PowerShell):
+
+PowerShell
+
+New-AzRoleAssignment -SignInName "user@example.com" -RoleDefinitionName "Contributor" -Scope "/subscriptions/subscriptionId/resourceGroups/resourceGroupName"
+Azure Subscription User Types and Resource Limits: A Comprehensive Overview (Page 3 of 5)
+Resource Limits (Quotas):
+
+Azure imposes limits on the number of resources you can create within a subscription. These limits are in place to prevent abuse and ensure fair usage.
+
+Types of Limits:
+
+Subscription Limits: Limits on the number of resources of a particular type you can deploy within a subscription (e.g., number of virtual machines, storage accounts).
+Regional Limits: Limits on the number of resources available in a specific Azure region.
+Resource-Specific Limits: Limits that are specific to a particular resource type (e.g., maximum size of a storage account).
+Viewing Resource Limits:
+
+You can view resource limits using the Azure portal, Azure CLI, or PowerShell.
+
+Using the Azure Portal:
+
+Go to your subscription in the Azure portal.
+Search for and select "Quotas."
+Using Azure CLI:
+
+Code snippet
+
+az vm list-skus --location "regionName" --query "[].name" -o tsv  # Example for VM SKUs
+Using PowerShell:
+
+PowerShell
+
+Get-AzVMSize -Location "regionName"  # Example for VM sizes
+Azure Subscription User Types and Resource Limits: A Comprehensive Overview (Page 4 of 5)
+Managing Resource Limits:
+
+Requesting Increases: If you need to increase a resource limit, you can submit a request to Azure support.
+Understanding Regional Availability: Be aware of the availability of resources in different Azure regions. Some resources may not be available in all regions.
+Planning for Capacity: When planning your deployments, consider the resource limits and regional availability to ensure that you have sufficient capacity.
+Impact of Resource Limits:
+
+Reaching resource limits can prevent you from deploying new resources.  It's essential to monitor your resource usage and plan accordingly to avoid hitting these limits.
+
+Example: Virtual Machine Limits:
+
+There are limits on the number of virtual machines you can create per subscription, per region, and per VM size.  These limits vary depending on the subscription type and the region.
+
+Azure Subscription User Types and Resource Limits: A Comprehensive Overview (Page 5 of 5)
+Best Practices for User Management and Resource Limits:
+
+Principle of Least Privilege: Grant users only the permissions they need to perform their tasks.
+Regularly Review User Access: Periodically review user access rights to ensure they are still appropriate.
+Use Groups for Access Management: Assign roles to groups rather than individual users to simplify management.
+Monitor Resource Usage: Regularly monitor your resource usage to identify potential bottlenecks and ensure that you are not approaching resource limits.
+Plan for Capacity: When planning your deployments, consider resource limits and regional availability.
+Request Limit Increases Proactively: If you anticipate needing higher limits, submit a request to Azure support in advance.
+Understand Regional Differences: Be aware that resource availability and limits can vary between Azure regions.
+Use Azure Policy: Implement Azure Policy to enforce resource limits and prevent over-provisioning.
+Automate User Management: Use Azure CLI or PowerShell to automate user provisioning and deprovisioning.
+Document User Roles and Permissions: Maintain clear documentation of user roles and permissions for auditing and compliance purposes.
+By understanding the different user types and resource limits in Azure, you can effectively manage your subscriptions and ensure that your Azure environment is secure, compliant, and scalable.  Using RBAC effectively and monitoring resource usage are essential for successful Azure administration.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Resource Tags, Pricing Calculator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Azure Resource Tags and Pricing Calculator: A Comprehensive Overview 
+Effectively managing and understanding the costs associated with your Azure resources is crucial for optimizing cloud spending. Azure Resource Tags and the Azure Pricing Calculator are valuable tools that contribute significantly to this effort. This overview will cover resource tagging in detail and how to use the Pricing Calculator for cost estimation and planning.
+
+Azure Resource Tags: Organizing and Managing Your Resources:
+
+Resource tags are key-value pairs that you assign to Azure resources. They provide a way to categorize, organize, and manage your resources.  Think of them as labels you attach to your resources to make them easier to identify and work with.
+
+Key Concepts:
+
+Key: The name of the tag (e.g., "Department," "Environment," "Project").
+Value: The value associated with the key (e.g., "Marketing," "Production," "ProjectA").
+Inheritance: Tags are not inherited. They are explicitly assigned to each resource. However, tag values can be used in policy definitions that are inherited.
+Why Use Resource Tags?
+
+Resource Organization: Group and filter resources based on tags. This makes it easier to find and manage related resources.
+Cost Management: Track and analyze costs by tag. This allows you to understand spending patterns across different departments, projects, or environments.
+Automation: Automate tasks based on tags. For example, you can use tags to identify resources that need to be backed up or deleted.
+Policy Enforcement: Apply Azure Policies based on tags. This ensures compliance with organizational standards and regulatory requirements.
+Resource Deployment: Use tags during resource deployment to automatically categorize new resources.
+Azure Resource Tags and Pricing Calculator: A Comprehensive Overview (Page 2 of 5)
+Tagging Best Practices:
+
+Develop a Tagging Strategy: Plan your tagging strategy before you start tagging resources. Define a consistent set of tags that will be used across your Azure environment.
+Use Standardized Tags: Use consistent tag keys and values to ensure that your tags are meaningful and easy to understand.
+Use Case Sensitivity Carefully: Tag keys are case-insensitive, but it's best to be consistent with casing.
+Limit Tag Count: While you can have many tags, avoid excessive tagging. Focus on the tags that are most important for your organization.
+Tag All Resources: Tag all of your Azure resources, including virtual machines, storage accounts, databases, and network components.
+Use Automation: Automate the tagging process to ensure that all new resources are tagged correctly.
+Document Your Tagging Strategy: Document your tagging strategy so that everyone in your organization understands how to use tags.
+Tagging Tools:
+
+You can tag resources using the Azure portal, Azure CLI, PowerShell, or the REST API.
+
+Using the Azure Portal:
+
+Go to the resource in the Azure portal.
+Select "Tags."
+Add or modify tags.
+Using Azure CLI:
+
+Code snippet
+
+az resource tag add --resource-group "resourceGroupName" --name "resourceName" --tags "Department=Marketing Environment=Production"
+Using PowerShell:
+
+PowerShell
+
+Set-AzResource -ResourceGroupName "resourceGroupName" -Name "resourceName" -Tag @{ Department = "Marketing"; Environment = "Production" }
+Azure Resource Tags and Pricing Calculator: A Comprehensive Overview (Page 3 of 5)
+Azure Pricing Calculator: Estimating Your Azure Costs:
+
+The Azure Pricing Calculator is a free online tool that helps you estimate the cost of your Azure deployments.  It allows you to select the resources you need, configure them, and then see an estimated monthly cost.
+
+Key Features:
+
+Resource Selection: Choose from a wide range of Azure services, including virtual machines, storage, databases, networking, and more.
+Configuration: Configure the resources to match your requirements, including size, performance, and features.
+Pricing Tiers: Select the appropriate pricing tier for each resource.
+Cost Estimation: See an estimated monthly cost for your deployment.
+Export and Share: Export your cost estimates to Excel or share them with others.
+How to Use the Pricing Calculator:
+
+Go to the Azure Pricing Calculator website.
+Select the services you plan to use.
+Configure the resources to match your requirements.
+Review the estimated cost.
+Azure Resource Tags and Pricing Calculator: A Comprehensive Overview (Page 4 of 5)
+Benefits of Using the Pricing Calculator:
+
+Cost Planning: Estimate the cost of your Azure deployments before you deploy them.
+Budgeting: Create budgets based on your cost estimates.
+Cost Optimization: Experiment with different resource configurations to find the most cost-effective solution.
+Comparison: Compare the cost of different Azure services.
+Integrating Tags with Cost Management:
+
+Tags play a crucial role in Azure Cost Management. You can use tags to:
+
+Group Costs: Group costs by department, project, or environment.
+Analyze Costs: Analyze cost trends and identify areas for cost optimization.
+Create Budgets: Create budgets based on tags.
+Generate Reports: Generate cost reports based on tags.
+Example:
+
+You can tag all resources related to a specific project with a tag like "ProjectName=ProjectA."  Then, in Cost Management, you can filter by this tag to see the total cost associated with that project.
+
+Azure Resource Tags and Pricing Calculator: A Comprehensive Overview (Page 5 of 5)
+Resource Tags and Pricing Calculator Lab Activity (Example):
+
+This lab activity demonstrates how to use resource tags and the pricing calculator.
+
+Scenario: Tag a virtual machine and then use the pricing calculator to estimate its cost.
+
+Steps:
+
+Create a Virtual Machine: Deploy a virtual machine in your Azure subscription.
+Tag the Virtual Machine: Add tags to the virtual machine, such as "Department=IT," "Environment=Development," and "Project=Testing."
+Use the Pricing Calculator: Go to the Azure Pricing Calculator and select the virtual machine service.
+Configure the VM: Configure the virtual machine to match the size and specifications of the VM you created.
+Estimate Cost: Review the estimated monthly cost.
+Analyze Costs with Tags: In Azure Cost Management, filter costs by the tags you assigned to the virtual machine.
+Further Lab Activities:
+
+Develop a tagging strategy for your Azure environment.
+Tag all of your Azure resources.
+Use tags to group and analyze costs in Azure Cost Management.
+Use the Pricing Calculator to estimate the cost of different Azure deployments.
+Explore advanced tagging and cost management features.
+Automate tagging using Azure CLI or PowerShell.
+Create and assign Azure Policies based on tags.
+By effectively using resource tags and the Azure Pricing Calculator, you can gain better control over your Azure costs and ensure that your cloud spending is optimized.  Tagging provides essential organization and tracking capabilities, while the Pricing Calculator allows for proactive cost estimation and planning.  Integrating tags with Cost Management provides deep insights into your cloud spending and enables data-driven decision-making.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Billing Alerts, Reservations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Managing Azure costs effectively is crucial for any organization using the platform. Azure provides several tools to help you stay on top of your spending, including billing alerts and reservations. This overview will cover how to set up billing alerts to proactively monitor your costs and how Azure Reservations can help you save money on your Azure resources.
+
+Azure Billing Alerts: Proactive Cost Monitoring:
+
+Billing alerts notify you when your Azure spending reaches a predefined threshold. These alerts help you proactively manage your costs and avoid unexpected overspending.
+
+Types of Billing Alerts:
+
+Budget Alerts: These alerts are triggered when your spending reaches a certain percentage of your defined budget. You can set budgets at different scopes (subscription, resource group, management group).
+Cost Alerts: These alerts notify you when your spending exceeds a specific amount. You can configure cost alerts based on various criteria.
+Credit Alerts: These alerts are relevant for users with Azure credits (e.g., free trials, student offers). They notify you when your credits are running low.
+Setting Up Billing Alerts:
+
+You can set up billing alerts using the Azure portal, Azure CLI, or PowerShell.
+
+Using the Azure Portal (Budget Alerts):
+
+Navigate to "Cost Management + Billing" and select "Budgets."
+Create a new budget.
+
+
+
+Define the scope (subscription, resource group, management group).
+Set the budget amount and the alert thresholds (e.g., 80%, 100%).
+Configure the alert actions (e.g., email notifications).
+Using Azure CLI (Budget Alerts):
+
+Code snippet
+
+From UI
+	Go to subscription
+	Left pane 
+		"Cost Management" 
+			"Budget" 
+			
+
+
+az consumption budget create --name "BudgetName" --amount 100 --time-period "{startDate:'2024-01-01',endDate:'2024-12-31'}" --time-grain "Monthly" --category "Cost" --notifications "[{enabled: true,operator: 'GreaterThan',threshold: 80,thresholdType: 'Percent'}]" --scope "/subscriptions/subscriptionId"
+Using PowerShell (Budget Alerts):
+
+PowerShell
+
+# ... (PowerShell commands for budget creation are more complex and involve defining objects)
+Azure Billing Alerts and Reservations: A Comprehensive Overview (Page 2 of 5)
+Customizing Billing Alerts:
+
+You can customize billing alerts to fit your specific needs.
+
+Alert Thresholds: Set different thresholds for different alert levels (e.g., warning at 80%, critical at 100%).
+Alert Frequency: Choose how often you want to receive alerts (e.g., daily, weekly, monthly).
+Alert Actions: Configure different actions to be taken when an alert is triggered (e.g., email notifications, SMS messages, automated actions using Azure Logic Apps).
+Alert Scope: Define the scope of the alert (subscription, resource group, management group).
+Managing Billing Alerts:
+
+You can manage your billing alerts through the Azure portal, CLI, or PowerShell. This includes:
+
+Viewing existing alerts.
+Modifying alert settings.
+Deleting alerts.
+Best Practices for Billing Alerts:
+
+Set up alerts for all your important subscriptions and resource groups.
+Use appropriate alert thresholds to avoid alert fatigue.
+Configure alert actions to ensure that you are notified promptly.
+Regularly review your billing alerts to ensure they are still relevant.
+Use budgets in conjunction with alerts for effective cost control.
+Azure Billing Alerts and Reservations: A Comprehensive Overview (Page 3 of 5)
+Azure Reservations: Cost Savings for Committed Usage:
+
+Azure Reservations allow you to commit to using specific Azure resources for a period of one or three years. In exchange for this commitment, you receive significant discounts on the cost of those resources.
+
+Benefits of Azure Reservations:
+
+Cost Savings: Reservations can save you a substantial amount of money compared to pay-as-you-go pricing.
+Predictable Costs: Reservations provide predictable pricing for your Azure resources, making it easier to budget.
+Flexible Purchase: You can purchase reservations for various Azure services, including virtual machines, storage, databases, and more.
+How Azure Reservations Work:
+
+Choose a Service: Select the Azure service you want to reserve (e.g., Virtual Machines, App Service).
+Select a Region: Choose the Azure region where you want to deploy the reserved resources.
+Configure the Reservation: Specify the size, quantity, and other properties of the resources you want to reserve.
+Select a Term: Choose a reservation term of one or three years.
+Review and Purchase: Review the reservation details and purchase the reservation.
+Key Considerations for Azure Reservations:
+
+Resource Configuration: Make sure you choose the correct size and configuration for your reserved resources.
+Region Selection: Choose the Azure region where you plan to deploy the reserved resources.
+Term Length: Consider the term length carefully. You are committed to the reservation for the chosen term.
+Flexibility: Some reservations offer flexibility to exchange or cancel them (with potential fees), but this is not always the case.
+Azure Billing Alerts and Reservations: A Comprehensive Overview (Page 4 of 5)
+Managing Azure Reservations:
+
+You can manage your Azure reservations through the Azure portal, CLI, or PowerShell.  This includes:
+
+Viewing existing reservations.
+Modifying reservation settings (if allowed).
+Exchanging reservations (if allowed).
+Cancelling reservations (if allowed, with potential fees).
+Example (Azure CLI - Purchase a VM Reservation):
+
+Code snippet
+
+az vm reservation purchase --sku "Standard_DS1_v2" --location "westus2" --quantity 1 --term "P1Y" --billing-scope "/subscriptions/subscriptionId"
+Example (PowerShell - Purchase a VM Reservation):
+
+PowerShell
+
+# ... (PowerShell commands for purchasing reservations are more complex and involve defining objects)
+Best Practices for Azure Reservations:
+
+Analyze your resource usage patterns to identify resources that are suitable for reservations.
+Choose the correct size and configuration for your reserved resources.
+Consider the term length carefully.
+Take advantage of reservation flexibility options if needed.
+Monitor your reservation utilization to ensure that you are getting the most value from your reservations.
+Combine reservations with other cost optimization strategies, such as right-sizing and spot VMs.
+Azure Billing Alerts and Reservations: A Comprehensive Overview (Page 5 of 5)
+Billing Alerts and Reservations Lab Activity (Example):
+
+This lab activity demonstrates setting up a budget alert and purchasing a reservation.
+
+Scenario: Create a budget alert for a resource group and purchase a reservation for a virtual machine.
+
+Steps (Budget Alert):
+
+Navigate to "Cost Management + Billing" and select "Budgets."
+Create a new budget for a specific resource group.
+Set the budget amount and the alert thresholds (e.g., 80%, 100%).
+Configure email notifications for the alerts.
+Steps (Reservation):
+
+Navigate to "Reservations."
+Select the service you want to reserve (e.g., "Virtual machines").
+Choose the region, size, and quantity of the resources you want to reserve.
+Select a reservation term (1 or 3 years).
+Review and purchase the reservation.
+Further Lab Activities:
+
+Explore different types of billing alerts and their customization options.
+Set up cost alerts based on specific criteria.
+Explore different types of reservations and their features.
+Manage existing reservations and modify their settings.
+Combine billing alerts and reservations with other cost management tools and strategies.
+Automate the purchase and management of reservations using Azure CLI or PowerShell.
+Analyze reservation utilization and identify opportunities for optimization.
+By effectively using billing alerts and reservations, you can gain greater control over your Azure spending and optimize your cloud costs. Billing alerts help you proactively monitor your spending, while reservations offer significant cost savings for committed usage. Combining these tools with other cost management best practices will help you maximize your cloud budget.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• RBAC Concepts, RBAC ROLES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Role-Based Access Control (RBAC) in Azure: A Comprehensive Overview 
+Role-Based Access Control (RBAC) in Azure is a powerful authorization system that allows you to manage access to Azure resources. With RBAC, you assign permissions to users, groups, service principals, and managed identities at different scopes, granting them the ability to perform specific actions on those resources. This overview will cover the core concepts of RBAC, its benefits, and how it works.
+
+What is Role-Based Access Control (RBAC)?
+
+RBAC is a system that allows you to define who has access to which resources and what they can do with those resources.  It's based on the principle of least privilege, meaning that users are only granted the permissions they need to perform their job functions.
+
+Key Concepts in RBAC:
+
+Security Principal: A user, group, service principal, or managed identity that is assigned a role.
+Role Definition: A collection of permissions. It specifies what actions a security principal can perform.
+Scope: The resource or set of resources to which a role assignment applies. This could be a subscription, a resource group, or an individual resource.
+Role Assignment: The process of associating a security principal with a role definition at a specific scope. This is what grants the permissions.
+How RBAC Works:
+
+A security principal (user, group, etc.) attempts to perform an action on a resource.
+Azure checks if the security principal has a role assignment that grants the necessary permission for that action at the requested scope (or a higher scope in the hierarchy).
+If a matching role assignment is found, the action is allowed. Otherwise, it is denied.
+Benefits of RBAC:
+
+Granular Access Control: Control access to resources at a fine-grained level.
+Principle of Least Privilege: Grant users only the permissions they need.
+Simplified Administration: Manage access by assigning roles to groups rather than individual users.
+Auditing and Compliance: Track who has access to what resources for auditing and compliance purposes.
+Scalability: Easily manage access for large numbers of users and resources.
+Role-Based Access Control (RBAC) in Azure: A Comprehensive Overview (Page 2 of 5)
+Role Definitions:
+
+Role definitions are the core of RBAC.  They list the permissions that are granted by a specific role.
+
+Built-in Roles: Azure provides a set of built-in roles with predefined permissions. These cover common scenarios.
+Custom Roles: You can create custom role definitions to define specific sets of permissions that are not covered by the built-in roles.
+Key Components of a Role Definition:
+
+Actions: The permissions granted by the role. These are specific actions that can be performed on resources (e.g., Microsoft.Compute/virtualMachines/read, Microsoft.Storage/storageAccounts/write).
+NotActions: Permissions that are specifically denied by the role. This is useful for excluding certain permissions from a broader role.
+AssignableScopes: The scopes at which the role can be assigned.
+Built-in Roles (Examples):
+
+Owner: Full access to all resources. Can manage access and billing.
+Contributor: Can create and manage resources, but cannot manage access or billing.
+Reader: Can view resources, but cannot make changes.
+Virtual Machine Contributor: Can manage virtual machines.
+Storage Account Contributor: Can manage storage accounts.
+Network Contributor: Can manage network resources.
+Role-Based Access Control (RBAC) in Azure: A Comprehensive Overview (Page 3 of 5)
+Scopes:
+
+Scope is the level at which a role assignment applies.  Permissions are inherited down the hierarchy.
+
+Management Group: The highest level. Role assignments at this level apply to all subscriptions and resource groups within the management group.
+Subscription: Role assignments at this level apply to all resource groups and resources within the subscription.
+Resource Group: Role assignments at this level apply to all resources within the resource group.
+Resource: The most granular level. Role assignments at this level apply only to the specific resource.
+Role Assignments:
+
+A role assignment links a security principal to a role definition at a specific scope. This is what grants the permissions.
+
+Creating Role Assignments:
+
+You can create role assignments using the Azure portal, Azure CLI, PowerShell, or the REST API.
+
+Example (Azure CLI):
+
+Code snippet
+
+az role assignment create --assignee "user@example.com" --role "Contributor" --scope "/subscriptions/subscriptionId/resourceGroups/resourceGroupName"
+Example (PowerShell):
+
+PowerShell
+
+New-AzRoleAssignment -SignInName "user@example.com" -RoleDefinitionName "Contributor" -Scope "/subscriptions/subscriptionId/resourceGroups/resourceGroupName"
+Role-Based Access Control (RBAC) in Azure: A Comprehensive Overview (Page 4 of 5)
+Best Practices for RBAC:
+
+Principle of Least Privilege: Grant users only the permissions they need to perform their tasks.
+Use Groups for Role Assignments: Assign roles to groups rather than individual users to simplify management.
+Use Built-in Roles Where Possible: Leverage built-in roles to avoid creating unnecessary custom roles.
+Create Custom Roles for Specific Scenarios: Create custom roles only when the built-in roles do not meet your requirements.
+Plan Your RBAC Strategy: Develop a well-defined RBAC strategy that aligns with your organization's security and governance requirements.
+Regularly Review Role Assignments: Periodically review role assignments to ensure that users still have the appropriate level of access.
+Use Management Groups: Use management groups to manage access at scale across multiple subscriptions.
+Automate Role Assignments: Use Azure CLI or PowerShell to automate role assignments.
+Document Role Assignments: Maintain clear documentation of role assignments for auditing and compliance purposes.
+RBAC and Azure AD Privileged Identity Management (PIM):
+
+PIM is a service that helps you manage access to privileged roles in Azure AD and Azure resources.  It allows you to:
+
+Just-in-Time Access: Grant privileged access only when needed.
+Approval Workflow: Require approval before privileged access is granted.
+Auditing: Track who has activated privileged roles and when.
+PIM integrates with RBAC to provide enhanced security for privileged accounts.
+
+Role-Based Access Control (RBAC) in Azure: A Comprehensive Overview (Page 5 of 5)
+RBAC Lab Activity (Example):
+
+This lab activity demonstrates how to assign roles using the Azure portal.
+
+Scenario: Grant a user contributor access to a resource group.
+
+Steps:
+
+Navigate to the Resource Group: In the Azure portal, go to the resource group you want to grant access to.
+Select Access Control (IAM): Select "Access control (IAM)" in the resource group's blade.
+Add a Role Assignment: Click "Add" -> "Add role assignment."
+Select the Role: Choose the "Contributor" role.
+Select the User: Select the user you want to grant access to.
+Save: Click "Save" to create the role assignment.
+Further Lab Activities:
+
+Explore different built-in roles and their permissions.
+Create custom role definitions.
+Assign roles at different scopes (subscription, resource group, resource).
+Use Azure CLI or PowerShell to manage role assignments.
+Implement PIM for privileged accounts.
+Explore Azure Policy integration with RBAC.
+Investigate how Azure Blueprints can help with RBAC consistency across subscriptions.
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Azure AD Roles and Permissions , Role Definitions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Azure Active Directory (Azure AD) uses a role-based authorization system to manage access to its resources and services.  Understanding Azure AD roles and permissions is crucial for securing your cloud environment and ensuring that users have the appropriate level of access. This overview will cover the core concepts of Azure AD roles, permissions, and role definitions.
+
+What are Azure AD Roles?
+
+Azure AD roles are collections of permissions that grant users the ability to perform specific actions within Azure AD.  They define what a user can do, such as managing users, groups, applications, or other Azure AD objects.
+
+Key Concepts:
+
+Security Principal: A user, group, service principal, or managed identity that is assigned a role.
+Role Definition: A collection of permissions. It specifies what actions a security principal can perform.
+Scope: The resource or set of resources to which a role assignment applies. This could be the entire Azure AD tenant or a more specific object.
+Role Assignment: The process of associating a security principal with a role definition at a specific scope. This is what grants the permissions.
+How Azure AD Roles Work:
+
+A security principal (user, group, etc.) attempts to perform an action in Azure AD.
+Azure AD checks if the security principal has a role assignment that grants the necessary permission for that action at the requested scope (or a higher scope in the hierarchy).
+If a matching role assignment is found, the action is allowed. Otherwise, it is denied.
+Benefits of Azure AD Roles:
+
+Granular Access Control: Control access to Azure AD resources at a fine-grained level.
+Principle of Least Privilege: Grant users only the permissions they need to perform their job functions.
+Simplified Administration: Manage access by assigning roles to groups rather than individual users.
+Auditing and Compliance: Track who has access to what resources for auditing and compliance purposes.
+Scalability: Easily manage access for large numbers of users and resources.
+Azure AD Roles and Permissions: A Comprehensive Overview (Page 2 of 5)
+Built-in Roles:
+
+Azure AD provides a set of built-in roles with predefined permissions. These cover common administrative scenarios.
+
+Examples of Built-in Roles:
+
+Global Administrator: Has full access to all Azure AD features and resources. This is the most privileged role.
+User Administrator: Can manage users, groups, and licenses.
+Groups Administrator: Can manage groups and their memberships.
+Application Administrator: Can manage enterprise applications and app registrations.
+Cloud Application Administrator: Can manage enterprise applications and app registrations. Has fewer permissions related to managing the Azure AD directory itself.
+Helpdesk Administrator: Can reset user passwords and perform other helpdesk-related tasks.
+Security Administrator: Can manage security-related settings and policies.
+SharePoint Administrator: Can manage SharePoint Online.
+Teams Administrator: Can manage Microsoft Teams.
+Exchange Administrator: Can manage Exchange Online.
+Finding Built-in Roles:
+
+You can find a list of built-in roles and their descriptions in the Azure portal or using PowerShell.
+
+Azure AD Roles and Permissions: A Comprehensive Overview (Page 3 of 5)
+Custom Roles:
+
+If the built-in roles do not meet your specific requirements, you can create custom roles.  This allows you to define very specific sets of permissions.
+
+Creating Custom Roles:
+
+You can create custom roles using the Azure portal, Azure CLI, PowerShell, or the Microsoft Graph API.
+
+Key Components of a Custom Role Definition:
+
+Actions: The permissions granted by the role. These are specific actions that can be performed on resources (e.g., Microsoft.Directory/users/create, Microsoft.Directory/groups/read).
+NotActions: Permissions that are specifically denied by the role. This is useful for excluding certain permissions from a broader role.
+AssignableScopes: The scopes at which the role can be assigned.
+Permissions:
+
+Permissions are the individual actions that a user can perform. They are the building blocks of role definitions.  Permissions are typically expressed in the format ResourceProvider/ResourceType/Action.
+
+Examples of Permissions:
+
+Microsoft.Directory/users/create
+Microsoft.Directory/users/read
+Microsoft.Directory/groups/read
+Microsoft.Directory/groups/members/add
+Microsoft.AzureAD/applications/create
+Azure AD Roles and Permissions: A Comprehensive Overview (Page 4 of 5)
+Scopes:
+
+Scope determines the level at which a role assignment applies. Permissions are inherited down the hierarchy.
+
+Tenant: The highest level. Role assignments at this level apply to all resources within the Azure AD tenant.
+Specific Object: Roles can also be assigned to specific objects within Azure AD, such as a particular user, group, or application.
+Role Assignments:
+
+A role assignment links a security principal to a role definition at a specific scope. This is what grants the permissions.
+
+Creating Role Assignments:
+
+You can create role assignments using the Azure portal, Azure CLI, PowerShell, or the Microsoft Graph API.
+
+Example (PowerShell):
+
+PowerShell
+
+# Get the object ID of the user
+$user = Get-AzureADUser -UserPrincipalName "user@example.com"
+
+# Get the object ID of the role definition (e.g., Global Administrator)
+$roleDefinition = Get-AzureADServicePrincipal -SearchString "Global Administrator"
+
+# Assign the role to the user at the tenant scope
+New-AzureADMSAuthorizationPolicy -DisplayName "MyPolicy" -Description "Policy Description" -Type "BuiltIn" -RoleIds @($roleDefinition.ObjectId) -TargetRefObjectId $user.ObjectId -TargetType "User"
+Azure AD Roles and Permissions: A Comprehensive Overview (Page 5 of 5)
+Best Practices for Azure AD Roles and Permissions:
+
+Principle of Least Privilege: Grant users only the permissions they need to perform their tasks.
+Use Groups for Role Assignments: Assign roles to groups rather than individual users to simplify management.
+Use Built-in Roles Where Possible: Leverage built-in roles to avoid creating unnecessary custom roles.
+Create Custom Roles for Specific Scenarios: Create custom roles only when the built-in roles do not meet your requirements.
+Plan Your Role Strategy: Develop a well-defined role strategy that aligns with your organization's security and governance requirements.
+Regularly Review Role Assignments: Periodically review role assignments to ensure that users still have the appropriate level of access.
+Use Privileged Identity Management (PIM): Use PIM to manage access to privileged roles.
+Automate Role Assignments: Use Azure CLI, PowerShell, or the Microsoft Graph API to automate role assignments.
+Document Role Assignments: Maintain clear documentation of role assignments for auditing and compliance purposes.
+Azure AD Roles and Permissions Lab Activity (Example):
+
+This lab activity demonstrates how to assign a built-in role using the Azure portal.
+
+Scenario: Grant a user the User Administrator role at the tenant scope.
+
+Steps:
+
+Navigate to Azure AD: In the Azure portal, go to Azure Active Directory.
+Select Roles and administrators: Select "Roles and administrators."
+Find the User Administrator role: Search for the "User Administrator" role.
+Add an assignment: Click "Add assignment."
+Select the user: Choose the user you want to grant the role to.
+Save: Click "Save" to create the role assignment.
+Further Lab Activities:
+
+Explore different built-in roles and their permissions.
+Create custom role definitions.
+Assign roles at different scopes (tenant, specific object).
+Use PowerShell or the Microsoft Graph API to manage role assignments.
+Implement Privileged Identity Management (PIM) for privileged roles.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• RBAC Definitions Powershell , Azure AD Users and Powershell
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+RBAC Definitions and Azure AD Users with PowerShell: A Comprehensive Overview 
+PowerShell provides a powerful way to manage Role-Based Access Control (RBAC) and Azure AD users.  This overview will cover how to work with RBAC definitions (roles) and manage Azure AD users using PowerShell cmdlets.
+
+Working with RBAC Definitions (Roles) in PowerShell:
+
+RBAC definitions, also known as roles, define the permissions that can be granted to security principals (users, groups, service principals, managed identities).  PowerShell allows you to manage these definitions.
+
+Key Cmdlets for RBAC Definitions:
+
+Get-AzRoleDefinition: Retrieves role definitions.
+New-AzRoleDefinition: Creates a custom role definition.
+Set-AzRoleDefinition: Modifies an existing custom role definition.
+Remove-AzRoleDefinition: Deletes a custom role definition.
+Retrieving Role Definitions:
+
+PowerShell
+
+# Get all role definitions in the subscription
+Get-AzRoleDefinition
+
+# Get a specific role definition by name
+Get-AzRoleDefinition -Name "Contributor"
+
+# Get a specific role definition by ID
+Get-AzRoleDefinition -Id "roleDefinitionId"
+
+# Get role definitions that include specific permissions
+Get-AzRoleDefinition | Where-Object {$_.Actions -contains "Microsoft.Compute/virtualMachines/read"}
+Creating Custom Role Definitions:
+
+PowerShell
+
+$roleDefinition = New-AzRoleDefinition -Name "CustomVMContributor" -Description "Allows management of VMs" -Actions @(
+    "Microsoft.Compute/virtualMachines/*"
+    "Microsoft.Network/virtualNetworks/join/action" # Example: Allow joining VNETs
+) -AssignableScopes @(
+    "/subscriptions/subscriptionId"
+)
+
+# Save the custom role definition (important step)
+$roleDefinition | Set-AzRoleDefinition
+Modifying Custom Role Definitions:
+
+PowerShell
+
+# ... (Retrieve the existing role definition using Get-AzRoleDefinition) ...
+
+# Modify the Actions property
+$roleDefinition.Actions.Add("Microsoft.Storage/storageAccounts/read")
+
+# Save the changes
+$roleDefinition | Set-AzRoleDefinition
+Deleting Custom Role Definitions:
+
+PowerShell
+
+Remove-AzRoleDefinition -Id "roleDefinitionId" # Use the ID
+RBAC Definitions and Azure AD Users with PowerShell: A Comprehensive Overview (Page 2 of 5)
+Working with Azure AD Users in PowerShell:
+
+Managing Azure AD users is a common administrative task. PowerShell provides a set of cmdlets for performing various user management operations.
+
+Key Cmdlets for Azure AD Users:
+
+Get-AzureADUser: Retrieves users.
+New-AzureADUser: Creates a new user.
+Set-AzureADUser: Modifies an existing user.
+Remove-AzureADUser: Deletes a user.
+Get-AzureADUserMembership: Gets the groups a user belongs to.
+Add-AzureADGroupMember: Adds a user to a group.
+Remove-AzureADGroupMember: Removes a user from a group.
+Set-AzureADUserLicense: Assigns or modifies user licenses.
+Connecting to Azure AD:
+
+Before you can manage Azure AD users, you need to connect to Azure AD using the Connect-AzureAD cmdlet.
+
+PowerShell
+
+Connect-AzureAD
+Retrieving Users:
+
+PowerShell
+
+# Get all users
+Get-AzureADUser
+
+# Get a specific user by UPN
+Get-AzureADUser -UserPrincipalName "user@example.com"
+
+# Search for users
+Get-AzureADUser -SearchString "John"
+Creating Users:
+
+PowerShell
+
+$user = New-AzureADUser -DisplayName "John Doe" -UserPrincipalName "john.doe@example.com" -Password "P@$$wOrd" -AccountEnabled $true -MailNickName "johndoe"
+Modifying Users:
+
+PowerShell
+
+# ... (Retrieve the user object using Get-AzureADUser) ...
+
+Set-AzureADUser -ObjectId $user.ObjectId -DisplayName "John A. Doe"
+Deleting Users:
+
+PowerShell
+
+Remove-AzureADUser -ObjectId $user.ObjectId
+RBAC Definitions and Azure AD Users with PowerShell: A Comprehensive Overview (Page 3 of 5)
+Managing User Membership:
+
+PowerShell
+
+# Get user's group memberships
+Get-AzureADUserMembership -ObjectId $user.ObjectId
+
+# Add user to a group
+Add-AzureADGroupMember -ObjectId "groupId" -RefObjectId $user.ObjectId
+
+# Remove user from a group
+Remove-AzureADGroupMember -ObjectId "groupId" -RefObjectId $user.ObjectId
+Managing User Licenses:
+
+PowerShell
+
+# Get available SKUs
+Get-AzureADSubscribedSku
+
+# Assign licenses (complex, requires defining license objects)
+# ... (See Microsoft documentation for details)
+Working with User Properties:
+
+You can modify various user properties using Set-AzureADUser.  Common properties include:
+
+DisplayName
+UserPrincipalName
+MailNickName
+MobilePhone
+Department
+JobTitle
+OfficeLocation
+Example:
+
+PowerShell
+
+Set-AzureADUser -ObjectId $user.ObjectId -Department "Marketing" -JobTitle "Marketing Manager"
+RBAC Definitions and Azure AD Users with PowerShell: A Comprehensive Overview (Page 4 of 5)
+Combining RBAC and User Management:
+
+PowerShell allows you to combine RBAC management and user management tasks. For example, you can create a script that:
+
+Creates a new user.
+Adds the user to a group.
+Assigns a specific role to the group at a particular scope.
+This automation is invaluable for streamlining user onboarding and ensuring consistent access control.
+
+Example (Simplified):
+
+PowerShell
+
+# ... (Create the user and group as before) ...
+
+# Assign a role to the group (replace with actual role definition ID and scope)
+New-AzRoleAssignment -ObjectId "groupId" -RoleDefinitionId "roleDefinitionId" -Scope "/subscriptions/subscriptionId/resourceGroups/resourceGroupName"
+Best Practices for User and RBAC Management with PowerShell:
+
+Use Modules: Always use the latest versions of the Azure AD and Az modules.
+Connect Securely: Use Connect-AzureAD with appropriate authentication methods.
+Error Handling: Implement error handling in your scripts to handle unexpected situations.
+Variables: Use variables to store values and make your scripts more readable and maintainable.
+Functions: Organize your scripts into functions to improve modularity and reusability.
+Documentation: Document your scripts clearly to explain their purpose and how they work.
+Testing: Test your scripts thoroughly before deploying them to production.
+Least Privilege: Use accounts with the least necessary privileges for the tasks being performed.
+Secure Credentials: Avoid storing credentials directly in your scripts. Use secure methods like Azure Key Vault or Managed Identities.
+RBAC Definitions and Azure AD Users with PowerShell: A Comprehensive Overview (Page 5 of 5)
+RBAC and Azure AD Users with PowerShell Lab Activity (Example):
+
+This lab activity demonstrates how to create a user, add them to a group, and assign a role to the group using PowerShell.
+
+Scenario: Create a new user, add them to an existing group, and grant the group "Reader" access to a resource group.
+
+Steps:
+
+Connect to Azure AD: Connect-AzureAD
+Create the User:
+PowerShell
+
+$user = New-AzureADUser -DisplayName "New Test User" -UserPrincipalName "newuser@yourdomain.com" -Password "P@$$wOrd" -AccountEnabled $true -MailNickName "newuser"
+Get the Group Object ID:
+PowerShell
+
+$group = Get-AzureADGroup -DisplayName "YourGroupName" # Replace with your group name
+$groupId = $group.ObjectId
+Add User to Group:
+PowerShell
+
+Add-AzureADGroupMember -ObjectId $groupId -RefObjectId $user.ObjectId
+Get the Resource Group ID:  (You'll need the full resource group ID, e.g., /subscriptions/subscriptionId/resourceGroups/resourceGroupName)
+
+Assign the "Reader" role to the group at the resource group scope:
+
+PowerShell
+
+$roleDefinition = Get-AzRoleDefinition -Name "Reader"
+New-AzRoleAssignment -ObjectId $groupId -RoleDefinitionId $roleDefinition.Id -Scope "resourceGroupId" # Replace with your resource group ID
+Further Lab Activities:
+
+Explore different built-in roles and their permissions.
+Create custom role definitions.
+Assign roles at different scopes (subscription, resource group, resource).
+Manage user licenses using PowerShell.
+Automate user onboarding and offboarding processes.
+
+
+
+
+N.B: 
+For pay as you go accounts, it takes 24-48 hours from the time you created the account for the budget features to be activated. So if you JUST created an account, you will have to wait. Errors in this section are expected for new accounts.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Azure Policy, Azure Policy Lab Activity 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Azure Policy: A Comprehensive Overview
+Page 1: Introduction to Azure Policy
+
+Azure Policy is a service in Microsoft Azure that helps you enforce organizational standards and assess compliance at scale. It acts as a guardrail, ensuring that your Azure resources adhere to your defined policies and regulations. By defining policies, you can control resource creation, configuration, and deployment, preventing non-compliant resources from being deployed and ensuring existing resources meet your standards.
+
+Key Concepts:
+
+Policy Definition: A policy definition expresses what to evaluate and what action to take. It contains rules that define the desired state of your resources. Policy definitions can be built-in (provided by Microsoft) or custom (created by you).
+Policy Assignment: A policy assignment is the act of applying a policy definition to a specific scope (management group, subscription, resource group, or individual resource). This makes the policy definition active and enforceable within that scope.
+Policy Set (Initiative): A policy set, also known as an initiative, is a grouping of multiple policy definitions. This simplifies management by allowing you to assign a set of related policies together.
+Scope: The scope defines where the policy assignment applies. It can be a management group, subscription, resource group, or individual resource.
+Parameters: Parameters allow you to customize policy definitions during assignment. For example, you can use parameters to specify allowed locations, allowed SKUs, or allowed tags.
+Compliance: Azure Policy provides compliance reporting, showing which resources are compliant and which are not. You can view compliance status in the Azure portal or using the Azure CLI or PowerShell.
+Remediation: For non-compliant resources, Azure Policy can automatically remediate them to bring them into compliance. This can involve modifying resource properties, deploying templates, or running scripts.
+Modes: Azure Policy operates in two modes:
+All: Evaluates all resource types.
+Indexed: Evaluates only resource types that support tags and locations.
+Benefits of Azure Policy:
+
+Compliance at Scale: Enforce policies across your entire Azure environment.
+Cost Control: Prevent the deployment of expensive or unauthorized resources.
+Security Governance: Ensure resources meet security best practices and compliance requirements.
+Operational Consistency: Maintain a consistent configuration across your resources.
+Simplified Management: Manage policies through the Azure portal, CLI, or PowerShell.
+Page 2: Policy Definitions and Assignments
+
+Policy Definitions:
+
+Policy definitions are written in JSON format and consist of:
+
+Metadata: Information about the policy definition, such as its name, description, and category.
+Parameters: Optional parameters that allow customization during assignment.
+Policy Rule: The core logic of the policy, which defines the conditions and actions.
+Policy Rule Structure:
+
+The policy rule uses a combination of:
+
+Logical Operators: allOf, anyOf, not.
+Conditions: equals, notEquals, contains, notContains, in, notIn, greater, greaterOrEquals, less, lessOrEquals.
+Effects: Deny, Audit, Append, Modify, DeployIfNotExists.
+Example Policy Definition (Deny non-allowed locations):
+
+JSON
+
+{
+  "properties": {
+    "displayName": "Deny resources not in allowed locations",
+    "description": "This policy denies resources that are not deployed in the allowed locations specified by the parameters.",
+    "parameters": {
+      "allowedLocations": {
+        "type": "Array",
+        "metadata": {
+          "description": "The list of allowed locations for resources.",
+          "displayName": "Allowed locations",
+          "strongType": "location"
+        }
+      }
+    },
+    "policyRule": {
+      "if": {
+        "not": {
+          "field": "location",
+          "in": "[parameters('allowedLocations')]"
+        }
+      },
+      "then": {
+        "effect": "Deny"
+      }
+    }
+  }
+}
+Policy Assignments:
+
+Policy assignments apply policy definitions to a specific scope. When creating an assignment, you specify:
+
+Scope: The management group, subscription, resource group, or resource.
+Policy Definition: The policy definition to apply.
+Parameters: Values for any parameters defined in the policy definition.
+Enforcement Mode: Determines whether the policy is actively enforced or only audited.
+Exclusions: Allows you to exclude specific resources or scopes from the assignment.
+Page 3: Policy Sets (Initiatives) and Remediation
+
+Policy Sets (Initiatives):
+
+Policy sets simplify policy management by grouping related policy definitions. This allows you to assign multiple policies with a single assignment.
+
+Creating a Policy Set:
+
+Create a JSON definition that includes an array of policy definitions.
+Assign the policy set to a scope, just like a single policy definition.
+Remediation:
+
+Remediation is the process of bringing non-compliant resources into compliance. Azure Policy supports two types of remediation:
+
+Manual Remediation: Manually modify resources to meet policy requirements.
+Automated Remediation: Use remediation tasks to automatically modify resources.
+Remediation Tasks:
+
+Remediation tasks can be created for policy definitions with the DeployIfNotExists or Modify effects. These tasks:
+
+Deploy templates to create or update resources.
+Modify resource properties.
+Creating a Remediation Task:
+
+Navigate to the policy assignment in the Azure portal.
+Select "Remediate."
+Create a remediation task, specifying the resources to remediate.
+Page 4: Azure Policy Lab Activity - Scenario: Enforcing Resource Tagging
+
+Scenario: Your organization requires all Azure resources to be tagged with Environment and CostCenter for cost tracking and management.
+
+Lab Activity:
+
+Create a Custom Policy Definition:
+Create a policy definition that audits resources missing the required tags.
+Use the AuditIfNotExists effect.
+Define parameters for the tag names (Environment, CostCenter).
+Create a Policy Assignment:
+Assign the policy definition to a resource group or subscription.
+Specify the tag names as parameters.
+Set the enforcement mode to "Audit."
+Create Non-Compliant Resources:
+Deploy Azure resources without the required tags.
+View Compliance:
+Navigate to the policy assignment in the Azure portal.
+View the compliance status, which should show the non-compliant resources.
+Create a Modify Policy Definition:
+Create a policy definition that automatically adds the tags if they are missing.
+Use the Modify effect.
+Create a Policy Assignment of the Modify Policy:
+Assign the new policy, and specify the tags and values to add.
+Create a remediation task to add the tags to the non-compliant resources.
+Verify Remediation:
+Check the compliance status again.
+Verify that the tags have been added to the resources.
+Page 5: Advanced Azure Policy Features and Best Practices
+
+Advanced Features:
+
+Policy Aliases: Use aliases to refer to resource properties in a standardized way.
+Policy Functions: Use functions to perform calculations and manipulate data in policy rules.
+Management Groups: Use management groups to organize and manage policies at scale.
+Policy Exemptions: Create exemptions to exclude specific resources or scopes from policy evaluation.
+Policy Definitions in Code (Policy as Code): Use Azure CLI or PowerShell to manage policy definitions and assignments programmatically.
+Azure DevOps integration: Use Azure DevOps to deploy and manage Azure Policies.
+Best Practices:
+
+Start with Audit Policies: Begin by auditing resources to identify compliance gaps before enforcing policies.
+Use Parameters: Make policy definitions reusable by using parameters.
+Group Policies with Policy Sets: Simplify management by using policy sets.
+Use Descriptive Names and Descriptions: Make policies easy to understand and maintain.
+Test Policies Thoroughly: Test policies in a non-production environment before deploying them to production.
+Monitor Compliance Regularly: Regularly review compliance reports to ensure resources remain compliant.
+Implement Remediation: Use remediation to automatically bring non-compliant resources into compliance.
+Use Policy as Code: Manage policies programmatically for version control and automation.
+Document Policies: Document policy definitions, assignments, and remediation procedures.
+Use Management Groups: Organize your policies using management groups to apply policies at a large scale.
+By understanding and implementing these advanced features and best practices, you can effectively leverage Azure Policy to enforce organizational standards and maintain compliance across your Azure environment.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Azure Policy WalkThrough and LAB Activity"	73-76	4	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Azure Policy Walkthrough and Lab Activity: A Detailed 5-Page Overview
+Page 1: Introduction and Foundational Concepts
+
+Azure Policy is a core service within Microsoft Azure that empowers organizations to govern their cloud resources effectively. It functions as a centralized policy engine, enabling you to define and enforce rules for resource configuration, deployment, and operation. Imagine it as a set of automated checks and balances, ensuring your Azure environment adheres to your company's security, compliance, and cost management standards.
+
+Key Objectives of Azure Policy:
+
+Enforce Compliance: Ensure resources meet regulatory requirements and internal policies.
+Prevent Non-Compliance: Block the creation or modification of resources that violate defined rules.
+Automate Remediation: Automatically correct non-compliant resources to bring them into alignment.
+Centralized Governance: Manage policies across subscriptions, resource groups, and management groups.
+Core Components:
+
+Policy Definitions: These are the heart of Azure Policy. They define the rules that resources must follow. Written in JSON, they specify conditions and actions.
+Policy Assignments: Applying a policy definition to a specific scope (management group, subscription, resource group, or resource). This activates the policy.
+Policy Sets (Initiatives): Grouping multiple policy definitions into a single unit. This simplifies management of related policies.
+Scopes: The hierarchical level at which a policy is assigned (management group, subscription, resource group, resource).
+Parameters: Variables within policy definitions that allow for customization during assignment.
+Effects: The actions taken when a policy condition is met (Deny, Audit, Append, Modify, DeployIfNotExists).
+Initial Setup and Navigation:
+
+Access Azure Policy through the Azure portal by searching for "Policy."
+Familiarize yourself with the "Definitions," "Assignments," and "Compliance" sections.
+Understand the concept of management groups for organizing policies at scale.
+Page 2: Deep Dive into Policy Definitions
+
+Policy definitions are the building blocks of Azure Policy. They define the "what" and "how" of compliance.
+
+Structure of a Policy Definition:
+
+Metadata: Provides information about the policy (name, description, category).
+Parameters (Optional): Define customizable values.
+Policy Rule: The core logic, using conditions and effects.
+Understanding Policy Rules:
+
+Conditions: Use logical operators (allOf, anyOf, not) and comparison operators (equals, contains, greater, etc.) to define criteria.
+Effects:
+Deny: Prevents the creation or modification of non-compliant resources.
+Audit: Logs non-compliance for reporting.
+Append: Adds tags or other properties to resources.
+Modify: Changes resource properties.
+DeployIfNotExists (DINE): Deploys a template if a resource doesn't exist or isn't compliant.
+Example: Audit Resources Missing a Tag:
+
+JSON
+
+{
+  "properties": {
+    "displayName": "Audit resources missing 'Environment' tag",
+    "description": "Audits resources that do not have the 'Environment' tag.",
+    "policyRule": {
+      "if": {
+        "not": {
+          "field": "tags['Environment']",
+          "exists": true
+        }
+      },
+      "then": {
+        "effect": "Audit"
+      }
+    }
+  }
+}
+Creating and Testing Policy Definitions:
+
+Use the Azure portal or Azure CLI/PowerShell to create custom policy definitions.
+Test policies in a non-production environment before deploying them to production.
+Use the "Evaluate compliance" feature to test policies against existing resources.
+Page 3: Policy Assignments and Initiatives (Policy Sets)
+
+Policy Assignments:
+
+Policy assignments put policy definitions into action.
+
+Key Assignment Settings:
+
+Scope: The target of the policy.
+Policy Definition/Initiative: The policy to apply.
+Parameters: Values for policy parameters.
+Enforcement Mode: Controls whether the policy is enforced or audited.
+Exclusions: Exclude specific resources or scopes.
+Initiatives (Policy Sets):
+
+Initiatives group related policies into a single unit. This simplifies management, especially for comprehensive compliance requirements.
+
+Creating Initiatives:
+
+Create a JSON definition that includes an array of policy definitions.
+Assign the initiative to a scope.
+Remediation Tasks:
+
+For DeployIfNotExists and Modify policies, remediation tasks automatically correct non-compliant resources.
+Create remediation tasks through the Azure portal.
+Page 4: Azure Policy Lab Activity - Enforcing Allowed Locations and Resource Types
+
+Scenario: Your organization requires all resources to be deployed in specific regions and only certain resource types are allowed.
+
+Lab Activity:
+
+Create a Policy Definition for Allowed Locations:
+Use the Deny effect.
+Define a parameter for allowed locations.
+Create a rule that denies resources not in the allowed locations.
+Create a Policy Definition for Allowed Resource Types:
+Use the Deny effect.
+Define a parameter for allowed resource types.
+Create a rule that denies resources not in the allowed resource types.
+Create an Initiative (Policy Set):
+Add both policy definitions to the initiative.
+Create a Policy Assignment:
+Assign the initiative to a resource group or subscription.
+Specify the allowed locations and resource types as parameters.
+Test the Policy:
+Attempt to create resources in a non-allowed location and of a non-allowed type.
+Verify that the policy blocks the deployment.
+View Compliance:
+Navigate to the policy assignment and view the compliance status.
+Observe the blocked deployments and the non-compliant resources.
+Page 5: Advanced Features and Best Practices
+
+Advanced Features:
+
+Policy Aliases: Use aliases to refer to resource properties in a standardized way.
+Policy Functions: Perform calculations and data manipulation in policy rules.
+Management Groups: Organize and manage policies at scale.
+Policy Exemptions: Exclude resources or scopes from policy evaluation.
+Policy as Code: Manage policies using Azure CLI/PowerShell or Terraform.
+Best Practices:
+
+Start with Audit Policies: Begin by auditing to identify compliance gaps.
+Use Parameters: Make policies reusable.
+Group Policies with Initiatives: Simplify management.
+Use Descriptive Names: Make policies easy to understand.
+Test Thoroughly: Test policies in non-production.
+Monitor Compliance: Regularly review compliance reports.
+Implement Remediation: Automate corrective actions.
+Use Policy as Code: For version control and automation.
+Document Policies: For maintainability.
+Leverage Management Groups: For large scale deployments.
+Use Azure Policy Insights: To get a better view of policy compliance.
+By following these guidelines and engaging in hands-on lab activities, you can effectively leverage Azure Policy to enforce governance, ensure compliance, and streamline your Azure management practices.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Lab 
+
+	"1.Access Azure using AD
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	Lab: Access Azure Using Azure Active Directory (Azure AD)
+
+This lab will guide you through the process of accessing Azure resources using Azure Active Directory (Azure AD) credentials. We'll cover basic user creation, role assignment, and access verification.
+
+Prerequisites:
+
+An active Azure subscription.
+Administrative access to your Azure AD tenant 
+	(Global Administrator or User Administrator).
+Lab Steps:
+
+1. Create a New Azure AD User:
+
+	Navigate to Azure AD:
+		Log in to the Azure portal (portal.azure.com).
+		Search for and select "Azure Entra ID ." -> Manage 
+		Create User:
+		In the left-hand menu, select "Users."
+		Click "+ New user" and then "Create new user".
+	User Details:
+		Username: Enter a unique username (e.g., labuser@yourdomain.onmicrosoft.com).
+		Name: Enter the user's display name.
+		Password: Either auto-generate a password or create one manually. Make sure to record the password. - usttest@vilasvargheseyahoo.onmicrosoft.com/Bomo225430
+		Groups and roles : Leave blank for now.
+		Click "Create."
+2. Assign a Role to the User:
+
+	Navigate to the Resource Group or Subscription:
+	Select the resource group or subscription you want the user to access.
+	Access Control (IAM):
+	In the left-hand menu, select "Access control (IAM)."
+	Add Role Assignment:
+	Click "+ Add" and then "Add role assignment."
+	Select Role:
+	Choose a role that grants the necessary permissions (e.g., "Reader," "Contributor," "Virtual Machine Contributor"). For this lab, "Reader" is sufficient.
+	Assign access to:
+	Select "User, group, or service principal".
+	Members:
+	Search for and select the user you created (labuser@yourdomain.onmicrosoft.com).
+	Review + assign:
+	Click "Review + assign."
+3. Verify User Access:
+
+	Open an Incognito/Private Browser Window:
+	This ensures you're not using your existing Azure session.
+	Navigate to the Azure Portal:
+	Go to portal.azure.com.
+	Sign In with the New User's Credentials:
+	Enter the username and password of the labuser account.
+	Verify Resource Access:
+	Navigate to the resource group or subscription you assigned the role to.
+	Verify that the user can view the resources based on the assigned role (e.g., if you assigned "Reader," the user should be able to view resources but not modify them).
+4. (Optional) Conditional Access
+
+	If your Azure AD tenant has conditional access policies enabled, you may need to configure the user to be able to access the Azure portal.
+	Navigate to Azure Active Directory, and then select conditional access.
+	Create a new policy, and add the user to the policy.
+	Configure the policy to allow access to the Azure portal.
+	5. (Optional) Azure CLI/PowerShell Access:
+
+	Install Azure CLI or PowerShell:
+	Install the Azure CLI or Azure PowerShell modules on your local machine.
+	Log In with the New User:
+	Azure CLI: az login -u labuser@yourdomain.onmicrosoft.com
+	Azure PowerShell: Connect-AzAccount -Username labuser@yourdomain.onmicrosoft.com
+	You'll be prompted for the user's password.
+	Verify Access:
+	Run Azure CLI or PowerShell commands to verify the user's access to the resources. For example:
+	Azure CLI: az group list
+	Azure PowerShell: Get-AzResourceGroup
+	Cleanup:
+
+	Remove Role Assignment:
+	Go back to the resource group or subscription's "Access control (IAM)."
+	Remove the role assignment for the labuser account.
+	Delete Azure AD User:
+	In Azure AD, go to "Users."
+	Select the labuser account and click "Delete user."
+Key Takeaways:
+
+Azure AD is used to authenticate users and control access to Azure resources.
+Role-based access control (RBAC) allows you to grant granular permissions to users and groups.
+You can access Azure resources through the Azure portal, Azure CLI, or Azure PowerShell using Azure AD credentials.
+Conditional Access policies can be used to further secure access to the Azure portal.
+	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	2.Reset Azure AD Password
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	Resetting Azure AD passwords can be handled in a few different ways, depending on whether you're an administrator or an end-user. Here's a breakdown:
+
+For Administrators:
+
+Azure Portal (Microsoft Entra admin center):
+Administrators with the appropriate permissions can reset user passwords directly through the Azure portal (now the Microsoft Entra admin center).
+Here's a general outline:
+Log in to the Microsoft Entra admin center.
+Navigate to "Users."
+Select the user whose password you want to reset.
+Look for options like "Reset password."
+You'll typically be given the option to generate a temporary password.
+PowerShell:
+Azure AD PowerShell modules allow administrators to automate password resets for individual or multiple users.
+This is useful for bulk operations.
+For End-Users:
+
+Self-Service Password Reset (SSPR):
+If your organization has enabled SSPR, users can reset their own passwords without administrator intervention.
+This typically involves:
+Going to the Azure AD sign-in page.
+Clicking "Forgot password."
+Following the on-screen instructions, which may include verifying their identity through email, SMS, or other methods.
+When SSPR is not enabled:
+If SSPR is not enabled, the user will have to contact their organisations IT help desk.
+Key Considerations:
+
+Permissions: Only administrators with the necessary permissions can reset passwords for other users.
+SSPR Configuration: The availability and specific steps for SSPR depend on how your organization has configured it.
+Security: Always follow security best practices when resetting passwords, such as using strong passwords and enabling multi-factor authentication (MFA).
+Where to find official information:
+
+For the most up-to-date and detailed instructions, refer to the official Microsoft documentation:
+Microsoft Learn is an excellent resource for this.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	3.Create an Azure Virtual Network
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Let's create an Azure Virtual Network (VNet). I'll guide you through the steps using the Azure portal, which is the most beginner-friendly method.
+
+Steps to Create an Azure Virtual Network:
+
+Sign in to the Azure Portal:
+
+Open your web browser and go to the Azure portal: portal.azure.com
+Sign in with your Azure account credentials.
+Search for Virtual Networks:
+
+In the search bar at the top of the portal, type "Virtual networks" and press Enter.
+Select "Virtual networks" from the search results.
+Create a Virtual Network:
+
+On the "Virtual networks" page, click the "+ Create" button.
+Basics Tab:
+
+Subscription: Choose the Azure subscription where you want to create the VNet.
+Resource group:
+You can either select an existing resource group or create a new one. To create a new one, click "Create new," enter a name for the resource group, and click "OK."
+Name: Enter a name for your virtual network (e.g., "myVNet").
+Region: Select the Azure region where you want to deploy the VNet. Choose a region that is geographically close to you or where your other resources will be located.
+IP Addresses Tab:
+
+IPv4 address space:
+This is the range of private IP addresses that will be used within your VNet.
+The default address space is typically "10.0.0.0/16." You can modify this if needed.
+It is very important to plan your address space. Overlapping address spaces will cause issues when connecting networks.
+Add subnet:
+A subnet is a range of IP addresses within the VNet.
+The default subnet is usually named "default."
+You can modify the subnet's name and address range.
+It is best practice to create multiple subnets. For example, a subnet for web servers, and a subnet for database servers.
+Click "Add subnet" to create additional subnets.
+Security Tab:
+
+You can configure security settings like Azure Bastion and DDoS protection here. For basic VNet creation, you can leave these settings at their defaults.
+Tags Tab (Optional):
+
+Tags are metadata that you can assign to your Azure resources.
+You can add tags to categorize and manage your resources.
+Review + create:
+
+Review the settings you've configured.
+If everything looks correct, click "Create."
+Deployment:
+
+Azure will begin deploying your virtual network.
+Once the deployment is complete, you'll see a notification.
+Verify VNet Creation:
+
+Go back to the "Virtual networks" page in the Azure portal.
+You should see your newly created VNet in the list.
+Click on your VNet to view its details.
+Key Considerations:
+
+IP Address Space Planning: Carefully plan your IP address space to avoid conflicts and ensure scalability.
+Subnet Design: Create subnets based on the different types of resources you plan to deploy.
+Security: Implement network security groups (NSGs) and other security measures to protect your VNet.
+Region Selection: Choose a region that meets your requirements for latency, data residency, and compliance.
+Cost: Be aware of the costs associated with VNets, especially if you're using features like VPN gateways or ExpressRoute.	
+	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	4.Create a new Subnet
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	
+	Prerequisites:
+
+An existing Azure Virtual Network (VNet).
+Access to the Azure portal.
+Steps to Create a New Subnet:
+
+Sign in to the Azure Portal:
+
+Open your web browser and go to the Azure portal: portal.azure.com.
+Sign in with your Azure account credentials.
+Navigate to Virtual Networks:
+
+In the search bar at the top of the portal, type "Virtual networks" and press Enter.
+Select "Virtual networks" from the search results.
+Select Your Virtual Network:
+
+Find and select the VNet where you want to create the new subnet.
+Go to Subnets:
+
+In the left-hand menu of your VNet, under "Settings," select "Subnets."
+Add a New Subnet:
+
+Click the "+ Subnet" button at the top of the "Subnets" page.
+Configure the Subnet:
+
+Name: Enter a name for your new subnet (e.g., "WebServersSubnet," "DatabaseSubnet").
+Subnet address range (address prefix):
+Enter the IP address range for your subnet.
+This range must be within the VNet's address space and must not overlap with existing subnets.
+Example: If your VNet is 10.0.0.0/16, you might use 10.0.1.0/24 for your new subnet.
+It is very important to plan your address space. Overlapping address spaces will cause issues when connecting networks.
+Network security group (Optional):
+You can associate an existing network security group (NSG) with the subnet or create a new one. NSGs control inbound and outbound network traffic.
+Route table (Optional):
+You can associate an existing route table with the subnet or create a new one. Route tables control network traffic routing.
+Subnet delegation (Optional):
+Used for delegating a subnet to a specific azure service.
+Service endpoints (Optional):
+Used to secure access to Azure service resources.
+Save the Subnet:
+
+Click "Save" at the bottom of the "Add subnet" blade.
+Verify Subnet Creation:
+
+You should now see your new subnet listed on the "Subnets" page of your VNet.
+Key Considerations:
+
+Address Space:
+Ensure the subnet's address range is within the VNet's address space and doesn't overlap with other subnets.
+NSGs and Route Tables:
+Properly configure NSGs and route tables to control network traffic and routing.
+Subnet Delegation:
+Understand when and how to use subnet delegation for Azure services.
+Planning:
+Carefully plan your subnet design based on your application's architecture and security requirements.
+	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	5.Create a new Internet Gateway
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	It's important to clarify that in Azure, the concept of a standalone "Internet Gateway" as it might exist in some other cloud providers, doesn't translate directly. In Azure, internet connectivity for your Virtual Network (VNet) is handled through different mechanisms. Here's a breakdown of how Azure provides internet access, and the relevant resources:
+
+Key Concepts:
+
+Public IP Addresses:
+Azure resources like Virtual Machines (VMs) can be assigned public IP addresses, allowing them to communicate directly with the internet.
+Network Address Translation (NAT):
+Azure provides NAT capabilities, allowing resources within a private VNet to access the internet without having a public IP address. This is often achieved through:
+NAT Gateway: A dedicated NAT service that provides outbound internet connectivity for VMs and other resources within a VNet. This is the recommended method.
+Virtual Network Gateways (VPN or ExpressRoute): These gateways connect your on-premises network to your Azure VNet, and can also provide internet access.
+Internet Access is Implicit:
+When you create a VNet, it inherently has the ability to route traffic to the internet. The control comes into play with how you configure that routing, and how you assign public IP's.
+How to Provide Internet Access:
+
+Assigning a Public IP Address:
+
+The simplest way to give a VM or other resource internet access is to assign it a public IP address.
+This allows direct two-way communication with the internet.
+Using Azure NAT Gateway:
+
+This is the recommended approach for providing outbound internet connectivity to resources within a private VNet.
+Here's a simplified overview:
+Create a NAT gateway.
+Associate the NAT gateway with one or more subnets in your VNet.
+Resources in those subnets can then access the internet.
+Virtual Network Gateways (VPN or ExpressRoute):
+
+These are primarily used to connect your on-premises network to Azure.
+However, they can also be configured to provide internet access to resources within your VNet.
+Important Considerations:
+
+Security:
+Use Network Security Groups (NSGs) to control inbound and outbound traffic to your VNet and subnets.
+Azure Firewall can provide advanced security features.
+Cost:
+Public IP addresses and NAT gateways incur costs.
+Consider your cost implications when designing your network architecture.
+	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	6.Create a new Route Table in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	Steps to Create a New Route Table:
+
+Sign in to the Azure Portal:
+
+Open your web browser and go to the Azure portal: portal.azure.com.
+Sign in with your Azure account credentials.
+Search for Route Tables:
+
+In the search bar at the top of the portal, type "Route tables" and press Enter.
+Select "Route tables" from the search results.
+Create a Route Table:
+
+On the "Route tables" page, click the "+ Create" button.
+Basics Tab:
+
+Subscription: Choose the Azure subscription where you want to create the route table.
+Resource group:
+You can either select an existing resource group or create a new one. To create a new one, click "Create new," enter a name for the resource group, and click "OK."
+Region: Select the Azure region where you want to deploy the route table. Choose the same region as your VNet.
+Name: Enter a name for your route table (e.g., "myRouteTable").
+IP address version: Leave this as IPv4.
+Tags Tab (Optional):
+
+Tags are metadata that you can assign to your Azure resources.
+You can add tags to categorize and manage your resources.
+Review + create:
+
+Review the settings you've configured.
+If everything looks correct, click "Create."
+Deployment:
+
+Azure will begin deploying your route table.
+Once the deployment is complete, you'll see a notification.
+Add Routes (Important):
+
+Now that you've created the route table, you need to add routes to it.
+Go back to the "Route tables" page and select your newly created route table.
+In the left-hand menu, under "Settings," select "Routes."
+Click "+ Add."
+Route name: Enter a name for your route.
+Address prefix: Enter the destination IP address range for the traffic you want to route (e.g., 0.0.0.0/0 for default internet route, or a specific network range).
+Next hop type: Choose the type of next hop:
+Virtual network gateway: For routing traffic to a VPN or ExpressRoute gateway.
+Virtual network: For routing traffic within the VNet.
+Internet: For routing traffic to the internet.
+Virtual appliance: For routing traffic through a network virtual appliance (NVA).
+None : For dropping traffic.
+Next hop address: Enter the IP address of the next hop (if applicable).
+Click "Add."
+Repeat the add route steps for each route that you need.
+Associate with Subnet (Crucial):
+
+A route table is only effective when associated with a subnet.
+Go back to your Virtual Network (VNet).
+In the left-hand menu, under "Settings," select "Subnets."
+Select the subnet you want to associate with the route table.
+In the "Route table" dropdown, select your route table.
+Click "Save."
+Key Considerations:
+
+Route Planning: Carefully plan your routes to ensure traffic is routed correctly.
+Next Hop Types: Understand the different next hop types and choose the appropriate one.
+Subnet Association: Remember to associate the route table with the correct subnet.
+Default Routes: A route with an address prefix of 0.0.0.0/0 is a default route, typically used to route traffic to the internet or a virtual appliance.
+Overlapping Routes: Be aware of overlapping routes, as Azure uses the most specific route.
+NSG's: Route tables control routing, but network security groups control what traffic is allowed in and out of the network.
+	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	7.Create a Custom Route Table in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	1. Sign in to the Azure Portal:
+
+Open your web browser and go to the Azure portal: portal.azure.com
+Sign in with your Azure account credentials.
+2. Search for Route Tables:
+
+In the search bar at the top of the portal, type "Route tables" and press Enter.
+Select "Route tables" from the search results.
+3. Create a Route Table:
+
+On the "Route tables" page, click the "+ Create" button.
+4. Configure the Basics:
+
+Subscription: Choose your Azure subscription.
+Resource group: Select an existing resource group or create a new one.
+Region: Choose the Azure region where you want to deploy the route table. It's best practice to choose the same region as your Virtual Network (VNet).
+Name: Give your route table a descriptive name (e.g., "CustomRouteTable-WebSubnet").
+IP address version: Leave this as IPv4.
+Click "Review + Create" then "Create"
+5. Add Custom Routes:
+
+Once the Route Table is deployed, navigate to it in the Azure portal.
+In the left-hand menu, under "Settings," select "Routes."
+Click "+ Add" to add a custom route.
+Route name: Enter a name for the route (e.g., "ToVirtualAppliance").
+Address prefix: Enter the destination IP address range for the traffic you want to route. This is the key part for custom routing. Examples:
+A specific subnet IP range (e.g., 10.1.0.0/24).
+A public IP address range.
+0.0.0.0/0 (for a default route).
+Next hop type: Choose the next hop type:
+Virtual network gateway: Route traffic to a VPN or ExpressRoute gateway.
+Virtual network: Route traffic within the same VNet.
+Internet: Route traffic directly to the internet.
+Virtual appliance: Route traffic through a Network Virtual Appliance (NVA).
+None: Drop the traffic.
+Next hop address: If you choose "Virtual appliance," enter the IP address of the NVA.
+Click "Add."
+Repeat these steps to add all your custom routes.
+6. Associate the Route Table with a Subnet:
+
+Navigate to your Virtual Network (VNet).
+In the left-hand menu, under "Settings," select "Subnets."
+Select the subnet you want to associate with the custom Route Table.
+In the "Route table" dropdown, choose the custom Route Table you created.
+Click "Save."
+Example Scenario: Routing Traffic Through a Virtual Appliance:
+
+Let's say you have a Network Virtual Appliance (NVA) with the IP address 10.0.2.4. You want to route all traffic from a specific subnet (10.0.1.0/24) through this NVA.
+
+Create the Route Table: Follow steps 1-4.
+Add the Route:
+Route name: "ToNVA"
+Address prefix: 0.0.0.0/0 (or a more specific range if needed)
+Next hop type: "Virtual appliance"
+Next hop address: 10.0.2.4
+Associate with Subnet: Associate the Route Table with the 10.0.1.0/24 subnet.
+Key Considerations for Custom Route Tables:
+
+Planning: Carefully plan your routes based on your network architecture and security requirements.
+Overlapping Routes: Azure selects the most specific route. Be mindful of overlapping address prefixes.
+Next Hop Types: Understand the different next hop types and choose the correct one.
+NVA Configuration: If routing through an NVA, ensure the NVA is properly configured to handle the traffic.
+NSGs: Route tables handle routing, while Network Security Groups (NSGs) handle traffic filtering. Use both for comprehensive network control.
+UDR's: User Defined Routes, is the full name of the azure route table functionality.
+	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	8.Associate Subnet with Route Table in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	Steps:
+
+Navigate to Your Virtual Network:
+
+Log in to the Azure portal (portal.azure.com).
+Search for "Virtual networks" in the portal's search bar and select it.
+Choose the Virtual Network (VNet) that contains the subnet you want to work with.
+Go to Subnets:
+
+In the left-hand menu of your VNet, under "Settings," select "Subnets."
+Select the Subnet:
+
+Click on the name of the subnet you want to associate with the Route Table.
+Associate the Route Table:
+
+In the subnet's settings pane, you'll find a "Route table" dropdown menu.
+Click on the dropdown and select the Route Table you want to associate with the subnet.
+Click the save button.
+Save Changes:
+
+Ensure that you press the save button, at the top of the subnet configuration page.
+Important Points:
+
+One Route Table Per Subnet:
+A subnet can only be associated with one Route Table at a time.
+Route Table Location:
+The Route Table must be in the same Azure region as the Virtual Network.
+Effect of Association:
+Once associated, all traffic leaving the subnet will be routed according to the rules defined in the Route Table.
+User Defined Routes (UDRs):
+Remember that Route tables are also known as User Defined Routes.
+Why This Is Important:
+
+Network Traffic Control:
+Route Tables allow you to define custom routes to direct network traffic to specific destinations, such as virtual appliances, VPN gateways, or the internet.
+Security:
+You can use Route Tables to enforce security policies by controlling the flow of traffic within your VNet.
+Network Virtual Appliances (NVAs):
+Route Tables are essential for routing traffic through NVAs, such as firewalls or load balancers.
+	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	9.Create Security Group to allow ports 22, 80, and 443 in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	Let's create a Network Security Group (NSG) in Azure to allow inbound traffic on ports 22 (SSH), 80 (HTTP), and 443 (HTTPS). We'll use the Azure portal for this.
+
+Steps:
+
+Sign in to the Azure Portal:
+
+Open your web browser and go to the Azure portal: portal.azure.com.
+Sign in with your Azure account credentials.
+Search for Network Security Groups:
+
+In the search bar at the top of the portal, type "Network security groups" and press Enter.
+Select "Network security groups" from the search results.
+Create a Network Security Group:
+
+On the "Network security groups" page, click the "+ Create" button.
+Configure the Basics:
+
+Subscription: Choose your Azure subscription.
+Resource group: Select an existing resource group or create a new one.
+Region: Choose the Azure region where you want to deploy the NSG. It's best practice to choose the same region as your Virtual Machines (VMs) or subnets.
+Name: Give your NSG a descriptive name (e.g., "WebAccessNSG").
+Click "Review + create" then "Create".
+Add Inbound Security Rules:
+
+Once the NSG is deployed, navigate to it in the Azure portal.
+In the left-hand menu, under "Settings," select "Inbound security rules."
+Click "+ Add."
+Configure the SSH Rule (Port 22):
+
+Source: Choose "Any" or "IP Addresses" to restrict access to specific IP ranges. "Any" is used for simplicity in this example.
+Source port ranges: Leave "*" (any).
+Destination: Choose "Any."
+Destination port ranges: Enter "22."
+Protocol: Choose "TCP."
+Action: Choose "Allow."
+Priority: Leave the default (or set a priority as needed). Lower numbers have higher priority.
+Name: Enter a name for the rule (e.g., "AllowSSH").
+Click "Add."
+Configure the HTTP Rule (Port 80):
+
+Repeat step 6, but:
+Change "Destination port ranges" to "80."
+Change "Name" to "AllowHTTP."
+Configure the HTTPS Rule (Port 443):
+
+Repeat step 6, but:
+Change "Destination port ranges" to "443."
+Change "Name" to "AllowHTTPS."
+Associate the NSG with a Subnet or Network Interface:
+
+Subnet Association:
+Navigate to your Virtual Network (VNet).
+Go to "Subnets."
+Select the subnet you want to associate with the NSG.
+In the "Network security group" dropdown, choose the NSG you created.
+Click "Save."
+Network Interface Association:
+Navigate to your Virtual Machine.
+Go to "Networking."
+Select the network interface.
+Go to “Network security group” and then “Associate”.
+Choose the NSG you created.
+Click "Save."
+Important Considerations:
+
+Security Best Practices:
+Avoid using "Any" for the source unless absolutely necessary. Restrict access to specific IP ranges for enhanced security.
+Implement the principle of least privilege. Only allow the ports that are required.
+Priority:
+Understand how priority works. Lower numbers have higher priority.
+Be aware of default security rules.
+NSG Association:
+Decide whether to associate the NSG with a subnet or a network interface, based on your network architecture.
+Testing:
+After configuring the NSG, test the connectivity to your VMs to ensure the rules are working as expected.
+Outbound Rules:
+NSG's have default outbound rules that allow all outbound traffic. If you need to restrict outbound traffic, you will need to add outbound security rules.
+	
+	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	10.Create another VPC and connect the two VPCs using VPC  in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	
+	When you want to connect two Virtual Networks (VNets) in Azure, you use a feature called VNet peering. This allows resources in different VNets to communicate with each other as if they were in the same network. Here's a breakdown of how to create another VNet and then connect the two using VNet peering:
+
+Part 1: Creating the Second Virtual Network
+
+Follow the same steps you used to create your first VNet, but with different names and IP address ranges to avoid conflicts. Here's a quick recap:
+
+Sign in to the Azure Portal:
+
+Go to portal.azure.com and sign in.
+Create a Virtual Network:
+
+Search for "Virtual networks" and click "+ Create."
+Basics:
+Choose your subscription and resource group.
+Name: Give it a unique name (e.g., "VNet2").
+Region: It can be the same or a different region as your first VNet.
+IP Addresses:
+Crucially, use a non-overlapping IP address space. For example, if your first VNet is 10.0.0.0/16, use something like 10.1.0.0/16 for this one.
+Create any necessary subnets.
+Review + create:
+Click "Create."
+Part 2: Connecting the VNets Using VNet Peering
+
+Now, we'll establish a peering connection between the two VNets.
+
+Navigate to the First VNet:
+
+In the Azure portal, go to your first VNet.
+In the left-hand menu, under "Settings," select "Peerings."
+Add a Peering:
+
+Click "+ Add."
+This virtual network:
+Peering link name: Give it a name (e.g., "VNet1toVNet2").
+Remote virtual network:
+Virtual network deployment model: Leave as "Resource Manager."
+I know my resource ID: Select this if you have the remote v-nets resource ID. Otherwise select the subscription and virtual network.
+Subscription: choose the subscription that the remote v-net is in.
+Virtual network: Choose the second VNet (VNet2).
+Peering link name: Give it a name (e.g., "VNet2toVNet1").
+Peering settings:
+Allow virtual network access: Check this.
+Allow forwarded traffic: Check this if you want to allow traffic forwarded from resources outside the VNets.
+Allow gateway transit: only check this if using virtual network gateways.
+Use remote virtual network's gateway or route server: only check this if using virtual network gateways.
+Click "Add."
+Repeat for the Second VNet:
+
+Go to VNet2 and repeat the peering process, creating a peering connection back to VNet1.
+Important Considerations:
+
+Non-Overlapping IP Addresses:
+This is absolutely essential. The IP address ranges of the two VNets must not overlap.
+Region:
+VNets can be peered within the same region or across different regions (global VNet peering).
+Permissions:
+You need appropriate permissions on both VNets to establish a peering connection.
+Route Tables and NSGs:
+If you have custom route tables or Network Security Groups (NSGs) in either VNet, ensure they are configured to allow the desired traffic flow between the peered VNets.
+Testing:
+After establishing the peering, test the connectivity by deploying Virtual Machines (VMs) in each VNet and trying to ping or connect to them.
+	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	11.Peering for inter-VPC connectivity in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	VNet peering in Azure is a powerful mechanism for connecting Virtual Networks (VNets) to enable seamless communication between resources in those VNets. Here's a detailed overview of peering for inter-VNet connectivity:
+
+What is VNet Peering?
+
+VNet peering allows you to connect two VNets in the same Azure region or across different Azure regions (global VNet peering). Once peered, resources in the peered VNets can communicate with each other using private IP addresses, as if they were within the same network.
+
+Key Features and Benefits:
+
+Private Connectivity: Traffic between peered VNets stays within the Azure backbone network, ensuring low latency and high bandwidth.
+No Public Internet Dependency: Communication doesn't traverse the public internet, enhancing security.
+Simplified Network Management: Peering simplifies network management compared to other connectivity methods like VPN gateways.
+Regional and Global Peering: Supports both regional and global peering, allowing you to connect VNets across different Azure regions.
+Non-Transitive: VNet peering is non-transitive. If VNet A is peered with VNet B, and VNet B is peered with VNet C, VNet A cannot directly communicate with VNet C unless VNet A is also directly peered with VNet C.
+Use Cases:
+
+Cross-Environment Communication: Connect development, test, and production VNets.
+Hub-and-Spoke Network Topology: Create a central hub VNet and connect multiple spoke VNets.
+Shared Services: Provide shared services (e.g., DNS, monitoring) to multiple VNets.
+Disaster Recovery: Connect primary and secondary VNets for disaster recovery scenarios.
+How VNet Peering Works:
+
+Peering Links: You create peering links between the VNets. Each VNet requires a peering link to the other.
+Route Propagation: Azure automatically updates the routing tables of the peered VNets to allow traffic between them.
+Traffic Flow: Traffic between resources in the peered VNets flows directly through the Azure backbone network.
+Configuration Steps:
+
+Create Peering Links:
+Navigate to one of the VNets in the Azure portal.
+In the left-hand menu, select "Peerings."
+Click "+ Add."
+Configure the peering link, specifying the remote VNet and peering settings.
+Repeat the process in the remote VNet to create a peering link back to the first VNet.
+Configure Peering Settings:
+Allow virtual network access: Enables communication between the peered VNets.
+Allow forwarded traffic: Allows traffic forwarded from resources outside the VNets.
+Allow gateway transit: Allows the peered VNets to use a virtual network gateway in one of the VNets.
+Use remote virtual network's gateway or route server: Allows the peered VNets to use a virtual network gateway or route server in one of the VNets.
+Important Considerations:
+
+IP Address Ranges: The IP address ranges of the peered VNets must not overlap.
+Permissions: You need appropriate permissions on both VNets to create a peering connection.
+Network Security Groups (NSGs): NSGs can control traffic flow between peered VNets. Ensure NSG rules allow the desired traffic.
+Route Tables: Custom route tables can be used to control traffic flow between peered VNets.
+Global VNet Peering:
+Requires that both virtual networks are in supported azure regions.
+Has some limitations, for example, gateway transit is not supported.
+Has a price that is different from regional peering.
+Peering Status: The peering status must be "Connected" for traffic to flow between the VNets.
+Troubleshooting:
+
+Check Peering Status: Verify that the peering status is "Connected."
+Verify NSG Rules: Ensure NSG rules allow the desired traffic.
+Check Route Tables: Verify that route tables are configured correctly.
+Test Connectivity: Use tools like ping or traceroute to test connectivity between resources in the peered VNets.
+VNet peering is a fundamental networking capability in Azure, enabling you to build complex and scalable network architectures.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	11.Create a Network Interface (vnet0) with a static internal IP in the Subnet created in step 4  in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	12.Assign an Elastic IP to the Network Interface created in step 11 in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	13Create a new pair of SSH keys in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	14.Attach an existing key pair to the VM in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	15.Create a new VM in Azure and tag the associated resources listed above in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	16.Create Blob Storage and File Storage in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	17.Configure and demonstrate a sample Azure Function code triggered through API Gateway for any trigger action in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	18.Change VM Size in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	19. Create an Auto Scaling Group behind a Classic Load Balancer with 3 Linux instances, each instance hosting a sample HTML page over Apache in azure 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	20.Demonstrate HA function of Auto Scaling Group behind an Elastic Load Balancer to show that the site remains accessible over the Classic Load Balancer" in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Milestone Assessment 7			
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"Module Virtual Networking  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Azure Network Introduction 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Purpose of Virtual Networks in azure  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Virtual Networks Lab  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Creating VIrtual network with PS Lab Activity  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• what are subnets 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Multiple NICs Lab Activity , IP Addressing in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Private IP Adresses , Public IP address  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Manage IP Address Lab Activity  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Azure service endpoints, Why use Service Endpoints in azure  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Service Endpoints Demo , Services that support Service Endpoint in azure  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Domain and custom Domains , Azure DNS  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• DNS Delegation, Private zone Scenario I , Private zone Scenario II , Private DNS in azure  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Demo 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Scope of NSG , NSG Demo  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• ""Module Interconnectivity  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Vnet peering , Benefits of Network Peering  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Vnet Peering Labs, Gateway transit  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Service Chaining , Virtual NEtwork Gateway I  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Azure Connectivity Comparision, Express Route  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Interconnectivity Conclusion , Virtual Network Gateway Lab in azure  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•
+• Module Network Traffic Management  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Traffic manager profiles Lab Activity  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• System Routes , User Defined Routes  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• What is Load Balancer I  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Public Load Balancer, Internal Load Balancer, Load Balancer SKU s  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Load Balancer Lab in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Azure Traffic Manager, Priority Routing  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• performance Routing , Geographic Routing, Weighted Routing  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"	77-80	4	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"• Module Azure Storage  in azure  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Azure Storage , Azure Storage Account  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Standard and premium storage accounts , Storage types in azure  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Creating Storage Account Lab Activity  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Create Storage Accout with Powershell Lab ACtivity in azure  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Create Storage Accout with CLI Lab Activity  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Azure Storage Explorer Introduction  in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Azure Blob Containers in azure 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Storage Performance Tiers 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Uploading Blobs , Blob access Policies , Blob Storage Pricing , Blob Storage Lab 
+Activity 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Azure Files , Files Vs Blobs , Create Azure file Share Lab Activity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+• Creating File Share with Poweshell and Mouting on Linux Lab Activity 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Module Azure Virtual Machines 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Supported Operating Systems 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• What is not supported 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• What is Azure Compute 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Virtual Machines Lab 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Backup & Disaster Recovery 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Creating VM with Powershell , Managing Linux Instances 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Maintenance and Downtime, Availability Sets 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• Fault Domain and Update domain , Custom Script Extensions 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+• CSE Lab "	81-84	4	
+Milestone Assessment 8			
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	"• Manage Azure identities and governance
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Azure Key Vault and Secrets Management 
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Implement and manage storage"	85-87	3	
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	"• Deploy and manage Azure compute resources
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Azure Logic Apps and Functions
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Implement and manage virtual networking"	88-91	4	
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	"• Monitor and maintain Azure resources
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Azure Monitor & Alerts"	92-96	5	
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+--------------------------
+
+
+"
+Deploying Applications: Introduction to AKS, Setting up AKS cluster, Deploying containerized applications to AKS, Managing AKS workloads, Scaling applications, Monitoring and logging in AKS, AKS networking and security, Integrating AKS with CI/CD pipelines,Event Hubs and Service Bus, Best practices for AKS deployments
+"	97-99	3	
+Milestone Assessment 10			
+Introduction to IaC & Benefits, Cloud Agnostic IaC with Terraform, Terraform Workflow, Terraform Init, Terraform Key Concepts: Plan, Apply, Destroy, Resource Addressing, Understanding Terraform Code, Deploying VM using Terraform Workflow on Azure, Installation of Terraform and Terraform Providers, State, Variables and Outputs, Provisioners and Use Cases, Installation of Terraform Provisioners to Setup Apache Webserver on Azure, State Command, Local and Remote State Storage, Persisting Terraform State in Azure Blob Storage, Accessing and Using Terraform Modules, Interacting with Terraform Module Inputs and Outputs, Building and Testing Terraform Modules Hands-On, Built-In Functions, Type Constraints, Dynamic Blocks, Terraform Blocks and Built-In Functions to Deploy to Azure, Terraform fmt, taint, and import Commands, Terraform Workspaces, Debugging Terraform, Practicing Terraform CLI Commands, Benefits of Sentinel (Embedded Policy-as-Code Framework), Terraform Vault Provider for Using Secrets Securely, Benefits of Terraform Registry and Usage, Terraform Cloud Workspaces, Terraform Cloud Workspace vs Terraform OSS.	100-108	9	"1.All terraform scripts should be maintained in git for enabling version control.
+2.Terraform tfstate file should be maintained in the Azure blob location.
+3.State locking should be enabled for the tfstate file.
+4.All Azure resources should be provisioned in Central US IOWA region."
+
+
+
+
+------------------------------------
+
+
+"• Introduction to CICD Pipelines, Site Reliability Engineering
+• AzureBoards: Project Planning and issue tracking 
+• Azure Repos – Branching policies and security, Source Control Strategy, Branching and Build Strategy
+• Azure build Pipeline – classic and Yaml way "	109-111	3	"Implement End-to-End CI/CD for a Sample .NET Core Application using Azure DevOps and Azure App Service
+
+1.Create a Work Item in Azure Boards
+Create a Feature and Stories in Azure Board and update it.
+
+2.Create a Repository
+i. Set up branches (develop, master)
+Ensure the develop branch is the default and compare branch.
+ii. Set branch policies for the develop branch:
+Minimum 1 reviewer.
+Comment resolution required.
+Gated pipeline trigger.
+Default reviewer: Pradeep Iyer.
+iii. Implement Pull Request Workflow (Feature to Develop):
+Gated pipeline should be triggered immediately after PR creation.
+Reviewer approves and user completes the PR.
+
+3. Create a Gated Pipeline (PR Trigger)
+i. Triggered for PR validation:
+Automatically triggered immediately after PR creation.
+ii. Build the application using debug configuration and run unit tests if any.
+
+4. Create a Package Pipeline
+Triggered automatically upon a merge to develop and master:
+i. Build the application using release configuration.
+ii. Package the application (zip).
+iii. Upload artifact to Azure DevOps.
+
+5. Create a Release Pipeline (Dev, QA, Prod)
+i. Automatically triggered after a package pipeline run.
+ii. Deploys the application to Azure App Service.
+iii. PR merge to the develop branch should trigger a deployment to Dev:
+Set artifact filters in the Dev stage for this.
+iv. PR merge to the master branch should trigger a deployment to QA and Prod:
+Set artifact filters in the QA and Prod stages for this.
+v. Set pre-deployment approvals for QA and Prod."
+Milestone Assessment 12			
+"• Building build yaml file ( Variables , Loops, Dependencies , functions, etc)
+• Azure Release Pipeline -- classic and Yaml way
+• Triggers
+• Running CICD pipeline using Microsoft hosted runners
+• Running CICD pipeline using Self hosted runners"	112-115	4	
+"
+• Review and scanning code 
+• Test code using automation tasks
+• Application Infrastructure Management Strategy
+• Security and Compliance
+•  Monitoring & Logging, Monitoring and Alerting, 
+• Desinging & Integrating CICD pipeline & Failure Prediction Strategy
+• Best Practices- DevOps Process Documentation 
+• Deployment and Release Communication Strategy"	116-120	5	
+
+
+
+
+• End to End deployment from pushing to code VCS till deploying code to production environment using best practices of Azure Devops pipelines with Blue Green Deployment strategies.	121-126	6
